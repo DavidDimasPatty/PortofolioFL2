@@ -6,17 +6,20 @@
 } */
 
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 30px;
     background-color: transparent;
+    gap: 30px;
     color: white;
     position: fixed;
     width: 100%;
     z-index: 888;
     transition: background-color 0.5s ease, color 0.5s ease;
     border-radius: 0 0 20px 20px;
+    margin-top: 10px;
 }
 
 @keyframes AnimationFadeButton {
@@ -62,15 +65,19 @@
     margin-top: 10px;
     opacity: 1;
     transform: translateY(0);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-links ul {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     list-style-type: none;
 }
 
+/* 
 .nav-links a.scrolled {
     color: black;
 }
@@ -94,6 +101,18 @@
 
 .nav-links a:hover {
     background-size: 0 3px, 100% 3px;
+} */
+
+
+.nav-links button {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 120px;
+    font-size: 14px;
 }
 
 .burger-btn {
@@ -113,6 +132,7 @@
     color: white;
     cursor: pointer;
 }
+
 /* 
 .getStarted {
     visibility: visible;
@@ -290,7 +310,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1268px) {
     .nav-links {
         visibility: hidden;
         position: absolute;

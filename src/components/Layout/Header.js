@@ -46,19 +46,34 @@ const Header = ({ onCheckboxChange, onMenuOpen, isMenuOpen }) => {
             <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
                 <ul>
                     <li>
-                        <a href="#tentangKami" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
-                            Tentang Kami
-                        </a>
+                        <button href="#tentangKami" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
+                          SERVICES
+                        </button>
                     </li>
                     <li>
-                        <a href="#ourService" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
-                            Layanan
-                        </a>
+                        <button href="#ourService" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
+                            SOLUTION
+                        </button>
                     </li>
                     <li>
-                        <a href="#FAQ" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
+                        <button href="#FAQ" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
+                            HOW
+                        </button>
+                    </li>
+                    <li>
+                        <button href="#FAQ" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
+                            PROJECTS
+                        </button>
+                    </li>
+                    <li>
+                        <button href="#FAQ" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
                             FAQ
-                        </a>
+                        </button>
+                    </li>
+                    <li>
+                        <button href="#FAQ" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
+                            CONTACT US
+                        </button>
                     </li>
                     <li>
                         <div className={`toggle-button-cover ${isScrolled ? 'scrolled ' : ' '}  ${isMenuOpen ? ' open ' : ' '}`} >
