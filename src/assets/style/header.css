@@ -1,0 +1,440 @@
+/* @font-face {
+    font-family: 'LiberationSans';
+    src: url('./font/LiberationSans-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 888;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    border-radius: 0 0 20px 20px;
+}
+
+@keyframes AnimationFadeButton {
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+
+.header.scrolled {
+    background-color: white;
+    color: black;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    font-size: 24px;
+    font-family: "LiberationSans";
+    filter: invert(1) brightness(2);
+}
+
+.logo-scrolled {
+    /* filter: invert(1) brightness(2); */
+}
+
+/* .logoLeft {
+    text-decoration: none;
+    margin-left: 20px;
+    color: white;
+} */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-links ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style-type: none;
+}
+
+.nav-links a.scrolled {
+    color: black;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    background:
+        linear-gradient(to right,
+            transparent,
+            transparent),
+        linear-gradient(to right,
+            #8ecae6,
+            #219ebc,
+            #023047);
+    background-size: 100% 1px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.nav-links a:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+.burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+/* 
+.getStarted {
+    visibility: visible;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    border: white solid;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    -webkit-animation: pulsate-fwd 0.8s ease-in-out infinite both, AnimationFadeButton 0.5s ease forwards;
+    animation: pulsate-fwd 0.8s ease-in-out infinite both, AnimationFadeButton 0.5s ease forwards;
+}
+
+.getStarted.scrolled {
+    background-color: black;
+    color: white;
+}
+
+.getStarted.scrolled::after {
+    background-color: black;
+}
+
+
+.getStarted:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #8ecae6,
+            #219ebc,
+            white);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+
+.getStarted:after {
+    z-index: -1;
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+}
+ */
+
+.checkbox {
+    width: 80px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+}
+
+.checkbox:checked {}
+
+.toggle-button-cover {}
+
+.layer {
+    position: absolute;
+    width: 74px;
+    top: 0px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 50px;
+    z-index: -1;
+    border: white 2px solid;
+    overflow: hidden;
+    background-color: white;
+}
+
+#button-10 .knobs:before,
+#button-10 .knobs:after,
+#button-10 .knobs span {
+    transition: 0.3s ease all;
+}
+
+.butSWitch {
+    position: relative;
+    width: 74px;
+    top: 0px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.knobs {
+    position: absolute;
+    top: 5px;
+    margin-left: 11px;
+    z-index: 1;
+    color: black;
+}
+
+
+.knobs::after {
+    content: " ";
+    position: absolute;
+    top: -11px;
+    left: 19px;
+    margin-left: 7px;
+    z-index: 1;
+    height: 39px;
+    width: 35px;
+    border-radius: 0 100px 50px 0;
+    background-image: url("../image/uspng.png");
+    background-size: 50px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.knobs::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+}
+
+
+#button-10 .checkbox:checked+.knobs:after {
+    color: #fff;
+}
+
+#button-10 .checkbox:checked~.knobs::before {
+    background-image: url("../image/idpng.png");
+    background-size: 60px;
+    background-repeat: no-repeat;
+    top: -3px;
+    left: -9px;
+    position: absolute;
+    height: 30px;
+    width: 32px;
+    border-radius: 80px 0 0 60px;
+}
+
+#button-10 .checkbox:checked~.knobs::after {
+    background-image: none;
+    content: 'IDN';
+    top: 0px;
+    color: black;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        visibility: hidden;
+        position: absolute;
+        top: -10px;
+        right: 0px;
+        background-color: #333;
+        padding: 60px 0px;
+        border-radius: 5px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        height: 100vh;
+        font-size: 30px;
+        transition: 0.5s ease all;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        pointer-events: none;
+    }
+
+
+    .nav-links a.scrolled {
+        color: white;
+    }
+
+    .nav-links.open {
+        visibility: visible;
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .burger-btn.open {
+        display: none;
+    }
+
+    .close-btn.open {
+        display: block;
+        z-index: 90;
+    }
+
+    .burger-btn.scrolled {
+        color: black;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        list-style-type: none;
+    }
+
+    .nav-links a {
+        padding: 0px;
+        text-align: center;
+    }
+
+    .toggle-button-cover {
+        visibility: hidden;
+        display: none;
+    }
+
+    .toggle-button-cover.open {
+        color: white;
+        visibility: visible;
+        display: block;
+    }
+
+    .toggle-button-cover.scrolled {
+        color: black;
+    }
+
+    .knobs {
+        color: white;
+        font-size: 15px;
+    }
+
+    #button-10 .checkbox:checked~.knobs::after {
+        color: black;
+        font-size: 15px;
+    }
+
+    .getStarted {
+        -webkit-animation: none;
+        animation: none;
+        border: none;
+        background: none;
+        white-space: nowrap;
+        visibility: hidden;
+    }
+
+    .getStarted.open {
+        visibility: visible;
+    }
+
+    .getStarted:before {
+        content: "";
+        background: none;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        border-radius: 10px;
+    }
+
+
+    .getStarted:after {
+        z-index: 0;
+        content: "";
+        background-color: transparent;
+        position: relative;
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+    }
+
+    .getStarted.scrolled {
+        background-color: transparent;
+        color: white;
+    }
+
+    .getStarted.scrolled::after {
+        background-color: transparent;
+    }
+
+    .header.open {
+        background-color: transparent;
+    }
+
+    .knobs {
+        color: black;
+    }
+
+    .header.open {
+        background-color: transparent !important;
+    }
+}
