@@ -3,6 +3,7 @@ import "../assets/style/home.css"
 import Header from "./Layout/Header";
 import Footer from "./Layout/Footer";
 import Top from "./Top";
+import Slogan from "./Slogan";
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
                 onMenuOpen={toggleMenu}
                 isMenuOpen={isMenuOpen} />
             <Top />
+            <Slogan />
             <Footer />
         </div>
     )

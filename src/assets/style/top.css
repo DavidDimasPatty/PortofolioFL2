@@ -1,15 +1,25 @@
 .wrapperTop {
     width: 100% !important;
     height: 50%;
+    background-color: black;
 }
 
 .wrapperRowTop {
     width: 100%;
+    border-radius: 0 0  100px 100px;
+    background-color: white;
+    height: 100%;
 }
 
 .buttonTopContentTitle {
     width: 120px;
     margin-bottom: 50px;
+}
+
+.titleName h1 {
+    font-family: depot;
+    font-size: 70px;
+    letter-spacing: 40px;
 }
 
 .buttonTopContentTitle h2 {
