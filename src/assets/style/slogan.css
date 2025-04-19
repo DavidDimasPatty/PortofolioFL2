@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Depot';
+    src: url('../../assets/font/DEPOT.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.slogan-section {
+    background-color: black;
+    margin-top: 50px;
+    padding-top: 50px;
+    color: white;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    font-family: 'Depot', sans-serif;
+    line-height: 1;
+}
+
+.slogan-small-text {
+    font-size: 5rem;
+}
+
+.slogan-strong-text {
+    font-size: 5rem;
+}
+
+.slogan-secure-text {
+    font-size: 5rem;
+}
+
+.slogan-arrow {
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+.slogan-blue-text {
+    color: #0038FC;
+}
+
+.slogan-small-text-2 {
+    font-size: 3rem;
+}
