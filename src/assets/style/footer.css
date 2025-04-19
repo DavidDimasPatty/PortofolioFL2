@@ -75,8 +75,10 @@
 
 .moveText {
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 100px;
+    letter-spacing: 70px;
+    font-size: 150px;
+    font-family: depot;
+    margin-left: 140px;
 }
 
 .wrapperVisionMission {
