@@ -6,7 +6,6 @@
 } */
 
 .header {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,7 +119,7 @@
     background: none;
     border: none;
     font-size: 30px;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -129,7 +128,7 @@
     background: none;
     border: none;
     font-size: 30px;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -310,12 +309,12 @@
 }
 
 
-@media (max-width: 1268px) {
+@media (max-width: 768px) {
     .nav-links {
         visibility: hidden;
         position: absolute;
-        top: -10px;
-        right: 0px;
+        top: -15px;
+        right: 0;
         background-color: #333;
         padding: 60px 0px;
         border-radius: 5px;
@@ -358,7 +357,7 @@
     }
 
     .burger-btn.scrolled {
-        color: black;
+        color: white;
     }
 
     .nav-links ul {

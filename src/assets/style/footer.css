@@ -1,0 +1,342 @@
+.footer {
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    width: 100% !important;
+    padding: 20px;
+    border-radius: 50px 50px 0 0;
+}
+
+.wrapImgFooter {
+    width: 200px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+.secureTittle {
+    margin-left: 2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.secureTittle h3 {
+    color: white;
+    font-size: 40px;
+}
+
+.secureTittle hr {
+    color: rgb(21, 21, 221);
+    width: 430px;
+    height: 3px;
+    margin-left: 12px;
+}
+
+.buttonFooterBot button {
+    border: none;
+    background-color: rgb(21, 21, 221);
+    border-radius: 10px;
+    width: 140px;
+    color: white;
+    margin-left: 10px;
+    height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.aboutUsFooter {
+    color: rgb(21, 21, 221);
+}
+
+.contactUsFooter {
+    color: rgb(21, 21, 221);
+}
+
+.socialMediaFooter {
+    color: rgb(21, 21, 221);
+}
+
+
+.aboutUsWrapFooter {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contactUsWrapFooter {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.socialMediaWrapFooter {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.moveText{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 100px;
+}
+
+
+
+
+
+
+.borderSpace {
+    content: "";
+    border-bottom: white solid;
+    width: 80vw;
+    margin-left: 20px;
+}
+
+.borderSpaceEnd {
+    border-top: white solid;
+    width: 100%;
+    color: white;
+
+}
+
+.borderSpaceEnd h5 {
+    margin-top: 15px;
+    margin-right: 50px;
+}
+
+.footerEnd {
+    width: 100%;
+    height: 100%;
+}
+
+.footerrow {
+    width: 100% !important;
+    color: white;
+    padding: 20px;
+}
+
+.footerClose {
+    width: 100% !important;
+    padding: 20px;
+    color: white;
+}
+
+.footerrow a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer b,
+.footer span {
+    color: white;
+}
+
+.formFooter {
+    width: 50vw;
+}
+
+.formFooter button {
+    width: 200px;
+    text-wrap: none;
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    min-height: 20px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.formFooter button:disabled {
+    pointer-events: none;
+}
+
+.formFooter button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.formFooter button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.footerBridge {
+    width: 100%;
+    color: white;
+}
+
+.wrapperCall {
+    width: 75%;
+}
+
+
+.buttonCall {
+    background: #fff;
+    backface-visibility: hidden;
+    border-radius: .375rem;
+    border-style: solid;
+    border-width: .125rem;
+    box-sizing: border-box;
+    color: #212121;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    line-height: 1.3;
+    padding: .875rem 1.125rem;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transform: translateZ(0) scale(1);
+    transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.buttonCall:not(:disabled):hover {
+    transform: scale(1.05);
+}
+
+.buttonCall:not(:disabled):hover:active {
+    transform: scale(1.05) translateY(.125rem);
+}
+
+.buttonCall:focus {
+    outline: 0 solid transparent;
+}
+
+.buttonCall:focus:before {
+    content: "";
+    left: calc(-1*.375rem);
+    pointer-events: none;
+    position: absolute;
+    top: calc(-1*.375rem);
+    transition: border-radius;
+    user-select: none;
+}
+
+.buttonCall:focus:not(:focus-visible) {
+    outline: 0 solid transparent;
+}
+
+.buttonCall:focus:not(:focus-visible):before {
+    border-width: 0;
+}
+
+.buttonCall:not(:disabled):active {
+    transform: translateY(.125rem);
+}
+
+.buttonFooterLink {
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    margin: 5px;
+    font-size: small;
+    width: auto;
+    height: 30px;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+
+.wrapperCall {
+    width: 100%;
+    text-align: center;
+}
+
+.wrapperwordBottom {
+    margin: 0px 0px;
+}
+
+.wordBottom {
+    width: 100%;
+    justify-content: start;
+}
+
+.wordBottom h1 {
+    width: 100%;
+}
+
+.wordBottom h5 {
+    width: 100%;
+}
+
+.corps {
+    display: flex;
+    margin: 0px 20px;
+}
+
+.corps h1 {
+    font-size: calc(2rem + 1.8vw);
+    margin: 0;
+}
+
+.footerCloseC1 {
+    border-right: 2px solid white;
+}
+
+.footerCloseC2 {
+    border-right: 2px solid white;
+}
+
+
+@media (max-width: 1200px) {
+    .wrapperCall {
+        width: 100%;
+        text-align: center;
+    }
+
+    .wordBottom {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .wordBottom h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .wordBottom h5 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .corps h1 {
+        font-size: 40px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .corps {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px;
+    }
+
+    .imgFooterWrapper {
+        justify-content: center;
+    }
+}

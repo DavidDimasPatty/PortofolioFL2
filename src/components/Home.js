@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import "../assets/style/home.css"
 import Header from "./Layout/Header";
+import Footer from "./Layout/Footer";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
             <Header onCheckboxChange={handleCheckboxChange}
                 onMenuOpen={toggleMenu}
                 isMenuOpen={isMenuOpen} />
+            <Footer/>
         </div>
     )
 };
