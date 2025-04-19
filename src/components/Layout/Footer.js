@@ -1,4 +1,4 @@
-import react from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../../assets/style/footer.css";
 import logoPT from "../../assets/image/logoPT.png"
 import Marquee from "react-fast-marquee";
@@ -6,6 +6,24 @@ import waLogo from "../../assets/image/whatsapp.png"
 import fbLogo from "../../assets/image/facebook.png"
 import igLogo from "../../assets/image/instagramm.png"
 const Footer = () => {
+    const [isHoverVision, setIsHoverVision] = useState(false);
+    const [isHoverMission, setisHoverMission] = useState(false);
+
+    const hoverVision = () => {
+        setIsHoverVision(true);
+        setisHoverMission(false);
+    }
+
+    const hoverMission = () => {
+        setIsHoverVision(false);
+        setisHoverMission(true);
+    }
+
+    
+    const resetHover = () => {
+        setIsHoverVision(false);
+        setisHoverMission(false);
+    }
 
 
     return (
@@ -31,16 +49,46 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="col-6 d-flex">
+                <div className="col-6 d-flex justify-content-center align-items-center wrapperVisionMission">
+                    <div className={`row mb-4 ourVisionHidden ${isHoverVision ? `visible` : ''}`}>
+                        <h6 className="titelOurVisionHidden">Our Vision</h6>
+                        <div className="textVisionHidden">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of
+                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
 
+                    </div>
+                    <div className={`row mb-4 ourMissionHidden ${isHoverMission ? `visible` : ''}`}>
+                        <h6 className="titelOurVisionHidden">Our Mission</h6>
+                        <div className="textMissionHidden">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of
+                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+                    </div>
                 </div>
 
                 <div className="col-2 d-flex">
                     <div className="row aboutUsWrapFooter">
                         <div className="row mb-4">
                             <h6 className="aboutUsFooter">About Us</h6>
-                            <h6>Our Vision</h6>
-                            <h6>Our Mission</h6>
+                            <h6 onMouseEnter={hoverVision}
+                                onMouseLeave={resetHover}
+                                onTouchStart={hoverVision}
+                                onTouchEnd={resetHover}>Our Vision</h6>
+                            <h6 onMouseEnter={hoverMission}
+                                onMouseLeave={resetHover}
+                                onTouchStart={hoverMission}
+                                onTouchEnd={resetHover}>Our Mission</h6>
                         </div>
 
                         <div className="row mb-4 contactUsWrapFooter">

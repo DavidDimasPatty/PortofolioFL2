@@ -74,10 +74,39 @@
     letter-spacing: 2px;
 }
 
-.moveText{
+.moveText {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 100px;
+}
+
+.wrapperVisionMission {
+    position: relative;
+
+}
+
+.ourVisionHidden {
+    position: absolute;
+    padding: 20px;
+    color: white;
+    opacity: 0;  
+    transition: opacity 0.6s ease
+}
+
+.ourMissionHidden {
+    position: absolute;
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.6s ease
+}
+
+.ourVisionHidden.visible {
+    opacity: 1;
+}
+
+.ourMissionHidden.visible {
+    opacity: 1;
 }
 
 
