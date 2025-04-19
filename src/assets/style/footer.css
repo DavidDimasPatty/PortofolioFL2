@@ -1,5 +1,4 @@
 .footer {
-    position: absolute;
     background-color: black;
     bottom: 0;
     width: 100% !important;
@@ -89,7 +88,7 @@
     position: absolute;
     padding: 20px;
     color: white;
-    opacity: 0;  
+    opacity: 0;
     transition: opacity 0.6s ease
 }
 
@@ -109,8 +108,15 @@
     opacity: 1;
 }
 
+.titelOurVisionHidden {
+    color: rgb(21, 21, 221);
+    font-size: 30px;
+}
 
-
+.titelOurMissionHidden {
+    color: rgb(21, 21, 221);
+    font-size: 30px;
+}
 
 
 

@@ -1,0 +1,26 @@
+.wrapperTop {
+    width: 100% !important;
+    height: 50%;
+}
+
+.wrapperRowTop {
+    width: 100%;
+}
+
+.buttonTopContentTitle {
+    width: 120px;
+    margin-bottom: 50px;
+}
+
+.buttonTopContentTitle h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.buttonTopContent button {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(21, 21, 221);
+    color: white;
+    width: 150px;
+}

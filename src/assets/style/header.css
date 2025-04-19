@@ -13,7 +13,6 @@
     background-color: transparent;
     gap: 30px;
     color: white;
-    position: fixed;
     width: 100%;
     z-index: 888;
     transition: background-color 0.5s ease, color 0.5s ease;
@@ -67,6 +66,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin-left: 10px;
 }
 
 .nav-links ul {
