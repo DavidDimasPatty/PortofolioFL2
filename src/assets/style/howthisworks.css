@@ -84,7 +84,7 @@
     box-shadow:
     inset 0 12px 0px -10px rgba(0, 85, 255, 1),
     inset 0 -12px 0px -10px rgba(0, 85, 255, 1),
-    0 24px 24px rgba(0, 0, 0, 0.1); /* shadow biasa */
+    0 24px 24px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(5px);
 }
@@ -128,7 +128,7 @@
 
 .plus-shape {
     position: absolute;
-    width: 100px;   /* ukuran total */
+    width: 100px; 
     height: 100px;
     left: 420px;
     bottom: 70px;
@@ -138,11 +138,11 @@
   .plus-shape::after {
     content: '';
     position: absolute;
-    background-color: blue; /* biru */
-    border-radius: 0px; /* opsional, untuk ujung sedikit membulat */
+    background-color: blue;
+    border-radius: 0px;
   }
   
-  /* Garis vertikal */
+
   .plus-shape::before {
     width: 30px;
     height: 100%;
@@ -151,7 +151,6 @@
     transform: translateX(-50%);
   }
   
-  /* Garis horizontal */
   .plus-shape::after {
     height: 30px;
     width: 100%;
@@ -193,7 +192,7 @@
     height: 30px;
     color: white;
     background-color: blue;
-    box-shadow: 0 24px 24px rgba(0, 0, 0, 0.4); /* shadow biasa */
+    box-shadow: 0 24px 24px rgba(0, 0, 0, 0.4); 
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(5px);
   }
