@@ -2,8 +2,9 @@
     width: 100% !important;
 }
 
-.wrapperWorks .row {
+.rowWrapperWorks {
     width: 100% !important;
+    position: relative;
 }
 
 .step {
@@ -70,3 +71,129 @@
     justify-content: space-around;
     margin-bottom: 30px;
 }
+
+.boxWorks {
+    position: relative;
+    top: 120px;
+    background: transparent;
+    border-radius: 24px;
+    border-radius: 30px;
+    width: 300px;
+    height: 300px;
+    left: 450px;
+    box-shadow:
+    inset 0 12px 0px -10px rgba(0, 85, 255, 1),
+    inset 0 -12px 0px -10px rgba(0, 85, 255, 1),
+    0 24px 24px rgba(0, 0, 0, 0.1); /* shadow biasa */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+.textWorks {
+    font-size: 12px;
+    font-weight: bold;
+    height: 120px;
+}
+
+.textPathWorks {
+    font-size: 10px;
+}
+
+.imageWorks {
+    height: 150px;
+    position: relative;
+}
+
+.imgWorksDeep{
+    position: relative;
+    left: 160px;
+    top: 40px;
+    filter: invert(1) brightness(2);
+}
+
+.wrapperBoxWorks{
+    position: relative;
+}
+
+.boxTopWorks{
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    background-color: blue;
+    border-radius: 10px;
+    left: 700px;
+    top: 90px;
+}
+
+.plus-shape {
+    position: absolute;
+    width: 100px;   /* ukuran total */
+    height: 100px;
+    left: 420px;
+    bottom: 70px;
+  }
+  
+  .plus-shape::before,
+  .plus-shape::after {
+    content: '';
+    position: absolute;
+    background-color: blue; /* biru */
+    border-radius: 0px; /* opsional, untuk ujung sedikit membulat */
+  }
+  
+  /* Garis vertikal */
+  .plus-shape::before {
+    width: 30px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  
+  /* Garis horizontal */
+  .plus-shape::after {
+    height: 30px;
+    width: 100%;
+    top: 47%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+
+  .projectsMore{
+    width: 100%;
+    height: 700px;
+  }
+
+  .projectsMoreCol{
+    width: 100%;
+  }
+
+  .moreProjects{
+    font-family: 'Depot', sans-serif;
+    line-height: 1;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 10px;
+  }
+
+  .moreProjects b{
+    width: 600px;
+  }
+
+  .moreProjectsButtonWrapper{
+    margin-top: 50px;
+  }
+
+  .moreProjectsButton{
+    border: none;
+    border-radius: 30px;
+    width: 300px;
+    height: 30px;
+    color: white;
+    background-color: blue;
+    box-shadow: 0 24px 24px rgba(0, 0, 0, 0.4); /* shadow biasa */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(5px);
+  }
