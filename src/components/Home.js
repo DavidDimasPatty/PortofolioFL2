@@ -5,6 +5,7 @@ import Footer from "./Layout/Footer";
 import Top from "./Top";
 import Slogan from "./Slogan";
 import HowThisWorks from "./HowThisWorks";
+import FAQ from "./FAQ";
 
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
             <Top />
             <Slogan />
             <HowThisWorks />
+            <FAQ/>
             <Footer />
         </div>
     )
