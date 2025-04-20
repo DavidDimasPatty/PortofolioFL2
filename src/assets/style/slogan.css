@@ -9,68 +9,103 @@
     background-color: black;
     color: white;
     font-family: 'Depot', sans-serif;
-    line-height: 1;
+    letter-spacing: 15px;
     padding: 50px 0;
-    letter-spacing: 20px;
+    line-height: 1;
+}
+
+.slogan-line {
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.slogan-line-1,
+.slogan-line-2 {
+    width: 100%;
+}
+
+.slogan-we-are {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
 }
 
 .slogan-small-text {
     font-size: 4rem;
+    line-height: 1;
 }
 
-.slogan-strong-text {
-    font-size: 10rem;
-}
-
+.slogan-strong-text,
 .slogan-secure-text {
     font-size: 10rem;
+    line-height: 1;
 }
 
 .slogan-arrow {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
+    margin-right: 1rem;
 }
 
 .slogan-blue-text {
     color: #0038FC;
+    margin-right: 0.5rem;
 }
 
 .slogan-small-text-2 {
     font-size: 2.5rem;
 }
 
-.slogan-line-1,
-.slogan-line-2 {
-    width: 100%;
-    /* bebas kamu atur, agar flex bekerja */
+.slogan-cta {
+    display: flex;
+    align-items: center;
 }
 
-.slogan-small-text,
-.slogan-strong-text,
-.slogan-secure-text {
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-}
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
 
-/* Buat responsif */
-@media (max-width: 768px) {
-
-    .slogan-line-1,
-    .slogan-line-2 {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .slogan-small-text,
     .slogan-strong-text,
     .slogan-secure-text {
-        font-size: 4rem;
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slogan-line {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .slogan-line-1>*,
-    .slogan-line-2>* {
-        align-self: flex-start;
+    .slogan-strong-text,
+    .slogan-secure-text,
+    .slogan-small-text {
+        font-size: 5rem;
+    }
+
+    .slogan-small-text-2 {
+        font-size: 2rem;
+    }
+
+    .slogan-arrow {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .slogan-strong-text,
+    .slogan-secure-text,
+    .slogan-small-text {
+        font-size: 3.5rem;
+    }
+
+    .slogan-small-text-2 {
+        font-size: 1.5rem;
+    }
+
+    .slogan-arrow {
+        font-size: 2rem;
     }
 }
