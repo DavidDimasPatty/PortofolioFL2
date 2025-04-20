@@ -4,6 +4,7 @@ import Header from "./Layout/Header";
 import Footer from "./Layout/Footer";
 import Top from "./Top";
 import Slogan from "./Slogan";
+import HowThisWorks from "./HowThisWorks";
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
                 isMenuOpen={isMenuOpen} />
             <Top />
             <Slogan />
+            <HowThisWorks />
             <Footer />
         </div>
     )

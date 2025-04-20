@@ -116,7 +116,7 @@ const Footer = () => {
             <div className="footerEnd d-flex justify-content-center align-items-center">
                 <div className="borderSpaceEnd d-flex justify-content-center align-items-center gap-3">
                     <Marquee speed={200} pauseOnHover={true} autoFill={true}>
-                        <h2 className="moveText ms-5"> IKODORA </h2>
+                        <h2 className="moveText"> IKODORA </h2>
                     </Marquee>
                 </div>
             </div>

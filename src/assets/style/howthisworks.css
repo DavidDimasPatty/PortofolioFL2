@@ -1,0 +1,72 @@
+.wrapperWorks {
+    width: 100% !important;
+}
+
+.wrapperWorks .row {
+    width: 100% !important;
+}
+
+.step {
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: white;
+    bottom: 10px;
+}
+
+.step-number {
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 5px;
+}
+
+.line {
+    border-top: 1px dashed #000;
+    height: 2px;
+    width: 100%;
+}
+
+.line-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 2;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.lineVertical {
+    position: relative;
+    border-left: 1px solid black;
+    height: 50px;
+    width: 10px;
+    left: 4px;
+    bottom: 6px;
+}
+
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 3;
+}
+
+
+.row-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
