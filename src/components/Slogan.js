@@ -4,21 +4,18 @@ export default function Slogan() {
     return (
         <div className="slogan-section">
             {/* Baris 1: WE ARE STRONG BY CHOICE */}
-            <div className="d-flex flex-wrap justify-content-between align-items-end slogan-line-1">
-                <div className="d-flex flex-column justify-content-end me-3">
+            <div className="d-flex justify-content-start align-items-stretch slogan-line-1">
+                <div className="d-flex flex-column justify-content-center me-3">
                     <div className="slogan-small-text">WE</div>
                     <div className="slogan-small-text">ARE</div>
                 </div>
 
-                <div className="slogan-strong-text">STRONG</div>
-
-                <div className="slogan-small-text">BY CHOICE,</div>
+                <div className="slogan-strong-text">STRONG<span className="slogan-small-text"> BY CHOICE,</span></div>
             </div>
 
             {/* Baris 2: SECURE BY DESIGN */}
-            <div className="d-flex justify-content-between align-items-end slogan-line-2 my-4">
-                <div className="slogan-secure-text">SECURE</div>
-                <div className="slogan-small-text">BY DESIGN</div>
+            <div className="d-flex justify-content-start align-items-stretch slogan-line-2">
+                <div className="slogan-secure-text">SECURE <span className="slogan-small-text">BY DESIGN</span></div>
             </div>
 
             {/* Baris 3: CTA */}

@@ -10,22 +10,24 @@
     color: white;
     font-family: 'Depot', sans-serif;
     line-height: 1;
+    padding: 50px 0;
+    letter-spacing: 20px;
 }
 
 .slogan-small-text {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .slogan-strong-text {
-    font-size: 5rem;
+    font-size: 10rem;
 }
 
 .slogan-secure-text {
-    font-size: 5rem;
+    font-size: 10rem;
 }
 
 .slogan-arrow {
-    font-size: 10rem;
+    font-size: 4rem;
     font-weight: bold;
 }
 
@@ -34,5 +36,41 @@
 }
 
 .slogan-small-text-2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+}
+
+.slogan-line-1,
+.slogan-line-2 {
+    width: 100%;
+    /* bebas kamu atur, agar flex bekerja */
+}
+
+.slogan-small-text,
+.slogan-strong-text,
+.slogan-secure-text {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Buat responsif */
+@media (max-width: 768px) {
+
+    .slogan-line-1,
+    .slogan-line-2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .slogan-small-text,
+    .slogan-strong-text,
+    .slogan-secure-text {
+        font-size: 4rem;
+    }
+
+    .slogan-line-1>*,
+    .slogan-line-2>* {
+        align-self: flex-start;
+    }
 }
