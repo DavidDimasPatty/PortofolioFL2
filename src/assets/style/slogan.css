@@ -10,102 +10,54 @@
     color: white;
     font-family: 'Depot', sans-serif;
     letter-spacing: 15px;
-    padding: 50px 0;
+    padding: 50px 25px;
+
+    display: flex;
+    flex-direction: column;
     line-height: 1;
 }
 
 .slogan-line {
     display: flex;
-    justify-content: start;
-    align-items: stretch;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 
-.slogan-line-1,
-.slogan-line-2 {
-    width: 100%;
+.slogan-small {
+    font-size: 70px;
 }
 
-.slogan-we-are {
+.slogan-large {
+    font-size: 176px;
+}
+
+.slogan-we-are{
+    align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-right: 40px;
 }
 
-.slogan-small-text {
-    font-size: 4rem;
-    line-height: 1;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
 }
 
-.slogan-strong-text,
-.slogan-secure-text {
-    font-size: 10rem;
-    line-height: 1;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
 }
 
-.slogan-arrow {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-right: 1rem;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
 }
 
-.slogan-blue-text {
-    color: #0038FC;
-    margin-right: 0.5rem;
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
 }
 
-.slogan-small-text-2 {
-    font-size: 2.5rem;
-}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 
-.slogan-cta {
-    display: flex;
-    align-items: center;
-}
-
-/* Responsive breakpoints */
-@media (max-width: 1200px) {
-
-    .slogan-strong-text,
-    .slogan-secure-text {
-        font-size: 8rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .slogan-line {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .slogan-strong-text,
-    .slogan-secure-text,
-    .slogan-small-text {
-        font-size: 5rem;
-    }
-
-    .slogan-small-text-2 {
-        font-size: 2rem;
-    }
-
-    .slogan-arrow {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .slogan-strong-text,
-    .slogan-secure-text,
-    .slogan-small-text {
-        font-size: 3.5rem;
-    }
-
-    .slogan-small-text-2 {
-        font-size: 1.5rem;
-    }
-
-    .slogan-arrow {
-        font-size: 2rem;
-    }
 }
