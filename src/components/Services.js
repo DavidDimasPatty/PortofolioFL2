@@ -6,6 +6,10 @@ import img2 from "../assets/image/logoPT.png"
 import img3 from "../assets/image/logoPT.png"
 import img4 from "../assets/image/logoPT.png"
 
+import icon1 from "../assets/image/logoPT.png"
+import icon2 from "../assets/image/logoPT.png"
+import icon3 from "../assets/image/logoPT.png"
+
 export default function Services() {
     const servicesData = [
         {
@@ -30,9 +34,13 @@ export default function Services() {
         }
     ];
 
+    const icons = [
+        icon1, icon2, icon3
+    ];
+
     useEffect(() => {
         const matchHeight = () => {
-            const descBoxes = document.querySelectorAll(".services-box-desc");
+            const descBoxes = document.querySelectorAll(".services-section-1-box-desc");
             let maxHeight = 0;
 
             descBoxes.forEach(box => {
@@ -59,20 +67,59 @@ export default function Services() {
         };
     }, []);
 
+    const fullText = "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda. Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. Di setiap sekt or, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital.";
+
+    const highlightWords = ["solusi", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
+
+    const highlightText = (text, highlights) => {
+        const parts = text.split(/(\s+)/);
+
+        return parts.map((word, index) => {
+            const cleanWord = word.toLowerCase().replace(/[.,]/g, "");
+            if (highlights.includes(cleanWord)) {
+                return (
+                    <span key={index} className="services-section-2-card-text-largeText">
+                        {word}
+                    </span>
+                );
+            }
+            return word;
+        });
+    };
+
     return (
-        <div className="services-section">
-            {servicesData.map((service, index) => (
-                <div className="services-box" key={index}>
-                    <div className="services-box-img">
-                        <img src={service.img} alt={`${service.title} Icon`} width={100} />
-                        <h6>{service.title}</h6>
+        <>
+            <div className="services-section">
+                <div className="services-section-1">
+                    {servicesData.map((service, index) => (
+                        <div className="services-section-1-box" key={index}>
+                            <div className="services-section-1-box-img">
+                                <img src={service.img} alt={`${service.title} Icon`} width={100} />
+                                <h6>{service.title}</h6>
+                            </div>
+                            <div className="services-section-1-box-desc">
+                                <h6>{service.title}</h6>
+                                <p>{service.desc}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="services-section-2">
+                    <div className="services-section-2-card">
+                        <div className="services-section-2-card-icon">
+                            {icons.map((icon, index) => (
+                                <img key={index} src={icon} width={50} />
+                            ))}
+                        </div>
+                        <span className="services-section-2-card-text">
+                            {highlightText(fullText, highlightWords)}
+                        </span>
                     </div>
-                    <div className="services-box-desc">
-                        <h6>{service.title}</h6>
-                        <p>{service.desc}</p>
+                    <div className="services-section-2-desc">
+                        Halo
                     </div>
                 </div>
-            ))}
-        </div>
+            </div>
+        </>
     );
 }

@@ -2,23 +2,25 @@
     background-color: darkgray;
     color: white;
     font-family: sans-serif;
-    padding: 50px 200px;
+}
 
+.services-section-1 {
+    padding: 50px 200px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     justify-content: center;
 }
 
-.services-box {
+.services-section-1-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:10rem;
+    gap: 10rem;
     letter-spacing: 1px;
 }
 
-.services-box-img {
+.services-section-1-box-img {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,11 +30,11 @@
     text-align: center;
 }
 
-.services-box-img img {
+.services-section-1-box-img img {
     object-fit: contain;
 }
 
-.services-box-desc {
+.services-section-1-box-desc {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -41,21 +43,68 @@
     border-radius: 100px;
     padding: 40px;
     text-align: justify;
-    
 }
 
-.services-box-desc p {
+.services-section-1-box-desc p {
     padding: 0;
     margin: 0;
     font-weight: normal !important;
 }
 
-.services-box-img h6,
-.services-box-desc h6,
-.services-box-desc p {
+.services-section-1-box-img h6,
+.services-section-1-box-desc h6,
+.services-section-1-box-desc p {
     font-size: 20px;
     font-weight: bold;
 }
+
+
+.services-section-2 {
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.services-section-2-card {
+    width: 50%;
+    border: 0.1px solid white;
+    border-radius: 70px;
+    padding: 30px 30px 100px 30px;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+        inset 0 4px 0px -3px rgba(0, 85, 255, 1),
+        inset 0 -4px 0px -3px rgba(0, 85, 255, 1);
+    /* 0 24px 24px rgba(0, 0, 0, 0.1); */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    text-align: center;
+    font-size: 26px;
+    line-height: 2;
+}
+
+.services-section-2-card-text-largeText {
+    font-size: 46px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.services-section-2-desc {
+    width: 50%;
+    
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
