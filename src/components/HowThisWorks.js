@@ -99,8 +99,8 @@ const HowThisWorks = () => {
                 </div>
             </div>
             <div className="row projectsMore d-flex justify-content-center align-items-center">
-                <div className="col projectsMoreCol">
-                    <div className="row">
+                <div className="row projectsMoreCol">
+                    <div className="col">
                         <div className="moreProjects d-flex justify-content-center align-items-center">
                             <b>More than 50+ clients and 100+ project</b>
                         </div>

@@ -1,9 +1,6 @@
-.wrapFAQ {
-    width: 100% !important;
-}
+
 
 .wrapRowFAQ {
-    width: 100% !important;
     margin-bottom: 100px;
 }
 
@@ -51,78 +48,64 @@
 .questionFAQ {
     position: relative;
     z-index: 100;
+    width: 70%;
 }
 
 .questionFAQ hr {
-    width: 70%;
     background-color: blue;
     height: 4px;
     margin-top: 10px;
+    width: 100%;
 }
 
 .downArrow1 {
-    width: 20px;
-    position: absolute;
-    left: 66%;
-    top: -15px;
     color: blue;
     font-weight: bolder;
     font-size: 30px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
+    margin-left: 20px;
 }
 
 .downArrow2 {
-    width: 20px;
-    position: absolute;
-    left: 66%;
-    top: -15px;
     color: blue;
     font-weight: bolder;
     font-size: 30px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
+    margin-left: 20px;
 }
 
 .downArrow3 {
-    width: 20px;
-    position: absolute;
-    left: 66%;
-    top: -15px;
     color: blue;
     font-weight: bolder;
     font-size: 30px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
+    margin-left: 20px;
 }
 
 .downArrow4 {
-    width: 20px;
-    position: absolute;
-    left: 66%;
-    top: -15px;
     color: blue;
     font-weight: bolder;
     font-size: 30px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
+    margin-left: 20px;
 }
 
 .downArrow5 {
-    width: 20px;
-    position: absolute;
-    left: 66%;
-    top: -15px;
     color: blue;
     font-weight: bolder;
     font-size: 30px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
+    margin-left: 20px;
 }
 
 .question1.active {
@@ -195,11 +178,11 @@
     border-radius: 20px;
 }
 
-.wrapButtonFAQRight{
+.wrapButtonFAQRight {
     margin-top: 20px;
 }
 
-.anyFAQ{
+.anyFAQ {
     font-size: 25px;
     font-weight: bold;
 }

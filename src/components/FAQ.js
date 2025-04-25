@@ -49,102 +49,110 @@ const FAQ = () => {
     }
 
     return (
-        <div className="col wrapFAQ">
-            <div className="row wrapRowFAQ">
-                <div className="col-6 d-flex justify-content-center align-items-center">
-                    <div className="col wrappperQuestions">
-                        <div className="col">
-                            <div><h3>FREQUENT ASKED QUESTIONS</h3></div>
-                        </div>
+        <div className="row wrapRowFAQ">
+            <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <div className="col wrappperQuestions">
+                    <div className="col">
+                        <div><h3>FREQUENT ASKED QUESTIONS</h3></div>
+                    </div>
 
-                        <div className="col">
-                            <div className="row wrapQuestions">
-                                <div className="row questionFAQ" onClick={clickQuestion1}>
-                                    <div>Apa saja layanan yang ditawarkan oleh perusahaan IT solution ini?</div>
+                    <div className="col">
+                        <div className="row wrapQuestions">
+                            <div className="row questionFAQ" onClick={clickQuestion1}>
+                                <div className="col d-flex justify-content-start align-items-center">
+                                    <div className="col">Apa saja layanan yang ditawarkan oleh perusahaan IT solution ini? </div>
                                     <div className={`downArrow1 ${question1 ? "active" : ""}`}>˅</div>
-                                    <hr />
                                 </div>
-                                <div className={`row question1 ${question1 ? "active" : ""}`}>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                    with the release of Letraset sheets containing Lorem Ipsum passages,
-                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </div>
+                                <hr />
                             </div>
-
-                            <div className="row wrapQuestions">
-                                <div className="row questionFAQ" onClick={clickQuestion2}>
-                                    Bagaimana cara kami memastikan keamanan data pelanggan?
-                                    <div className={`downArrow2 ${question2 ? "active" : ""}`}>˅</div>
-                                    <hr />
-                                </div>
-                                <div className={`row question2 ${question2 ? "active" : ""}`}>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                    with the release of Letraset sheets containing Lorem Ipsum passages,
-                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </div>
+                            <div className={`row question1 ${question1 ? "active" : ""}`}>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                             </div>
-
-                            <div className="row wrapQuestions">
-                                <div className="row questionFAQ" onClick={clickQuestion3}>
-                                    Apakah layanan IT security kami dapat diintegrasikan dengan sistem yang sudah ada?
-                                    <div className={`downArrow3 ${question3 ? "active" : ""}`}>˅</div>
-                                    <hr />
-                                </div>
-                                <div className={`row question3 ${question3 ? "active" : ""}`}>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                    with the release of Letraset sheets containing Lorem Ipsum passages,
-                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </div>
-                            </div>
-
-                            <div className="row wrapQuestions">
-                                <div className="row questionFAQ" onClick={clickQuestion4}>
-                                    Berapa lama waktu yang dibutuhkan untuk implementasi layanan?
-                                    <div className={`downArrow4 ${question4 ? "active" : ""}`}>˅</div>
-                                    <hr />
-                                </div>
-                                <div className={`row question4 ${question4 ? "active" : ""}`}>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                    with the release of Letraset sheets containing Lorem Ipsum passages,
-                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </div>
-                            </div>
-
-                            <div className="row wrapQuestions">
-                                <div className="row questionFAQ" onClick={clickQuestion5}>
-                                    Bagaimana cara memulai dengan layanan kami?
-                                    <div className={`downArrow5 ${question5 ? "active" : ""}`}>˅</div>
-                                    <hr />
-                                </div>
-                                <div className={`row question5 ${question5 ? "active" : ""}`}>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                    with the release of Letraset sheets containing Lorem Ipsum passages,
-                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </div>
-                            </div>
-
                         </div>
+
+                        <div className="row wrapQuestions">
+                            <div className="row questionFAQ" onClick={clickQuestion2}>
+                                <div className="col d-flex justify-content-start align-items-center">
+                                    <div className="col">Bagaimana cara kami memastikan keamanan data pelanggan?</div>
+                                    <div className={`downArrow2 ${question2 ? "active" : ""}`}>˅</div>
+                                </div>
+                                <hr />
+                            </div>
+                            <div className={`row question2 ${question2 ? "active" : ""}`}>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                        </div>
+
+                        <div className="row wrapQuestions">
+                            <div className="row questionFAQ" onClick={clickQuestion3}>
+                                <div className="col d-flex justify-content-start align-items-center">
+                                    <div className="col">Apakah layanan IT security kami dapat diintegrasikan dengan sistem yang sudah ada?</div>
+                                    <div className={`downArrow3 ${question3 ? "active" : ""}`}>˅</div>
+                                </div>
+                                <hr />
+                            </div>
+                            <div className={`row question3 ${question3 ? "active" : ""}`}>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                        </div>
+
+                        <div className="row wrapQuestions">
+                            <div className="row questionFAQ" onClick={clickQuestion4}>
+                                <div className="col d-flex justify-content-start align-items-center">
+                                    <div className="col">Berapa lama waktu yang dibutuhkan untuk implementasi layanan?</div>
+                                    <div className={`downArrow4 ${question4 ? "active" : ""}`}>˅</div>
+                                </div>
+                                <hr />
+                            </div>
+                            <div className={`row question4 ${question4 ? "active" : ""}`}>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                        </div>
+
+                        <div className="row wrapQuestions">
+                            <div className="row questionFAQ" onClick={clickQuestion5}>
+                                <div className="col d-flex justify-content-start align-items-center">
+                                    <div className="col">Bagaimana cara memulai dengan layanan kami?</div>
+                                    <div className={`downArrow5 ${question5 ? "active" : ""}`}>˅</div>
+                                </div>
+                                <hr />
+                            </div>
+                            <div className={`row question5 ${question5 ? "active" : ""}`}>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+            </div>
 
-                <div className="col-6 d-flex justify-content-center align-items-center">
-                    <div className="col">
-                        <div className="col d-flex justify-content-center align-items-center anyFAQ">Any more questions?</div>
-                        <div className="col d-flex justify-content-center align-items-center"> if you still have questions, give us a shout!</div>
-                        <div className="col wrapButtonFAQRight d-flex justify-content-center align-items-center">
-                            <button className="contactUsFAQ">Contact Us</button>
-                            <button className="getStartedFAQ">Get Sarted</button>
-                        </div>
+            <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <div className="col">
+                    <div className="col d-flex justify-content-center align-items-center anyFAQ">Any more questions?</div>
+                    <div className="col d-flex justify-content-center align-items-center"> if you still have questions, give us a shout!</div>
+                    <div className="col wrapButtonFAQRight d-flex justify-content-center align-items-center">
+                        <button className="contactUsFAQ">Contact Us</button>
+                        <button className="getStartedFAQ">Get Sarted</button>
                     </div>
                 </div>
             </div>
