@@ -51,13 +51,10 @@ const FAQ = () => {
     return (
         <div className="row wrapRowFAQ">
             <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                <div className="col wrappperQuestions">
+                <div className="row wrappperQuestions d-flex justify-content-center align-items-center">
                     <div className="col">
-                        <div><h3>FREQUENT ASKED QUESTIONS</h3></div>
-                    </div>
-
-                    <div className="col">
-                        <div className="row wrapQuestions">
+                        <h3 className="text-center mb-3"> FREQUENT ASKED QUESTIONS</h3>
+                        <div className="wrapQuestions">
                             <div className="row questionFAQ" onClick={clickQuestion1}>
                                 <div className="col d-flex justify-content-start align-items-center">
                                     <div className="col">Apa saja layanan yang ditawarkan oleh perusahaan IT solution ini? </div>
@@ -74,7 +71,7 @@ const FAQ = () => {
                             </div>
                         </div>
 
-                        <div className="row wrapQuestions">
+                        <div className="wrapQuestions">
                             <div className="row questionFAQ" onClick={clickQuestion2}>
                                 <div className="col d-flex justify-content-start align-items-center">
                                     <div className="col">Bagaimana cara kami memastikan keamanan data pelanggan?</div>
@@ -91,7 +88,7 @@ const FAQ = () => {
                             </div>
                         </div>
 
-                        <div className="row wrapQuestions">
+                        <div className="wrapQuestions">
                             <div className="row questionFAQ" onClick={clickQuestion3}>
                                 <div className="col d-flex justify-content-start align-items-center">
                                     <div className="col">Apakah layanan IT security kami dapat diintegrasikan dengan sistem yang sudah ada?</div>
@@ -108,7 +105,7 @@ const FAQ = () => {
                             </div>
                         </div>
 
-                        <div className="row wrapQuestions">
+                        <div className="wrapQuestions">
                             <div className="row questionFAQ" onClick={clickQuestion4}>
                                 <div className="col d-flex justify-content-start align-items-center">
                                     <div className="col">Berapa lama waktu yang dibutuhkan untuk implementasi layanan?</div>
@@ -125,7 +122,7 @@ const FAQ = () => {
                             </div>
                         </div>
 
-                        <div className="row wrapQuestions">
+                        <div className="wrapQuestions">
                             <div className="row questionFAQ" onClick={clickQuestion5}>
                                 <div className="col d-flex justify-content-start align-items-center">
                                     <div className="col">Bagaimana cara memulai dengan layanan kami?</div>

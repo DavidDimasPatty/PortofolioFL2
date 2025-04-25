@@ -5,10 +5,8 @@ import logoPT from "../assets/image/logoPT.png"
 const HowThisWorks = () => {
 
     return (
-        <div className="col wrapperWorks">
-
-            <div className="row rowWrapperWorks d-flex">
-
+        <div className="row wrapperWorks d-flex justify-content-center align-items-center">
+            <div className="row WrapperWorks">
                 <div className="col-12 col-md-6 wrapperDiagram">
                     <div className="diagramContent">
                         <h2 className="mb-5">HOW THIS WORKS</h2>

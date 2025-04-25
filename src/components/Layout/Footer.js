@@ -19,7 +19,7 @@ const Footer = () => {
         setisHoverMission(true);
     }
 
-    
+
     const resetHover = () => {
         setIsHoverVision(false);
         setisHoverMission(false);
@@ -28,28 +28,25 @@ const Footer = () => {
 
     return (
         <div className="footer" id="footer">
-            <div className="row">
-                <div className="col-4 d-flex  pb-2">
-                    <div className="row">
+            <div className="row contentFooter">
+                <div className="col-12 col-md-4 d-flex  pb-2">
+                    <div className="row w-100">
                         <div className="row p-3 secureTittle">
                             <h3>WANT TO BE SECURE?</h3>
                             <hr />
                         </div>
-                        <div className="row">
-                            <div className="col d-flex justify-content-start buttonFooterBot">
-                                <button>Our Plan</button>
-                                <button>FAQ</button>
-                                <button>HOW</button>
-                            </div>
+                        <div className="col d-flex justify-content-start buttonFooterBot">
+                            <button>Our Plan</button>
+                            <button>FAQ</button>
+                            <button>HOW</button>
                         </div>
-
                         <div className="row wrapImgFooter">
                             <img src={logoPT} className="imgFooter"></img>
                         </div>
                     </div>
                 </div>
 
-                <div className="col-6 d-flex justify-content-center align-items-center wrapperVisionMission">
+                <div className="col-12 col-md-6 d-flex justify-content-center align-items-center wrapperVisionMission">
                     <div className={`row mb-4 ourVisionHidden ${isHoverVision ? `visible` : ''}`}>
                         <h6 className="titelOurVisionHidden">Our Vision</h6>
                         <div className="textVisionHidden">
@@ -77,7 +74,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="col-2 d-flex">
+                <div className="col-12 col-md-2 d-flex">
                     <div className="row aboutUsWrapFooter">
                         <div className="row mb-4">
                             <h6 className="aboutUsFooter">About Us</h6>

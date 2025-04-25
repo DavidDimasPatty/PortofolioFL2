@@ -1,14 +1,11 @@
 
-
-.wrapRowFAQ {
+.wrapRowFAQ{
+    width: 100%;
     margin-bottom: 100px;
 }
 
 .wrappperQuestions {
-    position: relative;
     width: 100%;
-    padding: 20px;
-    left: 100px;
 }
 
 .question1 {
@@ -42,6 +39,10 @@
 }
 
 .wrapQuestions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
 }
 

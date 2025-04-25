@@ -6,6 +6,10 @@
     border-radius: 50px 50px 0 0;
 }
 
+.contentFooter{
+    
+}
+
 .wrapImgFooter {
     width: 200px;
     margin-top: 90px;
@@ -30,6 +34,8 @@
     margin-left: 12px;
 }
 
+
+
 .buttonFooterBot button {
     border: none;
     background-color: rgb(21, 21, 221);
@@ -37,7 +43,6 @@
     width: 140px;
     color: white;
     margin-left: 10px;
-    height: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
