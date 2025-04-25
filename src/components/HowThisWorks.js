@@ -6,13 +6,13 @@ const HowThisWorks = () => {
 
     return (
         <div className="col wrapperWorks">
-            <div className="row rowWrapperWorks">
-                <div className="col-6">
-                    <div className="row">
-                        <div className="col d-flex justify-content-center align-items-center">
-                            <h2>HOW THIS WORKS</h2>
-                        </div>
-                        <div class="container m-5">
+
+            <div className="row rowWrapperWorks d-flex">
+
+                <div className="col-12 col-md-6 wrapperDiagram">
+                    <div className="diagramContent">
+                        <h2 className="mb-5">HOW THIS WORKS</h2>
+                        <div class="col">
                             <div class="row-container">
                                 <div class="step-container">
                                     <div class="step-number">1</div>
@@ -63,30 +63,35 @@ const HowThisWorks = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-6 wrapperBoxWorks">
-                    <div className="boxTopWorks">
 
-                    </div>
-                    <div className="plus-shape">
+                <div className="col-12 col-md-6 wrapperBoxWorks">
+                    <div className="col boxWorksContent">
+                        <div className="wrapContentComponent">
+                            <div className="boxTopWorks">
 
-                    </div>
-                    <div className="col boxWorks">
-                        <div className="imageWorks">
-                            <img src={logoPT} width={"100px"} className="imgWorksDeep" />
+                            </div>
+                            <div className="plus-shape">
+
+                            </div>
                         </div>
-                        <div className="textWorks p-3">
-                            Kami mendengarkan kebutuhan Anda,
-                            memahami tantangan bisnis, dan
-                            menganalisis infrastruktur yang ada
-                            untuk memberikan solusi terbaik
-                        </div>
-                        <div>
-                            <div className="col d-flex justify-content-between align-items-end px-3 textPathWorks">
-                                <div>
-                                    Step 1
-                                </div>
-                                <div>
-                                    Konsultasi dan Analisis
+                        <div className="boxWorks">
+                            <div className="imageWorks">
+                                <img src={logoPT} width={"100px"} className="imgWorksDeep" />
+                            </div>
+                            <div className="textWorks p-3">
+                                Kami mendengarkan kebutuhan Anda,
+                                memahami tantangan bisnis, dan
+                                menganalisis infrastruktur yang ada
+                                untuk memberikan solusi terbaik
+                            </div>
+                            <div>
+                                <div className="col d-flex justify-content-between align-items-end px-3 textPathWorks">
+                                    <div>
+                                        Step 1
+                                    </div>
+                                    <div>
+                                        Konsultasi dan Analisis
+                                    </div>
                                 </div>
                             </div>
                         </div>

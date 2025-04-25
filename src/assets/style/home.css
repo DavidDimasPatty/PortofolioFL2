@@ -704,7 +704,7 @@
 
 @media (max-width: 768px) {
     .wrapper-all.menuOpen::before {
-        content: '';
+        /* content: '';
         position: fixed;
         backdrop-filter: blur(10px);
         height: 100vh;
@@ -712,7 +712,7 @@
         top: 0;
         left: 0;
         background-color: rgba(0, 0, 0, 0.1);
-        z-index: 500;
+        z-index: 500; */
     }
 
     .frontWelcome{

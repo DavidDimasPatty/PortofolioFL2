@@ -89,7 +89,7 @@ const FAQ = () => {
                             </div>
 
                             <div className="row wrapQuestions">
-                                <div className="row questionFAQ"  onClick={clickQuestion3}>
+                                <div className="row questionFAQ" onClick={clickQuestion3}>
                                     Apakah layanan IT security kami dapat diintegrasikan dengan sistem yang sudah ada?
                                     <div className={`downArrow3 ${question3 ? "active" : ""}`}>˅</div>
                                     <hr />
