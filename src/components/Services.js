@@ -116,7 +116,26 @@ export default function Services() {
                         </span>
                     </div>
                     <div className="services-section-2-desc">
-                        Halo
+                        <div className="services-section-2-desc-line-text">
+                            <div className="services-section-2-desc-line"></div>
+                            <span className="services-section-2-desc-title">MENDEKATKAN</span>
+                            <div className="services-section-2-desc-line"></div>
+                        </div>
+
+                        <div className="services-section-2-desc-line-text">
+                            <div className="services-section-2-desc-line"></div>
+                            <span className="services-section-2-desc-outline fst-italic">Masa Depan</span>
+                        </div>
+
+                        <div className="services-section-2-desc-line-text">
+                            <span className="services-section-2-desc-text-normal">lewat</span>
+                            <div className="services-section-2-desc-line"></div>
+                        </div>
+
+                        <div class="services-section-2-desc-line-text">
+                            <span class="services-section-2-desc-outline fst-italic">Solusi Digital</span>
+                            <div class="services-section-2-desc-line"></div>
+                        </div>
                     </div>
                 </div>
             </div>
