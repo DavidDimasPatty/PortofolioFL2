@@ -8,7 +8,7 @@ const Top = () => {
         <div className="wrapperTop d-flex justify-content-center align-items-center">
             <div className="row wrapperRowTop">
                 <div className="col-12 col-md-7  titleName">
-                    IKODORA
+                    IKODOR<div className="lastLetterTop">A</div>
                 </div>
                 <div className="topRight col-12 col-md-5">
                     <div className="buttonTopContentTitle">

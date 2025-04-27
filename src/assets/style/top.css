@@ -31,9 +31,10 @@
     font-family: depot;
     font-size: 50px;
     letter-spacing: 30px;
-    display: grid;
-    place-items: center;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .titleName h1{
@@ -51,4 +52,16 @@
     background-color: rgb(21, 21, 221);
     color: white;
     width: 150px;
+}
+
+.lastLetterTop{
+    letter-spacing: 0;
+    font-size: 50px;
+}
+
+@media (max-width: 768px) {
+    .buttonTopContentTitle {
+        width: 100%;
+        text-align: center;
+    }
 }
