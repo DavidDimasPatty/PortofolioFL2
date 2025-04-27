@@ -24,40 +24,94 @@
 }
 
 .slogan-small {
+    /* font-size: 100px; */
     font-size: 70px;
+    /* font-size: clamp(70px, 10vw, 100px); */
 }
 
 .slogan-large {
+    /* font-size: 250px; */
     font-size: 176px;
+    /* font-size: clamp(176px, 10vw, 250px); */
 }
 
-.slogan-we-are{
+.slogan-we-are {
     align-self: center;
     display: flex;
     flex-direction: column;
 }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .slogan-small {
+        font-size: 28px;
+    }
 
+    .slogan-large {
+        font-size: 58px;
+    }
+
+    .slogan-section {
+        padding: 30px 15px;
+        letter-spacing: 5px;
+    }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .slogan-small {
+        font-size: 32px;
+    }
 
+    .slogan-large {
+        font-size: 62px;
+    }
+
+    .slogan-section {
+        padding: 30px 15px;
+        letter-spacing: 5px;
+    }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .slogan-small {
+        font-size: 38px;
+    }
 
+    .slogan-large {
+        font-size: 95px;
+    }
+
+    .slogan-section {
+        padding: 30px 15px;
+        letter-spacing: 5px;
+    }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .slogan-small {
+        font-size: 50px;
+    }
 
+    .slogan-large {
+        font-size: 125px;
+    }
+
+    .slogan-section {
+        padding: 30px 15px;
+        letter-spacing: 5px;
+    }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) and (max-width: 1530px) {
+    .slogan-small {
+        font-size: 50px;
+    }
 
+    .slogan-large {
+        font-size: 126px;
+    }
+
+    .slogan-section {
+        padding: 50px 25px;
+        letter-spacing: 15px;
+    }
 }
