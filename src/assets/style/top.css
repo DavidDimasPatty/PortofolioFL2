@@ -64,4 +64,11 @@
         width: 100%;
         text-align: center;
     }
+    .lastLetterTop{
+        font-size: 50px;
+    }
+    .titleName {
+        font-size: 50px;
+        letter-spacing: 10px;
+    }
 }
