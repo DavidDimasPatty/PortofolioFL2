@@ -4,6 +4,15 @@
     background-color: black;
 }
 
+.topRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
 .wrapperRowTop {
     width: 100%;
     border-radius: 0 0 100px 100px;
@@ -12,14 +21,23 @@
 }
 
 .buttonTopContentTitle {
-    width: 120px;
+    width: 150px;
     margin-bottom: 50px;
 }
 
-.titleName h1 {
+
+.titleName {
+    text-align: center;
     font-family: depot;
     font-size: 50px;
     letter-spacing: 30px;
+    display: grid;
+    place-items: center;
+    flex-wrap: wrap;
+}
+
+.titleName h1{
+    text-align: center;
 }
 
 .buttonTopContentTitle h2 {

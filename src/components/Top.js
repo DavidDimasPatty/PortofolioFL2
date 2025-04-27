@@ -5,22 +5,20 @@ const Top = () => {
 
 
     return (
-        <div className="col wrapperTop d-flex justify-content-center align-items-center">
+        <div className="wrapperTop d-flex justify-content-center align-items-center">
             <div className="row wrapperRowTop">
-                <div className="col-7 wrapperTopLeft d-flex justify-content-center align-items-center titleName">
-                    <h1>IKODORA</h1>
+                <div className="col-12 col-md-7  titleName">
+                    IKODORA
                 </div>
-                <div className="col-5 d-flex justify-content-center align-items-center">
-                    <div className="col">
-                        <div className="row buttonTopContentTitle">
-                            <h2>HOW CAN WE HELP?</h2>
-                        </div>
-                        <div className="row mb-3 buttonTopContent  d-flex justify-content-start align-items-center">
-                            <button> OUR PLAN </button>
-                        </div>
-                        <div className="row buttonTopContent  d-flex justify-content-start align-items-center">
-                            <button>  CONTACT US </button>
-                        </div>
+                <div className="topRight col-12 col-md-5">
+                    <div className="buttonTopContentTitle">
+                        <h2>HOW CAN WE HELP?</h2>
+                    </div>
+                    <div className="mb-3 buttonTopContent  d-flex justify-content-start align-items-center">
+                        <button> OUR PLAN </button>
+                    </div>
+                    <div className="buttonTopContent  d-flex justify-content-start align-items-center">
+                        <button>  CONTACT US </button>
                     </div>
                 </div>
             </div>
