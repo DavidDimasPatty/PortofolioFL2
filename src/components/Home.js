@@ -6,6 +6,7 @@ import Top from "./Top";
 import Slogan from "./Slogan";
 import HowThisWorks from "./HowThisWorks";
 import FAQ from "./FAQ";
+import Services from "./Services";
 
 
 const Home = () => {
@@ -27,7 +28,8 @@ const Home = () => {
                 onMenuOpen={toggleMenu}
                 isMenuOpen={isMenuOpen} />
             <Top />
-            <Slogan />
+            {/* <Slogan /> */}
+            <Services />
             <HowThisWorks />
             <FAQ/>
             <Footer />

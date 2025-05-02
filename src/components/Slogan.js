@@ -5,8 +5,8 @@ export default function Slogan() {
         <div className="slogan-section">
             <div className="slogan-line">
                 <span className="slogan-we-are">
-                    <span className="slogan-small">WE</span>
-                    <span className="slogan-small">ARE</span>
+                    <span>WE</span>
+                    <span>ARE</span>
                 </span>
                 <span className="slogan-large">STRONG</span>
                 <span className="slogan-small">BY CHOICE,</span>

@@ -1,14 +1,33 @@
+@font-face {
+    font-family: 'Humnst777black';
+    src: url('../../assets/font/TT0861M_.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Asap SemiCondensed';
+    src: url('../../assets/font/TT0861M_.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sloganAndService {
+    background-image: url('../../assets/image/bg-services.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .services-section {
-    background-color: darkgray;
     color: white;
-    font-family: sans-serif;
 }
 
 .services-section-1 {
-    padding: 50px 200px;
+    padding: 150px 200px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
     justify-content: center;
 }
 
@@ -16,8 +35,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10rem;
-    letter-spacing: 1px;
+    letter-spacing: 2pt;
+
+    border: 1px solid white;
+    border-radius: 9999px;
+
+    padding: 50px 0;
 }
 
 .services-section-1-box-img {
@@ -26,12 +49,12 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 15%;
-    text-align: center;
+    width: 20%;
 }
 
 .services-section-1-box-img img {
     object-fit: contain;
+    height: 150px;
 }
 
 .services-section-1-box-desc {
@@ -39,33 +62,33 @@
     flex-direction: column;
     flex: 1;
     justify-content: center;
-    border: 1px solid white;
-    border-radius: 100px;
-    padding: 40px;
+    padding-right: 50px;
     text-align: justify;
+}
+
+.services-section-1-box-desc h6 {
+    font-size: 19pt;
+    font-family: 'Humnst777black', sans-serif;
+    margin-bottom: 30px;
 }
 
 .services-section-1-box-desc p {
     padding: 0;
     margin: 0;
-    font-weight: normal !important;
+    font-size: 23pt;
+    font-family: 'Asap SemiCondensed', sans-serif;
 }
 
-.services-section-1-box-img h6,
-.services-section-1-box-desc h6,
-.services-section-1-box-desc p {
-    font-size: 20px;
-    font-weight: bold;
-}
+
+
 
 
 
 .services-section-2 {
-    padding: 50px 100px;
+    padding: 50px 100px 200px 100px;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    gap: 6rem;
 }
 
 .services-section-2-card {
@@ -73,8 +96,8 @@
     border: 0.1px solid white;
     border-radius: 70px;
     padding: 30px 30px 100px 30px;
-    background: transparent;
-    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.5);
+    /* backdrop-filter: blur(4px); */
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     letter-spacing: 1px;
@@ -88,15 +111,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
 
     text-align: center;
-    font-size: 26px;
+    font-size: 30pt;
+    font-family: 'Asap SemiCondensed', sans-serif;
     line-height: 2;
 }
 
+.services-section-2-card-icon img {
+    width: 80px;
+}
+
 .services-section-2-card-text-largeText {
-    font-size: 46px;
+    font-size: 48pt;
+    font-family: 'Asap SemiCondensed', sans-serif;
     line-height: 1;
     font-weight: bold;
 }
@@ -108,57 +137,116 @@
     align-items: center;
     flex-direction: column;
     letter-spacing: 2px;
-    /* text-transform: uppercase; */
     line-height: 1;
 }
 
-.services-section-2-desc-title {
-    font-size: clamp(24px, 6vw, 80px);
-    font-weight: bold;
-    margin: 0;
+.services-section-2-desc img{
+    object-fit: contain;
+    width: 85%;
 }
 
-.services-section-2-desc-line-text {
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    flex-wrap: nowrap;
-    width: 100%;
+
+
+@media only screen and (max-width: 992px) {
+    /* .services-section-1 {
+        padding: 30px 20px;
+    }
+
+    .services-section-1-box {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .services-section-1-box-img {
+        width: 100%;
+    }
+
+    .services-section-1-box-img h6,
+    .services-section-1-box-desc h6,
+    .services-section-1-box-desc p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+    .services-section-2 {
+        padding: 20px 20px;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 2.8rem;
+    }
+
+    .services-section-2-card {
+        width: 100%;
+        border-radius: 50px;
+        font-size: 20px;
+    }
+
+    .services-section-2-card-text-largeText {
+        font-size: 35px;
+    }
+
+    .services-section-2-desc {
+        width: 80%;
+        padding: 100px 0;
+    }
+
+    .services-section-2-desc-title {
+        font-size: 56px;
+    }
+
+    .services-section-2-desc-outline {
+        font-size: 56px;
+    }
+
+    .services-section-2-desc-text-normal {
+        font-size: 56px;
+    }
+
+    .services-section-2-desc-line {
+        top: -8px;
+    } */
 }
 
-.services-section-2-desc-outline {
-    font-size: clamp(24px, 6vw, 80px);
-    color: transparent;
-    -webkit-text-stroke: 1px white;
-    font-weight: bold;
-    white-space: nowrap;
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    /* .services-section-1 {
+        padding: 30px 20px;
+    }
+
+    .services-section-1-box {
+        gap: 1rem;
+    }
+
+    .services-section-1-box-img {
+        width: 20%;
+    }
+
+    .services-section-1-box-img h6,
+    .services-section-1-box-desc h6,
+    .services-section-1-box-desc p {
+        font-size: 18px;
+        font-weight: bold;
+    } */
 }
 
-.services-section-2-desc-text-normal {
-    font-size: clamp(24px, 6vw, 80px);
-    color: white;
+@media only screen and (min-width: 1200px) and (max-width: 1530px) {
+    /* .services-section-1 {
+        padding: 50px 50px;
+    }
+
+    .services-section-1-box {
+        gap: 1.5rem;
+    }
+
+    .services-section-1-box-img {
+        width: 20%;
+    }
+
+    .services-section-1-box-img h6,
+    .services-section-1-box-desc h6,
+    .services-section-1-box-desc p {
+        font-size: 18px;
+        font-weight: bold;
+    } */
 }
-
-.services-section-2-desc-line {
-    flex-grow: 1;
-    height: 5px;
-    background: white;
-    position: relative;
-    top: -13px;
-    flex-wrap: nowrap;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
