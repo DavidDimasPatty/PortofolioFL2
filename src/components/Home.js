@@ -3,11 +3,10 @@ import "../assets/style/home.css"
 import Header from "./Layout/Header";
 import Footer from "./Layout/Footer";
 import Top from "./Top";
-import Slogan from "./Slogan";
 import HowThisWorks from "./HowThisWorks";
 import FAQ from "./FAQ";
 import Services from "./Services";
-
+import Slogan from "./Slogan";
 
 const Home = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,8 +27,7 @@ const Home = () => {
                 onMenuOpen={toggleMenu}
                 isMenuOpen={isMenuOpen} />
             <Top />
-            <Slogan />
-            <Services/>
+            <Services />
             <HowThisWorks />
             <FAQ/>
             <Footer />
