@@ -2,6 +2,7 @@
     width: 100% !important;
     height: 50%;
     background-color: black;
+    min-height: 300px;
 }
 
 .topRight {
@@ -70,5 +71,8 @@
     .titleName {
         font-size: 50px;
         letter-spacing: 10px;
+    }
+    .wrapperTop{
+        min-height: 300px;
     }
 }

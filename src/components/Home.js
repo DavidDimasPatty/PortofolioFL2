@@ -6,6 +6,7 @@ import Top from "./Top";
 import Slogan from "./Slogan";
 import HowThisWorks from "./HowThisWorks";
 import FAQ from "./FAQ";
+import Services from "./Services";
 
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
                 isMenuOpen={isMenuOpen} />
             <Top />
             <Slogan />
+            <Services/>
             <HowThisWorks />
             <FAQ/>
             <Footer />
