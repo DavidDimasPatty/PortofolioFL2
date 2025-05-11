@@ -35,7 +35,7 @@ const Footer = () => {
                             <h3>WANT TO BE SECURE?</h3>
                             <hr />
                         </div>
-                        <div className="col d-flex justify-content-start buttonFooterBot">
+                        <div className="col-12 d-flex justify-content-start buttonFooterBot">
                             <button>Our Plan</button>
                             <button>FAQ</button>
                             <button>HOW</button>

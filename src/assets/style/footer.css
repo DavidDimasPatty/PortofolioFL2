@@ -48,7 +48,12 @@
 }
 
 .aboutUsFooter {
+    position: relative;
     color: rgb(21, 21, 221);
+}
+
+.aboutUsWrapFooter h6{
+    z-index: 10;
 }
 
 .contactUsFooter {
@@ -88,7 +93,6 @@
 
 .wrapperVisionMission {
     position: relative;
-
 }
 
 .ourVisionHidden {
@@ -381,4 +385,48 @@
     .imgFooterWrapper {
         justify-content: center;
     }
+
+}
+
+@media (max-width:820px){
+    .ourVisionHidden {
+        position: absolute;
+        padding: 20px;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        left: 50%;
+        height: 500px;
+    }
+
+    .ourMissionHidden {
+        position: absolute;
+        padding: 20px;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        left: 50%;
+        height: 500px;
+    }
+    
+    
+    .textVisionHidden{
+        font-size: 1.5vh;
+    }
+
+    .textMissionHidden{
+        font-size: 1.5vh;
+    }
+
+    .wrapperVisionMission {
+        position: relative;
+        width: 600px;
+    }
+
+    .contactUsWrapFooter {
+        color: white;
+        width: 200px;
+    }
+
+
 }

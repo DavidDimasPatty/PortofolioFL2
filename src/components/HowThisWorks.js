@@ -96,7 +96,10 @@ const HowThisWorks = () => {
                     </div>
                 </div>
             </div>
-            <div className="row projectsMore d-flex justify-content-center align-items-center">
+
+
+
+            <div className="projectsMore d-flex justify-content-center align-items-center">
                 <div className="row projectsMoreCol">
                     <div className="col">
                         <div className="moreProjects d-flex justify-content-center align-items-center">
@@ -105,9 +108,16 @@ const HowThisWorks = () => {
                         <div className="moreProjectsButtonWrapper d-flex justify-content-center align-items-center">
                             <button className="moreProjectsButton">GET FREE CONSULTATION</button>
                         </div>
+                        <div className="orbit">
+                            <div class="orbit1"></div>
+                            <div class="orbit2"></div>
+                            <div class="orbit3"></div>
+                            <div class="rocket"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
