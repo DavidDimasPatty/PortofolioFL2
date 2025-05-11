@@ -211,7 +211,9 @@
 }
 
 .moreProjectsButtonWrapper {
+  position: relative;
   margin-top: 50px;
+  z-index: 40;
 }
 
 .moreProjectsButton {
@@ -236,12 +238,16 @@
   overflow: hidden;
 }
 
-.orbit1, .orbit2, .orbit3 {
+.orbit1,
+.orbit2,
+.orbit3 {
   position: absolute;
   width: 20vw;
   height: 20vw;
   max-width: 300px;
+  min-width: 200px;
   max-height: 300px;
+  min-height: 200px;
   border: 1px solid black;
   border-radius: 50%;
   top: 50%;
@@ -264,38 +270,56 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 24px;
-  height: 24px;
+  width: 100px;
+  height: 100px;
   background: url('/src/assets/image/roket.png') no-repeat center/contain;
   border-radius: 50%;
   transform-origin: -150px 0;
-  animation: moveRocket 26s linear infinite;
+   animation: moveRocket 10s linear infinite; 
+  transform: rotate(180deg);
 }
 
 @keyframes moveRocket {
 
-  /* Keliling orbit1 */
   0% {
-    transform: rotate(0deg) translateX(150px);
+    transform: rotate(360deg) translateX(0);
   }
 
-  16.66% {
+  10% {
+    transform: rotate(450deg) translateX(-80px);
+  }
+
+  25% {
+    transform: rotate(720deg) translateX(-100px);
+  }
+
+  50% {
+    transform: rotate(1080deg) translateX(100px);
+  }
+
+  75% {
+    transform: rotate(1440deg) translateX(300px);
+  }
+
+  100% {
+    transform: rotate(1800deg) translateX(0);
+  }
+
+  /* 16.66% {
     transform: rotate(360deg) translateX(150px);
   }
+  
 
-  /* Pindah ke orbit2 */
-  16.67% {
-    transform-origin: 30px 0;
+   16.67% {
     transform: rotate(0deg) translateX(-150px);
   }
 
+   
   33.33% {
     transform: rotate(360deg) translateX(-150px);
-  }
-
-  /* Pindah ke orbit3 */
+  } 
+ /*
   33.34% {
-    transform-origin: 210px 0;
     transform: rotate(0deg) translateX(150px);
   }
 
@@ -303,9 +327,7 @@
     transform: rotate(360deg) translateX(150px);
   }
 
-  /* Ulangi orbit1 */
   50.01% {
-    transform-origin: -150px 0;
     transform: rotate(0deg) translateX(150px);
   }
 
@@ -314,7 +336,6 @@
   }
 
   66.67% {
-    transform-origin: 30px 0;
     transform: rotate(0deg) translateX(-150px);
   }
 
@@ -323,11 +344,33 @@
   }
 
   83.34% {
-    transform-origin: 210px 0;
     transform: rotate(0deg) translateX(150px);
+  } */
+
+  /* 100% {
+    transform: rotate(360deg) translateX(150px);
+  }  */
+}
+
+
+@media (max-width:928px) {
+  .orbit1 {
+    left: 10%;
   }
 
-  100% {
-    transform: rotate(360deg) translateX(150px);
+  .orbit2 {
+    left: 35%;
   }
+
+  .orbit3 {
+    left: 60%;
+  }
+
+  .orbit1,
+  .orbit2,
+  .orbit3 {
+    width: 10vw;
+    height: 10vw;
+  }
+
 }
