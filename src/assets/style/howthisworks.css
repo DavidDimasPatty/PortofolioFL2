@@ -493,11 +493,10 @@
 .workstep1 {
   /* filter: invert(1) brightness(2); */
   position: absolute;
-  right: 20px;
+  right: 10px;
   width: 110px;
-  top: 2px;
-  opacity: 0;
-  animation: fadeInMove 1s forwards;
+  top: 12px;
+  animation: fadeInScale 1s forwards;
 }
 
 .step2 {
@@ -535,7 +534,7 @@
 
 .workstep2a.active,
 .workstep2b.active,
-.workstep2c.active  {
+.workstep2c.active {
   opacity: 1;
   transform: translateX(10px) translateY(10px);
 }
@@ -665,12 +664,21 @@
 
 @keyframes fadeInMove {
   0% {
-    opacity: 0;
+
     transform: translateX(0px);
   }
 
   100% {
-    opacity: 1;
     transform: translateX(10px) translateY(10px);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
