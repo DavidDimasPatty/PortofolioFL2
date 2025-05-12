@@ -150,11 +150,11 @@
 
 .boxTopWorks {
   position: absolute;
-  height: 130px;
-  width: 130px;
+  height: 160px;
+  width: 160px;
   background-color: blue;
   border-radius: 10px;
-  left: 260px;
+  left: 180px;
   top: -30px;
 }
 
@@ -482,5 +482,195 @@
 
   100% {
     height: 50px;
+  }
+}
+
+
+.step1 {
+  position: relative;
+}
+
+.workstep1 {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 20px;
+  width: 110px;
+  top: 2px;
+  opacity: 0;
+  animation: fadeInMove 1s forwards;
+}
+
+.step2 {
+  position: relative;
+}
+
+.workstep2a,
+.workstep2b,
+.workstep2c {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transform: translateX(0px);
+  transition: all 0.5s ease;
+}
+
+
+.workstep2a {
+  right: 20px;
+  width: 110px;
+  top: 2px;
+}
+
+.workstep2b {
+  right: 30px;
+  width: 90px;
+  top: 10px;
+}
+
+.workstep2c {
+  right: 46px;
+  width: 60px;
+  top: 26px;
+}
+
+.workstep2a.active,
+.workstep2b.active,
+.workstep2c.active  {
+  opacity: 1;
+  transform: translateX(10px) translateY(10px);
+}
+
+.step3 {
+  position: relative;
+}
+
+.workstep3a {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 20px;
+  width: 110px;
+  top: 2px;
+  animation: fadeInMove 1s forwards;
+}
+
+.workstep3b {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 46px;
+  width: 60px;
+  top: 26px;
+  animation: fadeInMove 1s forwards;
+}
+
+.workstep3c {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 37px;
+  width: 80px;
+  top: 17px;
+  animation: fadeInMove 1s forwards;
+}
+
+.step4 {
+  position: relative;
+}
+
+.workstep4a {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 20px;
+  width: 120px;
+  top: 0px;
+  animation: fadeInMove 1s forwards;
+}
+
+.workstep4b {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 50px;
+  width: 60px;
+  top: 30px;
+  animation: fadeInMove 1s forwards;
+}
+
+.workstep4c {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 70px;
+  width: 20px;
+  top: 50px;
+  animation: fadeInMove 1s forwards;
+}
+
+.step5 {
+  position: relative;
+}
+
+.workstep5a,
+.workstep5b {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transform: translateX(0px);
+  transition: all 0.5s ease;
+}
+
+.workstep5a {
+  right: 30px;
+  width: 100px;
+}
+
+.workstep5b {
+  right: 20px;
+  width: 20px;
+}
+
+.workstep5a.active,
+.workstep5b.active {
+  opacity: 1;
+  transform: translateX(10px) translateY(10px);
+}
+
+
+.step6 {
+  position: relative;
+}
+
+.workstep6a {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 15px;
+  width: 120px;
+  top: 0px;
+  animation: fadeInMove 1s forwards;
+}
+
+.workstep6b {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 35px;
+  width: 80px;
+  top: 20px;
+  animation: fadeInMove 1s forwards;
+}
+
+.workstep6c {
+  /* filter: invert(1) brightness(2); */
+  position: absolute;
+  right: 67px;
+  width: 18px;
+  top: 55px;
+  animation: fadeInMove 1s forwards;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(10px) translateY(10px);
   }
 }
