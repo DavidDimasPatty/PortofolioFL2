@@ -294,6 +294,9 @@
     color: black;
 }
 
+.logoPrimary{
+    filter: invert(1) brightness(2);
+}
 @keyframes glowing-button-85 {
     0% {
         background-position: 0 0;

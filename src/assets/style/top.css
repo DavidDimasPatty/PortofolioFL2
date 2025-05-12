@@ -1,14 +1,13 @@
 .wrapperTop {
     width: 100% !important;
-    height: 50%;
+    height: 70%;
     background-color: black;
-    min-height: 300px;
 }
 
 .topRight {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 20px;
@@ -28,7 +27,7 @@
 
 
 .titleName {
-    text-align: center;
+    text-align: start;
     font-family: depot;
     font-size: 50px;
     letter-spacing: 30px;
@@ -38,7 +37,7 @@
     align-items: center;
 }
 
-.titleName h1{
+.titleName h1 {
     text-align: center;
 }
 
@@ -55,9 +54,13 @@
     width: 150px;
 }
 
-.lastLetterTop{
+.lastLetterTop {
     letter-spacing: 0;
     font-size: 50px;
+}
+
+.imgTopLogo {
+    width: 60%;
 }
 
 @media (max-width: 768px) {
@@ -65,14 +68,20 @@
         width: 100%;
         text-align: center;
     }
-    .lastLetterTop{
+
+    .lastLetterTop {
         font-size: 50px;
     }
+
     .titleName {
         font-size: 50px;
         letter-spacing: 10px;
     }
-    .wrapperTop{
-        min-height: 300px;
+
+    .wrapperTop {}
+
+    .imgTopLogo {
+        width: 60%;
+        min-width: 400px
     }
 }

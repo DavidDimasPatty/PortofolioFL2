@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import "../../assets/style/header.css"
-import logoPT from "../../assets/image/logoPT.png"
+import logoPT from "../../assets/image/primaryLogo.png"
 
 const Header = ({ onCheckboxChange, onMenuOpen, isMenuOpen }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +35,7 @@ const Header = ({ onCheckboxChange, onMenuOpen, isMenuOpen }) => {
     return (
         <header className={`header ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'open' : ''}`}>
             <div className={`logo${isScrolled ? '-scrolled' : ' '} d-flex justify-content-center align-items-center`} id="logo">
-                <img src={logoPT} width={"60px"} />
+                <img src={logoPT} width={"30px"} className="logoPrimary" />
             </div>
             <button className={`burger-btn ${isScrolled ? `scrolled` : ''} ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 ☰
