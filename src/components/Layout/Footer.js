@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import "../../assets/style/footer.css";
-import logoPT from "../../assets/image/logoPT.png"
+import logoPT from "../../assets/image/footerLogo.png"
 import Marquee from "react-fast-marquee";
 import waLogo from "../../assets/image/whatsapp.png"
 import fbLogo from "../../assets/image/facebook.png"
