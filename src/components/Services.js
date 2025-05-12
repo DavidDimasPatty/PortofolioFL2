@@ -6,9 +6,9 @@ import img2 from "../assets/image/services-ikon-2.png"
 import img3 from "../assets/image/services-ikon-3.png"
 import img4 from "../assets/image/services-ikon-4.png"
 
-import icon1 from "../assets/image/logoPT.png"
-import icon2 from "../assets/image/logoPT.png"
-import icon3 from "../assets/image/logoPT.png"
+import icon1 from "../assets/image/service-solution-1.png"
+import icon2 from "../assets/image/service-solution-2.png"
+import icon3 from "../assets/image/service-solution-3.png"
 
 import img from "../assets/image/services-sol.png"
 

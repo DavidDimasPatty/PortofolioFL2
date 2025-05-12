@@ -8,7 +8,7 @@
 .slogan-section {
     color: white;
     font-family: 'Depot', sans-serif;
-    letter-spacing: 10pt;
+    letter-spacing: 5pt;
     padding: 50px 50px;
 
     display: flex;
@@ -23,94 +23,164 @@
 }
 
 .slogan-small {
-    font-size: 104pt;
+    font-size: 60pt;
 }
 
 .slogan-large {
-    font-size: 208pt;
-    padding-right: 50px;
+    font-size: 125pt;
+    padding-right: 10px;
 }
 
 .slogan-we-are {
     align-self: center;
     display: flex;
     flex-direction: column;
-    font-size: 91pt;
-    line-height: 79pt;
-    padding-right: 20px;
+    font-size: 50pt;
+    line-height: 50pt;
+    padding-right: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    /* .slogan-small {
-        font-size: 28px;
+@media (max-width: 360px) {
+    .slogan-small {
+        font-size: 26pt;
     }
 
     .slogan-large {
-        font-size: 58px;
+        font-size: 26pt;
+    }
+
+    .slogan-section {
+        padding: 30px 10px;
+        letter-spacing: 1pt;
+    }
+
+    .slogan-we-are {
+        flex-direction: row;
+        font-size: 26pt;
+        line-height: 1;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+    .slogan-small {
+        font-size: 26pt;
+    }
+
+    .slogan-large {
+        font-size: 26pt;
+    }
+
+    .slogan-section {
+        padding: 30px 10px;
+        letter-spacing: 1pt;
+    }
+
+    .slogan-we-are {
+        flex-direction: row;
+        font-size: 26pt;
+        line-height: 1;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+    .slogan-small {
+        font-size: 18pt;
+    }
+
+    .slogan-large {
+        font-size: 44pt;
     }
 
     .slogan-section {
         padding: 30px 15px;
-        letter-spacing: 5px;
-    } */
+        letter-spacing: 1pt;
+    }
+
+    .slogan-we-are {
+        flex-direction: column;
+        font-size: 20pt;
+        line-height: 15pt;
+    }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-    /* .slogan-small {
-        font-size: 32px;
+@media (min-width: 600px) and (max-width: 767px) {
+    .slogan-small {
+        font-size: 26pt;
     }
 
     .slogan-large {
-        font-size: 62px;
+        font-size: 55pt;
     }
 
     .slogan-section {
         padding: 30px 15px;
-        letter-spacing: 5px;
-    } */
+        letter-spacing: 1pt;
+    }
+
+    .slogan-we-are {
+        font-size: 23pt;
+        line-height: 20pt;
+    }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-    /* .slogan-small {
-        font-size: 38px;
+@media (min-width: 767px) and (max-width: 991px) {
+    .slogan-small {
+        font-size: 35pt;
     }
 
     .slogan-large {
-        font-size: 95px;
+        font-size: 71pt;
     }
 
     .slogan-section {
         padding: 30px 15px;
-        letter-spacing: 5px;
-    } */
+        letter-spacing: 1pt;
+    }
+
+    .slogan-we-are {
+        font-size: 31pt;
+        line-height: 27pt;
+    }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    /* .slogan-small {
-        font-size: 50px;
+@media (min-width: 991px) and (max-width: 1199px) {
+    .slogan-small {
+        font-size: 42pt;
     }
 
     .slogan-large {
-        font-size: 125px;
+        font-size: 95pt;
     }
 
     .slogan-section {
-        padding: 30px 15px;
-        letter-spacing: 5px;
-    } */
+        padding: 50px 30px;
+        letter-spacing: 1pt;
+    }
+
+    .slogan-we-are {
+        font-size: 40pt;
+        line-height: 34pt;
+    }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1530px) {
-    /* .slogan-small {
-        font-size: 50px;
+@media (min-width: 1199px) and (max-width: 1440px) {
+    .slogan-small {
+        font-size: 52pt;
     }
 
     .slogan-large {
-        font-size: 126px;
+        font-size: 118pt;
     }
 
     .slogan-section {
-        padding: 50px 25px;
-        letter-spacing: 15px;
-    } */
+        padding: 50px 30px;
+        letter-spacing: 1pt;
+    }
+
+    .slogan-we-are {
+        font-size: 46pt;
+        line-height: 46pt;
+    }
 }
