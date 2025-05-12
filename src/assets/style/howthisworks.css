@@ -13,15 +13,18 @@
 
 .step {
   position: relative;
-  border: 1px solid #000;
+  border:  1px solid rgba(0, 0, 0, 0.7);
   border-radius: 30px;
   padding: 10px 20px;
-  display: inline-block;
-  text-align: center;
   font-weight: bold;
   font-size: 0.9rem;
   background-color: white;
   bottom: 10px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .step-number {
@@ -278,7 +281,7 @@
   background: url('/src/assets/image/roket.png') no-repeat center/contain;
   border-radius: 50%;
   transform-origin: -150px 0;
-   animation: moveRocket 10s linear infinite; 
+  animation: moveRocket 10s linear infinite;
   transform: rotate(180deg);
 }
 

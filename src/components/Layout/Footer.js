@@ -29,7 +29,7 @@ const Footer = () => {
     return (
         <div className="footer" id="footer">
             <div className="row contentFooter">
-                <div className="col-12 col-md-4 d-flex  pb-2">
+                <div className="col-12 col-md-3 d-flex  pb-2">
                     <div className="row w-100">
                         <div className="row p-3 secureTittle">
                             <h3>WANT TO BE SECURE?</h3>
@@ -46,7 +46,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="col-12 col-md-6 d-flex justify-content-center align-items-center wrapperVisionMission">
+                <div className="col-12 col-md-7 d-flex justify-content-center align-items-center wrapperVisionMission">
                     <div className={`row mb-4 ourVisionHidden ${isHoverVision ? `visible` : ''}`}>
                         <h6 className="titelOurVisionHidden">Our Vision</h6>
                         <div className="textVisionHidden">

@@ -17,17 +17,17 @@ const HowThisWorks = () => {
                                     <div className="lineVertical"></div>
                                     <div class="step">KONSULTASI & ANALISIS</div>
                                 </div>
-                                <div class="line-container">
+                                {/* <div class="line-container">
                                     <div class="line"></div>
-                                </div>
+                                </div> */}
                                 <div class="step-container">
                                     <div class="step-number">2</div>
                                     <div className="lineVertical"></div>
                                     <div class="step">PERENCANAAN & STRATEGI</div>
                                 </div>
-                                <div class="line-container">
+                                {/* <div class="line-container">
                                     <div class="line"></div>
-                                </div>
+                                </div> */}
                                 <div class="step-container">
                                     <div class="step-number">3</div>
                                     <div className="lineVertical"></div>
@@ -41,17 +41,17 @@ const HowThisWorks = () => {
                                     <div className="lineVertical"></div>
                                     <div class="step">PENGUJIAN & OPTIMALISASI</div>
                                 </div>
-                                <div class="line-container">
+                                {/* <div class="line-container">
                                     <div class="line"></div>
-                                </div>
+                                </div> */}
                                 <div class="step-container">
                                     <div class="step-number">5</div>
                                     <div className="lineVertical"></div>
                                     <div class="step">DEPLOYMENT & TRAINING</div>
                                 </div>
-                                <div class="line-container">
+                                {/* <div class="line-container">
                                     <div class="line"></div>
-                                </div>
+                                </div> */}
                                 <div class="step-container">
                                     <div class="step-number">6</div>
                                     <div className="lineVertical"></div>
