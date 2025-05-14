@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import "../assets/style/services.css";
 import img1 from "../assets/image/services-ikon-1.png"
@@ -13,28 +13,102 @@ import icon3 from "../assets/image/service-solution-3.png"
 import img from "../assets/image/services-sol.png"
 
 import Slogan from "./Slogan";
+import PricingModal from "./Pricing";
 
 export default function Services() {
     const servicesData = [
         {
             title: "SOFTWARE DEVELOPMENT",
             desc: "Aplikasi web dan mobile yang inovatif, aman, skalabel, responsif, user-friendly, dan efisien.",
-            img: img1
+            img: img1,
+            details: [
+                {
+                    cardTitle: "MOBILE APPS",
+                    pointsTitle: ["Akses fitur dasar", "Support Email", "Diskon 5%"],
+                    price: "Rp 100.000"
+                },
+                {
+                    cardTitle: "WEBSITE",
+                    pointsTitle: ["Akses fitur dasar", "Support Email", "Diskon 5%"],
+                    price: "Rp 100.000"
+                },
+                {
+                    cardTitle: "ERP",
+                    pointsTitle: ["Akses fitur dasar", "Support Email", "Diskon 5%"],
+                    price: "Rp 100.000"
+                },
+                {
+                    cardTitle: "PROFILLING",
+                    pointsTitle: ["Akses fitur dasar", "Support Email", "Diskon 5%"],
+                    price: "Rp 100.000"
+                }
+            ]
         },
         {
             title: "CYBER SECURITY",
             desc: "Perlindungan dari ancaman siber dengan layanan Vulnerability Assessment & Penetration Testing (Pentest) serta keamanan jaringan.",
-            img: img2
+            img: img2,
+            details: [
+                {
+                    cardTitle: "Vulnerability Assessment",
+                    pointsTitle: ["Pemindaian celah keamanan", "Laporan kerentanan", "Saran perbaikan"],
+                    price: "Rp 150.000"
+                },
+                {
+                    cardTitle: "Penetration Testing (Pentest)",
+                    pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko"],
+                    price: "Rp 300.000"
+                },
+                {
+                    cardTitle: "Network Security",
+                    pointsTitle: ["Firewall setup", "Intrusion Detection", "Keamanan VPN"],
+                    price: "Rp 200.000"
+                }
+            ]
         },
         {
             title: "IT MANAGED & CONSULTING",
             desc: "Layanan perencanaan, implementasi, dan pemeliharaan yang andal. Dari strategi IT hingga pemantauan 24/7 dengan lancar dan efisien.",
-            img: img3
+            img: img3,
+            details: [
+                {
+                    cardTitle: "IT Strategy Consulting",
+                    pointsTitle: ["Perencanaan jangka panjang", "Audit IT", "Efisiensi operasional"],
+                    price: "Rp 250.000"
+                },
+                {
+                    cardTitle: "24/7 IT Support",
+                    pointsTitle: ["Support teknis nonstop", "Pemantauan sistem", "Respons cepat masalah"],
+                    price: "Rp 350.000"
+                },
+                {
+                    cardTitle: "Infrastructure Management",
+                    pointsTitle: ["Manajemen server & jaringan", "Backup rutin", "Skalabilitas tinggi"],
+                    price: "Rp 300.000"
+                }
+            ]
         },
         {
             title: "DATA ANALYTICS & AI SOLUTIONS",
             desc: "Layanan mengubah data menjadi wawasan berharga dengan solusi Data Analytics & Artificial Intelligence, menganalisa tren dan mengotomatisasi proses menggunakan teknologi AI.",
-            img: img4
+            img: img4,
+            details: [
+                {
+                    cardTitle: "Business Intelligence",
+                    pointsTitle: ["Dashboard interaktif", "Visualisasi data", "Insight bisnis real-time"],
+                    price: "Rp 200.000"
+                },
+                {
+                    cardTitle: "Predictive Analytics",
+                    pointsTitle: ["Model prediktif", "Analisa tren historis", "Forecasting akurat"],
+                    price: "Rp 300.000"
+                },
+                {
+                    cardTitle: "AI Automation",
+                    pointsTitle: ["Otomatisasi proses", "Chatbot cerdas", "Machine learning pipeline"],
+                    price: "Rp 400.000"
+                }
+            ]
         }
     ];
 
@@ -95,6 +169,17 @@ export default function Services() {
         });
     };
 
+    const [selectedService, setSelectedService] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+    const handleBoxServiceClick = (service) => {
+        if (service.details) {
+            setSelectedService(service);
+            setIsModalOpen(true);
+        }
+    };
+
     return (
         <>
             <div className="sloganAndService">
@@ -102,7 +187,9 @@ export default function Services() {
                 <div className="services-section">
                     <div className="services-section-1">
                         {servicesData.map((service, index) => (
-                            <div className="services-section-1-box" key={index}>
+                            <div className="services-section-1-box"
+                                key={index}
+                                onClick={() => handleBoxServiceClick(service)}>
                                 <div className="services-section-1-box-img">
                                     <img src={service.img} alt={`${service.title} Icon`} />
                                 </div>
@@ -132,6 +219,12 @@ export default function Services() {
                     </div>
                 </div>
             </div>
+            
+            <PricingModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                service={selectedService}
+            />
         </>
     );
 }
