@@ -42,11 +42,11 @@
 
 @media (max-width: 360px) {
     .slogan-small {
-        font-size: 26pt;
+        font-size: 16pt;
     }
 
     .slogan-large {
-        font-size: 26pt;
+        font-size: 28pt;
     }
 
     .slogan-section {
@@ -55,20 +55,19 @@
     }
 
     .slogan-we-are {
-        flex-direction: row;
-        font-size: 26pt;
-        line-height: 1;
-        gap: 10px;
+        flex-direction: column;
+        font-size: 14pt;
+        line-height: 11pt;
     }
 }
 
 @media (min-width: 360px) and (max-width: 480px) {
     .slogan-small {
-        font-size: 26pt;
+        font-size: 16pt;
     }
 
     .slogan-large {
-        font-size: 26pt;
+        font-size: 28pt;
     }
 
     .slogan-section {
@@ -77,10 +76,9 @@
     }
 
     .slogan-we-are {
-        flex-direction: row;
-        font-size: 26pt;
-        line-height: 1;
-        gap: 10px;
+        flex-direction: column;
+        font-size: 14pt;
+        line-height: 11pt;
     }
 }
 

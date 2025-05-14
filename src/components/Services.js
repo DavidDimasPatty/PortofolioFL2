@@ -59,15 +59,17 @@ export default function Services() {
 
             descBoxes.forEach(box => {
                 box.style.height = `${maxHeight}px`;
-                console.log(maxHeight);
             });
         };
 
-        matchHeight();
+        const timeout = setTimeout(() => {
+            matchHeight();
+        }, 500);
 
         window.addEventListener("resize", matchHeight);
 
         return () => {
+            clearTimeout(timeout);
             window.removeEventListener("resize", matchHeight);
         };
     }, []);
