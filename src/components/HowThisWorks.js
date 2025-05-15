@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "../assets/style/howthisworks.css"
 import logoPT from "../assets/image/logoPT.png"
 import step1 from "../assets/image/howWorks/step1/step1.png"
@@ -25,6 +25,9 @@ const HowThisWorks = () => {
     const [hoverContainer5, setHoverContainer5] = useState(false);
     const [hoverContainer6, setHoverContainer6] = useState(false);
     const [hoverContentBox, setHoverContentBox] = useState("1");
+    const diagramRef = useRef(null);
+    const [currentStep, setCurrentStep] = useState(1);
+    const stepRefs = useRef([]);
 
     const container1 = () => {
         setHoverContainer1(true);
@@ -88,77 +91,198 @@ const HowThisWorks = () => {
         setHoverContentBox(val);
     }
 
+    useEffect(() => {
+        const handleWheel = (e) => {
+            e.preventDefault();
+
+            if (e.deltaY > 0 && currentStep < 6) {
+                setCurrentStep((prev) => prev + 1);
+                setHoverContentBox((currentStep + 1).toString());
+            } else if (e.deltaY < 0 && currentStep > 1) {
+                setCurrentStep((prev) => prev - 1);
+                setHoverContentBox((currentStep - 1).toString());
+            }
+        };
+
+        const diagramEl = diagramRef.current;
+        if (diagramEl) {
+            diagramEl.addEventListener("wheel", handleWheel, { passive: false });
+        }
+
+        return () => {
+            if (diagramEl) {
+                diagramEl.removeEventListener("wheel", handleWheel);
+            }
+        };
+    }, [currentStep]);
+
+    useEffect(() => {
+        if (currentStep <= 5) {
+            console.log(currentStep)
+            if (stepRefs.current[currentStep - 1]) {
+                stepRefs.current[currentStep - 1].scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }
+        } else if (currentStep === 6) {
+            document.getElementById("targetSection").scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }, [currentStep]);
+
     return (
         <div className="row wrapperWorks d-flex justify-content-center align-items-center">
-            <div className="row WrapperWorks">
-                <div className="col-12 col-md-6 wrapperDiagram">
-                    <div className="diagramContent">
-                        <h2 className="mb-5">HOW THIS WORKS</h2>
-                        <div class="col">
-                            <div class="row-container">
-                                <div class={`step-container`}
-                                    onMouseEnter={() => { container1(); setContent("1") }}
-                                    onMouseLeave={() => { containerEnd1(); setContent("1") }}>
-                                    <div class={`step-number ${hoverContainer1 ? "light-top1" : ""}`}>1</div>
-                                    <div class={`lineVertical ${hoverContainer1 ? "light-v1" : ""}`}></div>
-                                    <div class={`step ${hoverContainer1 ? "light1" : ""}`}>KONSULTASI & ANALISIS</div>
-                                </div>
-                                {/* <div class="line-container">
+            {window.innerWidth <= 767 ? <h2 className="mb-5 text-center">HOW THIS WORKS</h2> : ""}
+            <div className="childWrapperWorks" ref={window.innerWidth <= 767  ? diagramRef : null}>
+                {window.innerWidth > 767 ?
+                    <div className="col-12 col-md-6 wrapperDiagram">
+                        <div className="diagramContent">
+                            <h2 className="mb-5">HOW THIS WORKS</h2>
+                            <div class="col">
+                                <div class="row-container  rounded-4 p-3">
+                                    <div class={`step-container`}
+                                        onMouseEnter={() => { container1(); setContent("1") }}
+                                        onMouseLeave={() => { containerEnd1(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer1 ? "light-top1" : ""}`}>1</div>
+                                        <div class={`lineVertical ${hoverContainer1 ? "light-v1" : ""}`}></div>
+                                        <div class={`step ${hoverContainer1 ? "light1" : ""}`}>KONSULTASI & ANALISIS</div>
+                                    </div>
+                                    {/* <div class="line-container">
                                     <div class="line"></div>
                                 </div> */}
-                                <div class={`step-container`}
-                                    onMouseEnter={() => { container2(); setContent("2") }}
-                                    onMouseLeave={() => { containerEnd2(); setContent("1") }}>
-                                    <div class={`step-number ${hoverContainer2 ? "light-top2" : ""}`}>2</div>
-                                    <div class={`lineVertical ${hoverContainer2 ? "light-v2" : ""}`}></div>
-                                    <div class={`step ${hoverContainer2 ? "light2" : ""}`}>PERENCANAAN & STRATEGI</div>
-                                </div>
-                                {/* <div class="line-container">
+                                    <div class={`step-container`}
+                                        onMouseEnter={() => { container2(); setContent("2") }}
+                                        onMouseLeave={() => { containerEnd2(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer2 ? "light-top2" : ""}`}>2</div>
+                                        <div class={`lineVertical ${hoverContainer2 ? "light-v2" : ""}`}></div>
+                                        <div class={`step ${hoverContainer2 ? "light2" : ""}`}>PERENCANAAN & STRATEGI</div>
+                                    </div>
+                                    {/* <div class="line-container">
                                     <div class="line"></div>
                                 </div> */}
-                                <div class={`step-container`}
-                                    onMouseEnter={() => { container3(); setContent("3") }}
-                                    onMouseLeave={() => { containerEnd3(); setContent("1") }}>
-                                    <div class={`step-number ${hoverContainer3 ? "light-top3" : ""}`}>3</div>
-                                    <div class={`lineVertical ${hoverContainer3 ? "light-v3" : ""}`}></div>
-                                    <div class={`step ${hoverContainer3 ? "light3" : ""}`}>PENGEMBANGAN & IMPLEMENTASI</div>
+                                    <div class={`step-container`}
+                                        onMouseEnter={() => { container3(); setContent("3") }}
+                                        onMouseLeave={() => { containerEnd3(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer3 ? "light-top3" : ""}`}>3</div>
+                                        <div class={`lineVertical ${hoverContainer3 ? "light-v3" : ""}`}></div>
+                                        <div class={`step ${hoverContainer3 ? "light3" : ""}`}>PENGEMBANGAN & IMPLEMENTASI</div>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row-container rounded-4 p-3">
-                                <div class={`step-container`}
-                                    onMouseEnter={() => { container4(); setContent("4") }}
-                                    onMouseLeave={() => { containerEnd4(); setContent("1") }}>
-                                    <div class={`step-number ${hoverContainer4 ? "light-top4" : ""}`}>4</div>
-                                    <div class={`lineVertical ${hoverContainer4 ? "light-v4" : ""}`}></div>
-                                    <div class={`step ${hoverContainer4 ? "light4" : ""}`}>PENGUJIAN & OPTIMALISASI</div>
-                                </div>
-                                {/* <div class="line-container">
+                                <div class="row-container  rounded-4 p-3">
+                                    <div class={`step-container`}
+                                        onMouseEnter={() => { container4(); setContent("4") }}
+                                        onMouseLeave={() => { containerEnd4(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer4 ? "light-top4" : ""}`}>4</div>
+                                        <div class={`lineVertical ${hoverContainer4 ? "light-v4" : ""}`}></div>
+                                        <div class={`step ${hoverContainer4 ? "light4" : ""}`}>PENGUJIAN & OPTIMALISASI</div>
+                                    </div>
+                                    {/* <div class="line-container">
                                     <div class="line"></div>
                                 </div> */}
-                                <div class={`step-container`}
-                                    onMouseEnter={() => { container5(); setContent("5") }}
-                                    onMouseLeave={() => { containerEnd5(); setContent("1") }}>
-                                    <div class={`step-number ${hoverContainer5 ? "light-top5" : ""}`}>5</div>
-                                    <div class={`lineVertical ${hoverContainer5 ? "light-v5" : ""}`}></div>
-                                    <div class={`step ${hoverContainer5 ? "light5" : ""}`}>DEPLOYMENT & TRAINING</div>
-                                </div>
-                                {/* <div class="line-container">
+                                    <div class={`step-container`}
+                                        onMouseEnter={() => { container5(); setContent("5") }}
+                                        onMouseLeave={() => { containerEnd5(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer5 ? "light-top5" : ""}`}>5</div>
+                                        <div class={`lineVertical ${hoverContainer5 ? "light-v5" : ""}`}></div>
+                                        <div class={`step ${hoverContainer5 ? "light5" : ""}`}>DEPLOYMENT & TRAINING</div>
+                                    </div>
+                                    {/* <div class="line-container">
                                     <div class="line"></div>
                                 </div> */}
-                                <div class={`step-container`}
-                                    onMouseEnter={() => { container6(); setContent("6") }}
-                                    onMouseLeave={() => { containerEnd6(); setContent("1") }}>
-                                    <div class={`step-number ${hoverContainer6 ? "light-top6" : ""}`}>6</div>
-                                    <div class={`lineVertical ${hoverContainer6 ? "light-v6" : ""}`}></div>
-                                    <div class={`step ${hoverContainer6 ? "light6" : ""}`}>PEMELIHARAAN & DUKUNGAN</div>
+                                    <div class={`step-container`}
+                                        onMouseEnter={() => { container6(); setContent("6") }}
+                                        onMouseLeave={() => { containerEnd6(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer6 ? "light-top6" : ""}`}>6</div>
+                                        <div class={`lineVertical ${hoverContainer6 ? "light-v6" : ""}`}></div>
+                                        <div class={`step ${hoverContainer6 ? "light6" : ""}`}>PEMELIHARAAN & DUKUNGAN</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div> :
+                    <div className="wrapperDiagram">
+                        <div className="diagramContent" >
+                            {/* tampilan mobile diatur aja nanti si width */}
+                            <div class="col">
+                                {currentStep <= 1 &&
+                                    <div class={`step-container`}
+                                        ref={(el) => (stepRefs.current[0] = el)}
+                                        onMouseEnter={() => { container1(); setContent("1") }}
+                                        onMouseLeave={() => { containerEnd1(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer1 ? "light-top1" : ""}`}>1</div>
+                                        <div class={`lineVertical ${hoverContainer1 ? "light-v1" : ""}`}></div>
+                                        <div class={`step ${hoverContainer1 ? "light1" : ""}`}>KONSULTASI & ANALISIS</div>
+                                    </div>}
+                                {/* <div class="line-container">
+                                    <div class="line"></div>
+                                </div> */}
+                                {currentStep == 2 &&
+                                    <div class={`step-container`}
+                                        ref={(el) => (stepRefs.current[0] = el)}
+                                        onMouseEnter={() => { container2(); setContent("2") }}
+                                        onMouseLeave={() => { containerEnd2(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer2 ? "light-top2" : ""}`}>2</div>
+                                        <div class={`lineVertical ${hoverContainer2 ? "light-v2" : ""}`}></div>
+                                        <div class={`step ${hoverContainer2 ? "light2" : ""}`}>PERENCANAAN & STRATEGI</div>
+                                    </div>}
+                                {/* <div class="line-container">
+                                    <div class="line"></div>
+                                </div> */}
+                                {currentStep == 3 &&
+                                    <div class={`step-container`}
+                                        ref={(el) => (stepRefs.current[0] = el)}
+                                        onMouseEnter={() => { container3(); setContent("3") }}
+                                        onMouseLeave={() => { containerEnd3(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer3 ? "light-top3" : ""}`}>3</div>
+                                        <div class={`lineVertical ${hoverContainer3 ? "light-v3" : ""}`}></div>
+                                        <div class={`step ${hoverContainer3 ? "light3" : ""}`}>PENGEMBANGAN & IMPLEMENTASI</div>
+                                    </div>}
 
-                <div className="col-12 col-md-6 wrapperBoxWorks">
+                                {currentStep == 4 &&
+                                    <div class={`step-container`}
+                                        ref={(el) => (stepRefs.current[0] = el)}
+                                        onMouseEnter={() => { container4(); setContent("4") }}
+                                        onMouseLeave={() => { containerEnd4(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer4 ? "light-top4" : ""}`}>4</div>
+                                        <div class={`lineVertical ${hoverContainer4 ? "light-v4" : ""}`}></div>
+                                        <div class={`step ${hoverContainer4 ? "light4" : ""}`}>PENGUJIAN & OPTIMALISASI</div>
+                                    </div>
+                                }
+                                {/* <div class="line-container">
+                                    <div class="line"></div>
+                                </div> */}
+
+                                {currentStep == 5 &&
+                                    <div class={`step-container`}
+                                        ref={(el) => (stepRefs.current[0] = el)}
+                                        onMouseEnter={() => { container5(); setContent("5") }}
+                                        onMouseLeave={() => { containerEnd5(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer5 ? "light-top5" : ""}`}>5</div>
+                                        <div class={`lineVertical ${hoverContainer5 ? "light-v5" : ""}`}></div>
+                                        <div class={`step ${hoverContainer5 ? "light5" : ""}`}>DEPLOYMENT & TRAINING</div>
+                                    </div>}
+                                {/* <div class="line-container">
+                                    <div class="line"></div>
+                                </div> */}
+                                {currentStep >= 6 &&
+                                    <div class={`step-container`}
+                                        ref={(el) => (stepRefs.current[0] = el)}
+                                        onMouseEnter={() => { container6(); setContent("6") }}
+                                        onMouseLeave={() => { containerEnd6(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer6 ? "light-top6" : ""}`}>6</div>
+                                        <div class={`lineVertical ${hoverContainer6 ? "light-v6" : ""}`}></div>
+                                        <div class={`step ${hoverContainer6 ? "light6" : ""}`}>PEMELIHARAAN & DUKUNGAN</div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>}
+
+                <div className={`wrapperBoxWorks ${window.innerWidth > 767 ? "col-12 col-md-6" : ""}`}>
                     <div className="col boxWorksContent">
                         <div className="wrapContentComponent">
                             <div className="boxTopWorks">
@@ -327,7 +451,7 @@ const HowThisWorks = () => {
 
 
 
-            <div className="projectsMore d-flex justify-content-center align-items-center">
+            <div className="projectsMore d-flex justify-content-center align-items-center" id="targetSection">
                 <div className="row projectsMoreCol">
                     <div className="col">
                         <div className="moreProjects d-flex justify-content-center align-items-center">
