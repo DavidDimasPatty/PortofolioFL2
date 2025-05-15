@@ -22,7 +22,7 @@
   padding: 10px 20px;
   font-weight: bold;
   font-size: 0.9rem;
-  background-color: white;
+  background-color: transparent;
   bottom: 10px;
   height: 60px;
   text-align: center;
@@ -200,12 +200,18 @@
 .projectsMore {
   width: 100%;
   height: 700px;
-  position: relative;
 }
 
 .projectsMoreCol {
+  position: relative;
   z-index: 20;
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .moreProjects {
@@ -215,16 +221,31 @@
   text-align: center;
   letter-spacing: 10px;
   color: white;
+  height: 300px;
+}
+
+.orbit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit svg {
+  width: 1000px;
+  height: 350px;
+  transform: scale(1.8);
 }
 
 .moreProjects b {
   width: 700px;
+  height: 100%;
 }
 
 .moreProjectsButtonWrapper {
   position: relative;
-  margin-top: 50px;
-  z-index: 40;
 }
 
 .moreProjectsButton {
@@ -239,16 +260,8 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
-.orbit {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
 
+/* 
 .orbit1,
 .orbit2,
 .orbit3 {
@@ -288,7 +301,7 @@
   transform-origin: -150px 0;
   animation: moveRocket 10s linear infinite;
   transform: rotate(180deg);
-}
+} */
 
 @keyframes moveRocket {
 

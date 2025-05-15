@@ -16,7 +16,10 @@ import step5b from "../assets/image/howWorks/step5/step5b.png"
 import step6a from "../assets/image/howWorks/step6/step6a.png"
 import step6b from "../assets/image/howWorks/step6/step6b.png"
 import step6c from "../assets/image/howWorks/step6/step6c.png"
-
+import rocket from "../assets/image/roket.png"
+import { gsap } from "gsap";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+gsap.registerPlugin(MotionPathPlugin);
 const HowThisWorks = () => {
     const [hoverContainer1, setHoverContainer1] = useState(false);
     const [hoverContainer2, setHoverContainer2] = useState(false);
@@ -28,7 +31,7 @@ const HowThisWorks = () => {
     const diagramRef = useRef(null);
     const [currentStep, setCurrentStep] = useState(1);
     const stepRefs = useRef([]);
-
+    const rocketRef = useRef(null);
     const container1 = () => {
         setHoverContainer1(true);
     }
@@ -91,6 +94,7 @@ const HowThisWorks = () => {
         setHoverContentBox(val);
     }
 
+
     useEffect(() => {
         const handleWheel = (e) => {
             e.preventDefault();
@@ -133,10 +137,26 @@ const HowThisWorks = () => {
         }
     }, [currentStep]);
 
+
+    useEffect(() => {
+        gsap.to(rocketRef.current, {
+            duration: 30,
+            repeat: -1,
+            ease: "none",
+            motionPath: {
+                path: "#orbitPath",
+                align: "#orbitPath",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+            }
+        });
+    }, []);
+
+
     return (
         <div className="row wrapperWorks d-flex justify-content-center align-items-center">
             {window.innerWidth <= 767 ? <h2 className="mb-5 text-center">HOW THIS WORKS</h2> : ""}
-            <div className="childWrapperWorks" ref={window.innerWidth <= 767  ? diagramRef : null}>
+            <div className="childWrapperWorks" ref={window.innerWidth <= 767 ? diagramRef : null}>
                 {window.innerWidth > 767 ?
                     <div className="col-12 col-md-6 wrapperDiagram">
                         <div className="diagramContent">
@@ -452,20 +472,49 @@ const HowThisWorks = () => {
 
 
             <div className="projectsMore d-flex justify-content-center align-items-center" id="targetSection">
-                <div className="row projectsMoreCol">
-                    <div className="col">
-                        <div className="moreProjects d-flex justify-content-center align-items-center">
-                            <b>More than 50+ clients and 100+ project</b>
-                        </div>
-                        <div className="moreProjectsButtonWrapper d-flex justify-content-center align-items-center">
-                            <button className="moreProjectsButton">GET FREE CONSULTATION</button>
-                        </div>
-                        <div className="orbit">
-                            <div class="orbit1"></div>
-                            <div class="orbit2"></div>
-                            <div class="orbit3"></div>
-                            <div class="rocket"></div>
-                        </div>
+                <div className="projectsMoreCol">
+                    <div className="moreProjects d-flex justify-content-center align-items-center">
+                        <b>More than 50+ clients and 100+ project</b>
+                    </div>
+                    <div className="moreProjectsButtonWrapper d-flex justify-content-center align-items-center">
+                        <button className="moreProjectsButton">GET FREE CONSULTATION</button>
+                    </div>
+
+                    <div className="orbit">
+                        <svg>
+                            <circle cx="280" cy="210" r="157" stroke="white" fill="none" />
+                            <circle cx="500" cy="210" r="157" stroke="white" fill="none" />
+                            <circle cx="750" cy="210" r="157" stroke="white" fill="none" />
+                            <g transform="translate(0.000000,513.000000) scale(0.100000,-0.100000)"
+                                fill="transparent" stroke="none" >
+                                <path id="orbitPath" d="M7320 4665 c-387 -53 -745 -252 -1008 -559 l-42 -49 -88 86 c-147
+144 -262 225 -445 312 -235 112 -405 150 -672 150 -267 0 -437 -38 -672 -150
+-187 -89 -299 -168 -453 -321 l-96 -94 -74 66 c-195 171 -454 298 -717 351
+-123 24 -403 24 -526 0 -214 -43 -454 -148 -619 -273 -311 -233 -513 -555
+-599 -955 -33 -150 -33 -438 0 -588 77 -361 239 -644 498 -873 204 -181 471
+-310 743 -359 98 -18 382 -18 480 0 276 50 540 178 750 364 l85 76 85 -84
+c145 -142 260 -223 443 -310 235 -112 406 -150 672 -149 268 0 438 38 672 149
+188 89 299 168 455 322 l97 96 94 -95 c105 -106 197 -182 305 -251 508 -327
+1176 -327 1684 0 397 255 670 665 760 1140 32 169 32 457 0 626 -111 587 -509
+1077 -1042 1282 -238 92 -517 125 -770 90z m410 -9 c389 -52 730 -236 993
+-535 196 -221 342 -525 399 -828 32 -169 32 -457 0 -626 -89 -473 -358 -878
+-750 -1130 -508 -327 -1176 -327 -1684 0 -109 70 -199 144 -304 251 l-94 96
+-98 -97 c-156 -154 -267 -233 -455 -322 -234 -111 -404 -149 -672 -149 -266
+-1 -437 37 -672 149 -184 87 -288 161 -438 306 l-90 88 -85 -76 c-209 -185
+-474 -314 -750 -364 -98 -18 -382 -18 -480 0 -405 73 -770 310 -993 644 -114
+171 -191 356 -238 578 -33 150 -33 438 0 588 50 234 143 449 271 625 214 297
+563 518 937 593 123 24 403 24 526 0 271 -54 545 -192 737 -369 58 -54 78 -69
+66 -50 -6 9 164 178 234 234 124 97 336 210 493 262 157 52 286 71 482 71 267
+0 437 -38 672 -150 202 -96 370 -220 503 -371 28 -32 34 -35 42 -21 28 51 180
+202 288 288 317 251 753 369 1160 315z"/>
+                            </g>
+                            <image
+                                ref={rocketRef}
+                                href={rocket}
+                                width="60"
+                                height="60"
+                            />
+                        </svg>
                     </div>
                 </div>
             </div>
