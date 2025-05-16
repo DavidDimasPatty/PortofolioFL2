@@ -355,8 +355,10 @@
     }
 
     .close-btn.open {
+        position: relative;
         display: block;
         z-index: 90;
+        left: 20px;
     }
 
     .burger-btn.scrolled {

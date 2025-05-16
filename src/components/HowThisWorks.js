@@ -27,6 +27,7 @@ const HowThisWorks = () => {
     const [hoverContainer4, setHoverContainer4] = useState(false);
     const [hoverContainer5, setHoverContainer5] = useState(false);
     const [hoverContainer6, setHoverContainer6] = useState(false);
+    const [doneLook, setDoneLook] = useState(false);
     const [hoverContentBox, setHoverContentBox] = useState("1");
     const diagramRef = useRef(null);
     const [currentStep, setCurrentStep] = useState(1);
@@ -94,19 +95,44 @@ const HowThisWorks = () => {
         setHoverContentBox(val);
     }
 
+    useEffect(() => {
+        if (doneLook) return;
+        console.log(doneLook)
+        const diagramEl = diagramRef.current;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && entry.intersectionRatio === 1) {
+                    document.body.style.overflow = "hidden";
+                } else {
+                    document.body.style.overflow = "";
+                }
+            },
+            {
+                root: null,
+                threshold: 1.0, // harus full 100% kelihatan
+            }
+        );
 
+        observer.observe(diagramEl);
+
+        return () => {
+            observer.disconnect();
+            document.body.style.overflow = "";
+        };
+    }, [doneLook]);
+
+    // Handle wheel scroll antar step
     useEffect(() => {
         const diagramEl = diagramRef.current;
         if (!diagramEl) return;
 
-        // Desktop scroll
         const handleWheel = (e) => {
             e.preventDefault();
             if (e.deltaY > 0 && currentStep < 6) nextStep();
             else if (e.deltaY < 0 && currentStep > 1) prevStep();
         };
 
-        // Mobile touch
+        // Mobile touch support
         let touchStartY = 0;
         const handleTouchStart = (e) => {
             touchStartY = e.touches[0].clientY;
@@ -120,55 +146,46 @@ const HowThisWorks = () => {
             else if (deltaY < -50 && currentStep > 1) prevStep();
         };
 
-        diagramEl.addEventListener("mouseenter", disableScroll);
-        diagramEl.addEventListener("mouseleave", enableScroll);
-
         diagramEl.addEventListener("wheel", handleWheel, { passive: false });
         diagramEl.addEventListener("touchstart", handleTouchStart, { passive: false });
         diagramEl.addEventListener("touchend", handleTouchEnd, { passive: false });
 
         return () => {
-            diagramEl.removeEventListener("mouseenter", disableScroll);
-            diagramEl.removeEventListener("mouseleave", enableScroll);
             diagramEl.removeEventListener("wheel", handleWheel);
             diagramEl.removeEventListener("touchstart", handleTouchStart);
             diagramEl.removeEventListener("touchend", handleTouchEnd);
-            enableScroll();
         };
     }, [currentStep]);
 
-    const disableScroll = () => {
-        document.body.style.overflow = "hidden";
-        document.addEventListener("touchmove", preventDefault, { passive: false });
-    };
-
-    const enableScroll = () => {
-        document.body.style.overflow = "";
-        document.removeEventListener("touchmove", preventDefault);
-    };
 
     const nextStep = () => {
         setCurrentStep((prev) => Math.min(prev + 1, 6));
+        console.log(currentStep);
+        setHoverContentBox((currentStep + 1).toString());
     };
 
     const prevStep = () => {
         setCurrentStep((prev) => Math.max(prev - 1, 1));
+        console.log(currentStep);
+        setHoverContentBox((currentStep - 1).toString());
     };
 
-    const preventDefault = (e) => {
-        e.preventDefault();
-    };
-
+    const isFirstRender = useRef(true);
     useEffect(() => {
-        if (currentStep <= 5) {
-            console.log(currentStep)
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+            return;
+        }
+
+        if (currentStep <= 5 && doneLook==false) {
             if (stepRefs.current[currentStep - 1]) {
                 stepRefs.current[currentStep - 1].scrollIntoView({
                     behavior: "smooth",
                     block: "start",
                 });
             }
-        } else if (currentStep === 6) {
+        } else if (currentStep >= 6 && doneLook==false) {
+            setDoneLook(true);
             document.getElementById("targetSection").scrollIntoView({
                 behavior: "smooth",
                 block: "start",

@@ -78,10 +78,17 @@
         letter-spacing: 10px;
     }
 
-    .wrapperTop {}
+    .wrapperTop {
+        min-height: 600px;
+    }
 
     .imgTopLogo {
         width: 60%;
         min-width: 400px
     }
+
+    .wrapperRowTop {
+        border-radius: 0 0 40px 40px;
+    }
+
 }
