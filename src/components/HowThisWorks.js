@@ -97,8 +97,9 @@ const HowThisWorks = () => {
 
     useEffect(() => {
         if (doneLook) return;
-        console.log(doneLook)
         const diagramEl = diagramRef.current;
+        if (!diagramEl) return;
+        
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting && entry.intersectionRatio === 1) {
@@ -160,13 +161,11 @@ const HowThisWorks = () => {
 
     const nextStep = () => {
         setCurrentStep((prev) => Math.min(prev + 1, 6));
-        console.log(currentStep);
         setHoverContentBox((currentStep + 1).toString());
     };
 
     const prevStep = () => {
         setCurrentStep((prev) => Math.max(prev - 1, 1));
-        console.log(currentStep);
         setHoverContentBox((currentStep - 1).toString());
     };
 
@@ -177,14 +176,14 @@ const HowThisWorks = () => {
             return;
         }
 
-        if (currentStep <= 5 && doneLook==false) {
+        if (currentStep <= 5 && doneLook == false) {
             if (stepRefs.current[currentStep - 1]) {
                 stepRefs.current[currentStep - 1].scrollIntoView({
                     behavior: "smooth",
                     block: "start",
                 });
             }
-        } else if (currentStep >= 6 && doneLook==false) {
+        } else if (currentStep >= 6 && doneLook == false) {
             setDoneLook(true);
             document.getElementById("targetSection").scrollIntoView({
                 behavior: "smooth",
