@@ -1,7 +1,8 @@
-
-.wrapRowFAQ{
+.wrapRowFAQ {
     width: 100%;
     margin-bottom: 100px;
+    font-family: "ASAP";
+    letter-spacing: 1px;
 }
 
 .wrappperQuestions {
@@ -169,6 +170,9 @@
     color: white;
     margin-right: 10px;
     border-radius: 20px;
+    text-transform: uppercase;
+    font-family: "DEPOT";
+    letter-spacing: 1px;
 }
 
 .getStartedFAQ {
@@ -177,6 +181,9 @@
     background-color: blue;
     color: white;
     border-radius: 20px;
+    text-transform: uppercase;
+    font-family: "DEPOT";
+    letter-spacing: 1px;
 }
 
 .wrapButtonFAQRight {
@@ -186,4 +193,11 @@
 .anyFAQ {
     font-size: 25px;
     font-weight: bold;
+    font-family: "HUM";
+    letter-spacing: 2px;
+}
+
+.faqTittleTop {
+    font-family: "DEPOT" !important;
+    letter-spacing: 2px;
 }

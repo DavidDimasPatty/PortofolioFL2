@@ -7,6 +7,7 @@
   background: url("../image/howBG.jpeg") no-repeat center;
   background-size: contain;
   overflow: hidden;
+  font-family: "DEPOT";
 }
 
 .childWrapperWorks {
@@ -110,6 +111,7 @@
   font-size: 12px;
   font-weight: bold;
   height: 120px;
+  font-family: "ASAP";
 }
 
 .textPathWorks {
@@ -215,7 +217,7 @@
 }
 
 .moreProjects {
-  font-family: 'Depot', sans-serif;
+  font-family: "DEPOT";
   line-height: 1;
   font-size: 64px;
   text-align: center;
@@ -262,6 +264,8 @@
   box-shadow: 0 24px 24px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(5px);
+  font-family: "DEPOT";
+  letter-spacing: 2px;
 }
 
 
@@ -682,6 +686,11 @@
   width: 18px;
   top: 55px;
   animation: fadeInMove 1s forwards;
+}
+
+.howThisTittle {
+  font-family: 'DEPOT';
+  letter-spacing: 5px;
 }
 
 @keyframes fadeInMove {

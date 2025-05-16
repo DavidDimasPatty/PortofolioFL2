@@ -31,9 +31,9 @@ const Footer = () => {
             <div className="row contentFooter">
                 <div className="col-12 col-md-3 d-flex  pb-2">
                     <div className="row w-100">
-                        <div className="row p-3 secureTittle">
-                            <h3>WANT TO BE SECURE?</h3>
-                            <hr />
+                        <div className="row secureTittle">
+                            <h3>WANT TO BE SECURE? <hr /></h3>
+
                         </div>
                         <div className="col-12 d-flex justify-content-start buttonFooterBot">
                             <button>Our Plan</button>

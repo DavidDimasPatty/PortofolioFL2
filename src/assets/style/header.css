@@ -112,6 +112,8 @@
     height: 30px;
     width: 120px;
     font-size: 14px;
+    font-family: 'ASAP';
+    letter-spacing: 2px;
 }
 
 .burger-btn {

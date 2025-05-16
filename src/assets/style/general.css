@@ -13,3 +13,18 @@ body {
 .wrapper-all {
     overflow-x: clip;
 }
+
+
+@font-face {
+    font-family: 'ASAP';
+    src: url('../../assets/font/Asap_SemiCondensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HUM';
+    src: url('../../assets/font/hum777k.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

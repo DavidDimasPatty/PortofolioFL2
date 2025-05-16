@@ -44,6 +44,7 @@
 .buttonTopContentTitle h2 {
     text-transform: uppercase;
     letter-spacing: 4px;
+    font-family: 'ASAP';
 }
 
 .buttonTopContent button {
@@ -52,6 +53,8 @@
     background-color: rgb(21, 21, 221);
     color: white;
     width: 150px;
+    font-family: 'DEPOT';
+    letter-spacing: 2px;
 }
 
 .lastLetterTop {

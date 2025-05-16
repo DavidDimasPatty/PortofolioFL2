@@ -53,7 +53,7 @@ const FAQ = () => {
             <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
                 <div className="row wrappperQuestions d-flex justify-content-center align-items-center">
                     <div className="col">
-                        <h3 className="text-center mb-3"> FREQUENT ASKED QUESTIONS</h3>
+                        <h3 className="text-center mb-3 faqTittleTop"> FREQUENT ASKED QUESTIONS</h3>
                         <div className="wrapQuestions">
                             <div className="row questionFAQ" onClick={clickQuestion1}>
                                 <div className="col d-flex justify-content-start align-items-center">
