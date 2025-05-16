@@ -288,9 +288,9 @@ const HowThisWorks = () => {
                                         ref={(el) => (stepRefs.current[0] = el)}
                                         onMouseEnter={() => { container1(); setContent("1") }}
                                         onMouseLeave={() => { containerEnd1(); setContent("1") }}>
-                                        <div class={`step-number ${hoverContainer1 ? "light-top1" : ""}`}>1</div>
-                                        <div class={`lineVertical ${hoverContainer1 ? "light-v1" : ""}`}></div>
-                                        <div class={`step ${hoverContainer1 ? "light1" : ""}`}>KONSULTASI & ANALISIS</div>
+                                        <div class={`step-number light-top1`}>1</div>
+                                        <div class={`lineVertical  light-v1 `}></div>
+                                        <div class={`step light1`}>KONSULTASI & ANALISIS</div>
                                     </div>}
                                 {/* <div class="line-container">
                                     <div class="line"></div>
@@ -300,9 +300,9 @@ const HowThisWorks = () => {
                                         ref={(el) => (stepRefs.current[0] = el)}
                                         onMouseEnter={() => { container2(); setContent("2") }}
                                         onMouseLeave={() => { containerEnd2(); setContent("1") }}>
-                                        <div class={`step-number ${hoverContainer2 ? "light-top2" : ""}`}>2</div>
-                                        <div class={`lineVertical ${hoverContainer2 ? "light-v2" : ""}`}></div>
-                                        <div class={`step ${hoverContainer2 ? "light2" : ""}`}>PERENCANAAN & STRATEGI</div>
+                                        <div class={`step-number  light-top2`}>2</div>
+                                        <div class={`lineVertical light-v2`}></div>
+                                        <div class={`step light2`}>PERENCANAAN & STRATEGI</div>
                                     </div>}
                                 {/* <div class="line-container">
                                     <div class="line"></div>
@@ -312,9 +312,9 @@ const HowThisWorks = () => {
                                         ref={(el) => (stepRefs.current[0] = el)}
                                         onMouseEnter={() => { container3(); setContent("3") }}
                                         onMouseLeave={() => { containerEnd3(); setContent("1") }}>
-                                        <div class={`step-number ${hoverContainer3 ? "light-top3" : ""}`}>3</div>
-                                        <div class={`lineVertical ${hoverContainer3 ? "light-v3" : ""}`}></div>
-                                        <div class={`step ${hoverContainer3 ? "light3" : ""}`}>PENGEMBANGAN & IMPLEMENTASI</div>
+                                        <div class={`step-number light-top3`}>3</div>
+                                        <div class={`lineVertical light-v3`}></div>
+                                        <div class={`step light3`}>PENGEMBANGAN & IMPLEMENTASI</div>
                                     </div>}
 
                                 {currentStep == 4 &&
@@ -322,9 +322,9 @@ const HowThisWorks = () => {
                                         ref={(el) => (stepRefs.current[0] = el)}
                                         onMouseEnter={() => { container4(); setContent("4") }}
                                         onMouseLeave={() => { containerEnd4(); setContent("1") }}>
-                                        <div class={`step-number ${hoverContainer4 ? "light-top4" : ""}`}>4</div>
-                                        <div class={`lineVertical ${hoverContainer4 ? "light-v4" : ""}`}></div>
-                                        <div class={`step ${hoverContainer4 ? "light4" : ""}`}>PENGUJIAN & OPTIMALISASI</div>
+                                        <div class={`step-number light-top4`}>4</div>
+                                        <div class={`lineVertical light-v4`}></div>
+                                        <div class={`step light4`}>PENGUJIAN & OPTIMALISASI</div>
                                     </div>
                                 }
                                 {/* <div class="line-container">
@@ -336,9 +336,9 @@ const HowThisWorks = () => {
                                         ref={(el) => (stepRefs.current[0] = el)}
                                         onMouseEnter={() => { container5(); setContent("5") }}
                                         onMouseLeave={() => { containerEnd5(); setContent("1") }}>
-                                        <div class={`step-number ${hoverContainer5 ? "light-top5" : ""}`}>5</div>
-                                        <div class={`lineVertical ${hoverContainer5 ? "light-v5" : ""}`}></div>
-                                        <div class={`step ${hoverContainer5 ? "light5" : ""}`}>DEPLOYMENT & TRAINING</div>
+                                        <div class={`step-number light-top5`}>5</div>
+                                        <div class={`lineVertical light-v5`}></div>
+                                        <div class={`step light5`}>DEPLOYMENT & TRAINING</div>
                                     </div>}
                                 {/* <div class="line-container">
                                     <div class="line"></div>
@@ -348,9 +348,9 @@ const HowThisWorks = () => {
                                         ref={(el) => (stepRefs.current[0] = el)}
                                         onMouseEnter={() => { container6(); setContent("6") }}
                                         onMouseLeave={() => { containerEnd6(); setContent("1") }}>
-                                        <div class={`step-number ${hoverContainer6 ? "light-top6" : ""}`}>6</div>
-                                        <div class={`lineVertical ${hoverContainer6 ? "light-v6" : ""}`}></div>
-                                        <div class={`step ${hoverContainer6 ? "light6" : ""}`}>PEMELIHARAAN & DUKUNGAN</div>
+                                        <div class={`step-number light-top6`}>6</div>
+                                        <div class={`lineVertical light-v6`}></div>
+                                        <div class={`step light6`}>PEMELIHARAAN & DUKUNGAN</div>
                                     </div>
                                 }
                             </div>
