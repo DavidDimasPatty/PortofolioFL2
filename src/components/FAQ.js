@@ -49,7 +49,7 @@ const FAQ = () => {
     }
 
     return (
-        <div className="row wrapRowFAQ">
+        <div className="wrapRowFAQ">
             <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
                 <div className="row wrappperQuestions d-flex justify-content-center align-items-center">
                     <div className="col">

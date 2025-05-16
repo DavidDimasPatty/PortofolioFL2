@@ -3,6 +3,9 @@
     margin-bottom: 100px;
     font-family: "ASAP";
     letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .wrappperQuestions {
@@ -200,4 +203,11 @@
 .faqTittleTop {
     font-family: "DEPOT" !important;
     letter-spacing: 2px;
+}
+
+@media(max-width:768) {
+    .wrapRowFAQ {
+    
+    }
+
 }
