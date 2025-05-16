@@ -97,27 +97,27 @@ const HowThisWorks = () => {
 
     useEffect(() => {
         if (doneLook) return;
-        const diagramEl = diagramRef.current;
-        if (!diagramEl) return;
-        
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting && entry.intersectionRatio === 1) {
-                    document.body.style.overflow = "hidden";
-                } else {
-                    document.body.style.overflow = "";
-                }
-            },
-            {
-                root: null,
-                threshold: 1.0, // harus full 100% kelihatan
-            }
-        );
 
-        observer.observe(diagramEl);
+        const handleScroll = () => {
+            const diagramEl = diagramRef.current;
+            if (!diagramEl) return;
+
+            const rect = diagramEl.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            if (rect.top >= 0 && rect.bottom <= windowHeight) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "";
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleScroll);
 
         return () => {
-            observer.disconnect();
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleScroll);
             document.body.style.overflow = "";
         };
     }, [doneLook]);
