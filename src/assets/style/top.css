@@ -22,7 +22,6 @@
 
 .buttonTopContentTitle {
     width: 150px;
-    margin-bottom: 50px;
 }
 
 
@@ -63,10 +62,16 @@
     width: 60%;
 }
 
+.wrapperButtonTop {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
     .buttonTopContentTitle {
-        width: 100%;
-        text-align: center;
+        width: 100px;
+        text-align: start;
     }
 
     .lastLetterTop {
@@ -89,6 +94,11 @@
 
     .wrapperRowTop {
         border-radius: 0 0 40px 40px;
+    }
+
+    .topRight {
+        display: flex !important;
+        flex-direction: row !important;
     }
 
 }
