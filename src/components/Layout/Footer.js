@@ -47,7 +47,7 @@ const Footer = () => {
                 </div>
 
                 <div className="col-12 col-md-7 d-flex justify-content-center align-items-center wrapperVisionMission">
-                    <div className={`row mb-4 ourVisionHidden ${isHoverVision ? `visible` : ''}`}>
+                    <div className={`mb-4 ourVisionHidden ${isHoverVision ? `visible` : ''}`}>
                         <h6 className="titelOurVisionHidden">Our Vision</h6>
                         <div className="textVisionHidden">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -60,7 +60,7 @@ const Footer = () => {
                         </div>
 
                     </div>
-                    <div className={`row mb-4 ourMissionHidden ${isHoverMission ? `visible` : ''}`}>
+                    <div className={`mb-4 ourMissionHidden ${isHoverMission ? `visible` : ''}`}>
                         <h6 className="titelOurVisionHidden">Our Mission</h6>
                         <div className="textMissionHidden">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.

@@ -411,11 +411,13 @@
 
 
     .textVisionHidden {
-        font-size: 1.5vh;
+        /* font-size: 1.5vh; */
+        font-size: 12px;
     }
 
     .textMissionHidden {
-        font-size: 1.5vh;
+        /* font-size: 1.5vh; */
+        font-size: 12px;
     }
 
     .wrapperVisionMission {
@@ -431,6 +433,7 @@
     .secureTittle h3 {
         color: white;
         font-size: 24px;
+        text-align: center;
     }
 
     .secureTittle {
