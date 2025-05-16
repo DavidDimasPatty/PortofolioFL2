@@ -231,12 +231,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
 
 .orbit svg {
   width: 1000px;
   height: 350px;
   transform: scale(1.8);
+  z-index: -1;
 }
 
 .moreProjects b {
@@ -246,6 +248,7 @@
 
 .moreProjectsButtonWrapper {
   position: relative;
+  z-index: 20;
 }
 
 .moreProjectsButton {
@@ -703,7 +706,6 @@
 
 @media (max-width: 767px) {
   .childWrapperWorks {
-    padding-top: 40px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -711,6 +713,7 @@
     overflow-y: hidden;
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
+    height: 400px;
   }
 
 
@@ -727,7 +730,7 @@
 
   .step {
     font-size: 12px;
-    height: 50px;
+    height: 40px;
     width: 120px;
   }
 
@@ -739,6 +742,8 @@
 
   .boxWorksContent {
     height: 100%;
+    bottom: 0px;
+    left: 10px;
   }
 
   .textWorks {
@@ -777,13 +782,24 @@
   .moreProjects {
     font-size: 32px;
     letter-spacing: 5px;
+    height: 150px;
   }
+
 
   .moreProjects b {
-    width: 700px;
+    width: 400px;
   }
 
-  .projectsMore {
+  .orbit svg {
+    position: absolute;
+    z-index: -1;
+    left: -300px;
+    transform: scale(0.9);
+    width: 1000px;
+    height: 350px;
+  }
+
+  .projectsMore{
     height: 400px;
   }
 }
