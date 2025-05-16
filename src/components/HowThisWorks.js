@@ -96,29 +96,68 @@ const HowThisWorks = () => {
 
 
     useEffect(() => {
+        const diagramEl = diagramRef.current;
+        if (!diagramEl) return;
+
+        // Desktop scroll
         const handleWheel = (e) => {
             e.preventDefault();
-
-            if (e.deltaY > 0 && currentStep < 6) {
-                setCurrentStep((prev) => prev + 1);
-                setHoverContentBox((currentStep + 1).toString());
-            } else if (e.deltaY < 0 && currentStep > 1) {
-                setCurrentStep((prev) => prev - 1);
-                setHoverContentBox((currentStep - 1).toString());
-            }
+            if (e.deltaY > 0 && currentStep < 6) nextStep();
+            else if (e.deltaY < 0 && currentStep > 1) prevStep();
         };
 
-        const diagramEl = diagramRef.current;
-        if (diagramEl) {
-            diagramEl.addEventListener("wheel", handleWheel, { passive: false });
-        }
+        // Mobile touch
+        let touchStartY = 0;
+        const handleTouchStart = (e) => {
+            touchStartY = e.touches[0].clientY;
+        };
+
+        const handleTouchEnd = (e) => {
+            const touchEndY = e.changedTouches[0].clientY;
+            const deltaY = touchStartY - touchEndY;
+
+            if (deltaY > 50 && currentStep < 6) nextStep();
+            else if (deltaY < -50 && currentStep > 1) prevStep();
+        };
+
+        diagramEl.addEventListener("mouseenter", disableScroll);
+        diagramEl.addEventListener("mouseleave", enableScroll);
+
+        diagramEl.addEventListener("wheel", handleWheel, { passive: false });
+        diagramEl.addEventListener("touchstart", handleTouchStart, { passive: false });
+        diagramEl.addEventListener("touchend", handleTouchEnd, { passive: false });
 
         return () => {
-            if (diagramEl) {
-                diagramEl.removeEventListener("wheel", handleWheel);
-            }
+            diagramEl.removeEventListener("mouseenter", disableScroll);
+            diagramEl.removeEventListener("mouseleave", enableScroll);
+            diagramEl.removeEventListener("wheel", handleWheel);
+            diagramEl.removeEventListener("touchstart", handleTouchStart);
+            diagramEl.removeEventListener("touchend", handleTouchEnd);
+            enableScroll();
         };
     }, [currentStep]);
+
+    const disableScroll = () => {
+        document.body.style.overflow = "hidden";
+        document.addEventListener("touchmove", preventDefault, { passive: false });
+    };
+
+    const enableScroll = () => {
+        document.body.style.overflow = "";
+        document.removeEventListener("touchmove", preventDefault);
+    };
+
+    const nextStep = () => {
+        setCurrentStep((prev) => Math.min(prev + 1, 6));
+    };
+
+    const prevStep = () => {
+        setCurrentStep((prev) => Math.max(prev - 1, 1));
+    };
+
+    const preventDefault = (e) => {
+        e.preventDefault();
+    };
 
     useEffect(() => {
         if (currentStep <= 5) {
