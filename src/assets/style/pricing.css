@@ -87,6 +87,12 @@ body.modal-open {
     cursor: pointer;
     font-family: 'ASAP', sans-serif;
     letter-spacing: 3px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-modal-close:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-modal-close-arrow-left {
