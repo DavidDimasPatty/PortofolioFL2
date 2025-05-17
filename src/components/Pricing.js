@@ -66,9 +66,17 @@ const PricingModal = ({ isOpen, onClose, service }) => {
                                     <div className="pricing-modal-card-desc1">START FROM</div>
                                     <p className="pricing-modal-card-price">{item.price}</p>
                                     <div className="pricing-modal-card-desc2">Start to chat with our team for more detail or to consult your ideas!</div>
-                                    <div className="pricing-modal-card-btn">
+                                    <a
+                                        href={`https://wa.me/6282135813697?text=${encodeURIComponent(
+                                            `Halo, saya tertarik dengan paket "${item.cardTitle}" dari kategori ${service.title}. Bisa dibantu untuk informasi lebih lanjut?`
+                                        )}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="pricing-modal-card-btn"
+                                    >
                                         <div className="pricing-modal-card-btn-text">Choose Plan</div>
-                                    </div>
+                                    </a>
+
                                 </div>
                             ))}
                         </div>
