@@ -24,23 +24,18 @@ export default function Services() {
             details: [
                 {
                     cardTitle: "MOBILE APPS",
-                    pointsTitle: ["Akses fitur dasar", "Support Email", "Diskon 5%"],
-                    price: "Rp 100.000"
+                    pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                    price: "Rp 30.000.000"
                 },
                 {
                     cardTitle: "WEBSITE",
-                    pointsTitle: ["Akses fitur dasar", "Support Email", "Diskon 5%"],
-                    price: "Rp 100.000"
+                    pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                    price: "Rp 1.400.000"
                 },
                 {
                     cardTitle: "ERP",
-                    pointsTitle: ["Akses fitur dasar", "Support Email", "Diskon 5%"],
-                    price: "Rp 100.000"
-                },
-                {
-                    cardTitle: "PROFILLING",
-                    pointsTitle: ["Akses fitur dasar", "Support Email", "Diskon 5%"],
-                    price: "Rp 100.000"
+                    pointsTitle: ["Full Cycle Development", "Testing", "Maintenance", "Installation"],
+                    price: "Rp 99.000.000"
                 }
             ]
         },
@@ -50,19 +45,19 @@ export default function Services() {
             img: img2,
             details: [
                 {
-                    cardTitle: "Vulnerability Assessment",
-                    pointsTitle: ["Pemindaian celah keamanan", "Laporan kerentanan", "Saran perbaikan"],
-                    price: "Rp 150.000"
+                    cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Website",
+                    pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                    price: "Rp 5.000.000"
                 },
                 {
-                    cardTitle: "Penetration Testing (Pentest)",
-                    pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko"],
-                    price: "Rp 300.000"
+                    cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) API",
+                    pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                    price: "Rp 12.000.000"
                 },
                 {
-                    cardTitle: "Network Security",
-                    pointsTitle: ["Firewall setup", "Intrusion Detection", "Keamanan VPN"],
-                    price: "Rp 200.000"
+                    cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Mobile Application",
+                    pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                    price: "Rp 35.000.000"
                 }
             ]
         },
@@ -72,19 +67,19 @@ export default function Services() {
             img: img3,
             details: [
                 {
-                    cardTitle: "IT Strategy Consulting",
-                    pointsTitle: ["Perencanaan jangka panjang", "Audit IT", "Efisiensi operasional"],
-                    price: "Rp 250.000"
+                    cardTitle: "IT Consulting & Manage Service",
+                    pointsTitle: ["Perancangan & Perencanaan Sistem", "Audit IT", "Efisiensi operasional"],
+                    price: "Rp 250.000.000"
                 },
                 {
-                    cardTitle: "24/7 IT Support",
-                    pointsTitle: ["Support teknis nonstop", "Pemantauan sistem", "Respons cepat masalah"],
-                    price: "Rp 350.000"
+                    cardTitle: "IT Support",
+                    pointsTitle: ["Support teknis", "Pemantauan sistem", "Testing"],
+                    price: "Rp 75.000.000"
                 },
                 {
-                    cardTitle: "Infrastructure Management",
-                    pointsTitle: ["Manajemen server & jaringan", "Backup rutin", "Skalabilitas tinggi"],
-                    price: "Rp 300.000"
+                    cardTitle: "Procurement of Technology Solution",
+                    pointsTitle: ["Pengadaan asset TI", "Pengadaan Software", "Implementasi & Set Up Sistem", "Pengadaan Cloud Service"],
+                    price: "Rp 15.000.000"
                 }
             ]
         },
@@ -95,18 +90,52 @@ export default function Services() {
             details: [
                 {
                     cardTitle: "Business Intelligence",
-                    pointsTitle: ["Dashboard interaktif", "Visualisasi data", "Insight bisnis real-time"],
-                    price: "Rp 200.000"
+                    pointsTitle: ["Dashboard", "Visualisasi data", "Insight bisnis real-time"],
+                    price: "Rp 15.000.000"
                 },
                 {
                     cardTitle: "Predictive Analytics",
-                    pointsTitle: ["Model prediktif", "Analisa tren historis", "Forecasting akurat"],
-                    price: "Rp 300.000"
+                    pointsTitle: ["Analisa tren historis", "Forecasting", "Dashboard", "Analisis customer Behaviour"],
+                    price: "Rp 45.000.000"
                 },
                 {
-                    cardTitle: "AI Automation",
-                    pointsTitle: ["Otomatisasi proses", "Chatbot cerdas", "Machine learning pipeline"],
-                    price: "Rp 400.000"
+                    cardTitle: "Artificial Intelegent Development",
+                    pointsTitle: ["Computer Vision", "Natural Language Processing", "Reinforcement Learning"],
+                    price: "Rp 75.000.000"
+                }
+            ]
+        },
+        {
+            title: "Internet of Things",
+            desc: "Kami menghadirkan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mengambil keputusan cepat berdasarkan data real-time. Dengan teknologi terpercaya dan pendekatan yang disesuaikan, kami pastikan transformasi digital Anda berjalan aman, efisien, dan berdampak nyata.",
+            img: img4,
+            details: [
+                {
+                    cardTitle: "Smart Home",
+                    pointsTitle: ["Smart Access Control", "CCTV", "Smart Lighting"],
+                    price: "Rp 7.500.000"
+                },
+                {
+                    cardTitle: "Industri",
+                    pointsTitle: ["Industrial Automation", "Assets Tracking"],
+                    price: "Rp 125.000.000"
+                },
+                {
+                    cardTitle: "Transportasi",
+                    pointsTitle: ["Smart Parking", "Vehicle Diagnostic"],
+                    price: "Rp 45.000.000"
+                }
+            ]
+        },
+        {
+            title: "Fraud Detection System",
+            desc: "Kami menghadirkan solusi fraud detection berbasis teknologi mutakhir yang mampu mengidentifikasi dan mencegah potensi penipuan secara real-time.",
+            img: img4,
+            details: [
+                {
+                    cardTitle: "Fraud System",
+                    pointsTitle: ["Fraud Risk Assessment & Advisory", "Fraud Detection System Implementation", "Data Analytics untuk Fraud Detection"],
+                    price: "Rp 125.000.000"
                 }
             ]
         }
@@ -219,7 +248,10 @@ export default function Services() {
                     </div>
                 </div>
             </div>
-            
+            <div className="waveService">
+                <div className="circleHalfWave1"></div>
+                <div className="circleHalfWave2"></div>
+            </div>
             <PricingModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
