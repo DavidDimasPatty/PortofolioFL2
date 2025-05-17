@@ -10,19 +10,33 @@ const PricingModal = ({ isOpen, onClose, service }) => {
     useEffect(() => {
         if (isOpen && service) {
             setShouldRender(true);
-            // biar transition bisa jalan
             setTimeout(() => setIsVisible(true), 200);
+
+            // Hitung scrollbar width
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
             document.body.classList.add("modal-open");
+
+            if (scrollbarWidth > 0) {
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
+            }
+
         } else {
             setIsVisible(false);
-            // tunggu efek keluar selesai baru hapus
+
             const timeout = setTimeout(() => {
                 setShouldRender(false);
                 document.body.classList.remove("modal-open");
-            }, 300); // sesuaikan dengan transition CSS
+                document.body.style.paddingRight = ""; // Reset padding
+            }, 300);
 
             return () => clearTimeout(timeout);
         }
+
+        // Cleanup saat komponen unmount
+        return () => {
+            document.body.classList.remove("modal-open");
+            document.body.style.paddingRight = "";
+        };
     }, [isOpen, service]);
 
     if (!shouldRender) return null;
