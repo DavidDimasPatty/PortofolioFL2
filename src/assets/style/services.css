@@ -385,6 +385,7 @@
     .services-section-2-desc {
         display: none;
     }
+
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
@@ -392,6 +393,7 @@
         padding: 50px 30px;
         gap: 2rem;
     }
+
 
     .services-section-1-box {
         border-radius: 9999px;
@@ -622,5 +624,11 @@
 
     .services-section-2-card-text-largeText {
         font-size: 20pt;
+    }
+}
+
+@media (max-width:375px) {
+    .services-section {
+        min-height: 2950px;
     }
 }
