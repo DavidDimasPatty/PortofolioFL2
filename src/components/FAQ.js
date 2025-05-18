@@ -63,11 +63,12 @@ const FAQ = () => {
                                 <hr />
                             </div>
                             <div className={`row question1 ${question1 ? "active" : ""}`}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                <ul>
+                                    <li> Cybersecurity Services: Vulneability Assessment & Pentesting dan keamanan jaringan.</li>
+                                    <li> Software Development: Pengembangan aplikasi berbasis web dan mobile.</li>
+                                    <li> IT Consulting & Managed Services: Perencanaan, implementasi, dan pemeliharaan infrastruktur IT.</li>
+                                    <li>  Data Analytics & AI Solutions: Business Intelligence, Machine Learning, dan Big Data.</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -80,11 +81,12 @@ const FAQ = () => {
                                 <hr />
                             </div>
                             <div className={`row question2 ${question2 ? "active" : ""}`}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                <ul>
+                                    <li>Enkripsi Data (At Rest & In Transit) menggunakan AES-256 & TLS.</li>
+                                    <li> Multi-Factor Authentication (MFA) untuk perlindungan login.</li>
+                                    <li> Backup & Disaster Recovery untuk menghindari kehilangan data.</li>
+                                    <li> Audit & Compliance sesuai dengan standar internasional.</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -97,11 +99,7 @@ const FAQ = () => {
                                 <hr />
                             </div>
                             <div className={`row question3 ${question3 ? "active" : ""}`}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                Tentu! Solusi kami dirancang untuk kompatibilitas dengan berbagai teknologi yang sudah Anda gunakan. Tim kami akan melakukan assessment dan integrasi tanpa mengganggu operasional bisnis Anda.
                             </div>
                         </div>
 
@@ -114,11 +112,10 @@ const FAQ = () => {
                                 <hr />
                             </div>
                             <div className={`row question4 ${question4 ? "active" : ""}`}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                <ul>
+                                    <li> Security Assessment & Pentesting: 1-4 minggu.</li>
+                                    <li> Software Development : 3 bulan - 12 bulan.</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -131,11 +128,12 @@ const FAQ = () => {
                                 <hr />
                             </div>
                             <div className={`row question5 ${question5 ? "active" : ""}`}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                <ul>
+                                    <li> Konsultasi Gratis – Hubungi kami untuk mendiskusikan kebutuhan Anda.</li>
+                                    <li> Assessment – Kami akan melakukan analisis terhadap sistem IT Anda.</li>
+                                    <li> Proposal & Rekomendasi – Kami memberikan solusi yang sesuai.</li>
+                                    <li> Implementasi & Support – Kami menjalankan solusi dengan dukungan 24/7.</li>
+                                </ul>
                             </div>
                         </div>
 

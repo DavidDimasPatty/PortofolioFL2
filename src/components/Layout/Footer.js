@@ -50,26 +50,20 @@ const Footer = () => {
                     <div className={`mb-4 ourVisionHidden ${isHoverVision ? `visible` : ''}`}>
                         <h6 className="titelOurVisionHidden">Our Vision</h6>
                         <div className="textVisionHidden">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            “Menjadi pelopor dalam pengembangan solusi teknologi yang aman, inovatif, dan berkelanjutan di tingkat Nasional maupun Global, dengan menjunjung tinggi integritas, kepercayaan, serta tanggung jawab sosial sebagai landasan utama dalam membentuk ekosistem digital yang terpercaya dan berdampak positif bagi bangsa dan negara.”
                         </div>
 
                     </div>
                     <div className={`mb-4 ourMissionHidden ${isHoverMission ? `visible` : ''}`}>
                         <h6 className="titelOurVisionHidden">Our Mission</h6>
                         <div className="textMissionHidden">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <ul>
+                                <li> Menjadikan Keamanan sebagai Pilar Utama dalam Setiap Inovasi.</li>
+                                <li> Mendorong Inovasi yang Relevan dan Bertanggung Jawab.</li>
+                                <li> Mengubah Ide Besar Menjadi Solusi Melalui Teknologi dan Kolaborasi.</li>
+                                <li> Menjunjung Tinggi Integritas dan Etika Profesional</li>
+                                <li> Membangun Ekosistem Digital yang Tangguh, Adaptif, dan Terpercaya.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
