@@ -8,6 +8,7 @@
   background-size: contain;
   overflow: hidden;
   font-family: "DEPOT";
+  padding: 0 !important;
 }
 
 .childWrapperWorks {
@@ -737,7 +738,7 @@
   }
 
   .step {
-    font-size: 12px;
+    font-size: 10px;
     height: 40px;
     width: 120px;
     z-index: 20;

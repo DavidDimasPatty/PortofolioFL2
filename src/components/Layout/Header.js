@@ -37,15 +37,16 @@ const Header = ({ onCheckboxChange, onMenuOpen, isMenuOpen }) => {
             <div className={`logo${isScrolled ? '-scrolled' : ' '} d-flex justify-content-center align-items-center`} id="logo">
                 <img src={logoPT} width={"30px"} className="logoPrimary" />
             </div>
-            <button className={`burger-btn ${isScrolled ? `scrolled` : ''} ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+            {/* <button className={`burger-btn ${isScrolled ? `scrolled` : ''} ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 ☰
             </button>
             <button className={`close-btn ${isScrolled ? `scrolled` : ''}  ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 X
-            </button>
-            <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+            </button> */}
+            {/* <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}> */}
+            <nav className={`nav-links`}>
                 <ul>
-                    <li>
+                    {/* <li>
                         <button href="#tentangKami" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
                           SERVICES
                         </button>
@@ -74,7 +75,7 @@ const Header = ({ onCheckboxChange, onMenuOpen, isMenuOpen }) => {
                         <button href="#FAQ" className={`${isScrolled ? 'scrolled' : ' '}`} onClick={() => onMenuOpen(false)}>
                             CONTACT US
                         </button>
-                    </li>
+                    </li> */}
                     <li>
                         <div className={`toggle-button-cover ${isScrolled ? 'scrolled ' : ' '}  ${isMenuOpen ? ' open ' : ' '}`} >
                             <div class="button-cover">
@@ -93,7 +94,7 @@ const Header = ({ onCheckboxChange, onMenuOpen, isMenuOpen }) => {
                     </li> */}
                 </ul>
             </nav>
-        </header>
+        </header >
     )
 }
 

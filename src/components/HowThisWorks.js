@@ -210,7 +210,7 @@ const HowThisWorks = () => {
 
     return (
         <div className="row wrapperWorks d-flex justify-content-center align-items-center">
-            {window.innerWidth <= 767 ? <h2 className="mb-5 text-center mt-3 howThisTittle">HOW THIS WORKS</h2> : ""}
+            {window.innerWidth <= 767 ? <h2 className="mb-5 text-center howThisTittle">HOW THIS WORKS</h2> : ""}
             <div className="childWrapperWorks" ref={window.innerWidth <= 767 ? diagramRef : null}>
                 {window.innerWidth > 767 ?
                     <div className="col-12 col-md-6 wrapperDiagram">

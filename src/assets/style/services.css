@@ -21,6 +21,7 @@
 
 .services-section {
     color: white;
+    min-height: 2800px;
 }
 
 .services-section-1 {
@@ -164,10 +165,10 @@
     left: 50%;
     transform: translateX(-50%) translateY(2%);
     width: 200vw;
-    height: 70vh;
+    height: 120vh;
     background-color: white;
-    border-top-left-radius: 70%;
-    border-top-right-radius: 70%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
     z-index: 2;
 }
 
@@ -178,7 +179,11 @@
     transform: translateX(-50%);
     width: 200vw;
     height: 90vh;
-    background: linear-gradient(to right, #5fb3b3, #b2d7f0, #6790f0, #0000ff);
+    background: linear-gradient(to right,
+            rgba(95, 179, 179, 0.2),
+            rgba(178, 215, 240, 0.2),
+            rgba(103, 144, 240, 0.2),
+            rgba(0, 0, 255, 0.2));
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
     z-index: 1;
