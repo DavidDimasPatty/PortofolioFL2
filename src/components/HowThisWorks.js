@@ -122,7 +122,6 @@ const HowThisWorks = () => {
         };
     }, [doneLook]);
 
-    // Handle wheel scroll antar step
     useEffect(() => {
         const diagramEl = diagramRef.current;
         if (!diagramEl) return;
@@ -133,7 +132,6 @@ const HowThisWorks = () => {
             else if (e.deltaY < 0 && currentStep > 1) prevStep();
         };
 
-        // Mobile touch support
         let touchStartY = 0;
         const handleTouchStart = (e) => {
             touchStartY = e.touches[0].clientY;

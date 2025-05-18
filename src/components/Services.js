@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import "../assets/style/services.css";
 import img1 from "../assets/image/services-ikon-1.png"
@@ -177,8 +177,8 @@ export default function Services() {
         };
     }, []);
 
-    const fullText1 = "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda.";
-    const fullText2 = "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. Di setiap sekt or, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital.";
+    // const fullText1 = "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda.";
+    // const fullText2 = "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. Di setiap sekt or, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital.";
 
     const highlightWords = ["solusi", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
 
@@ -209,6 +209,78 @@ export default function Services() {
         }
     };
 
+
+    const sectionRef = useRef(null);
+    const [doneLook, setDoneLook] = useState(false)
+    const [currentStep, setCurrentStep] = useState(0);
+
+    useEffect(() => {
+        if (doneLook) return;
+
+        const diagramEl = sectionRef.current;
+        if (!diagramEl) return;
+
+        const handleWindowScroll = () => {
+            const rect = diagramEl.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            if (rect.top <= 0 && rect.bottom >= windowHeight) {
+                document.body.style.overflow = "hidden";
+
+            } else {
+                document.body.style.overflow = "";
+            }
+        };
+
+        window.addEventListener("scroll", handleWindowScroll);
+        window.addEventListener("resize", handleWindowScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleWindowScroll);
+            window.removeEventListener("resize", handleWindowScroll);
+            document.body.style.overflow = "";
+        };
+    }, [doneLook]);
+
+
+    useEffect(() => {
+        if (doneLook) return;
+
+        const diagramEl = sectionRef.current;
+        if (!diagramEl) return;
+
+        if (currentStep == arr.length) {
+            setDoneLook(true);
+        }
+
+        const handleWheel = (e) => {
+            e.preventDefault();
+            nextStep();
+        };
+
+        diagramEl.addEventListener("wheel", handleWheel, { passive: false });
+        diagramEl.addEventListener("touchstart", handleWheel, { passive: false });
+        diagramEl.addEventListener("touchend", handleWheel, { passive: false });
+
+        return () => {
+            diagramEl.removeEventListener("wheel", handleWheel);
+            diagramEl.removeEventListener("touchstart", handleWheel);
+            diagramEl.removeEventListener("touchend", handleWheel);
+        };
+    }, [currentStep]);
+
+
+    const nextStep = () => {
+        setCurrentStep(currentStep + 1);
+    };
+
+
+    const arr = [
+        "",
+        "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri.",
+        "Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda.",
+        "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik.",
+        "Di setiap sekt or, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital."
+    ]
     return (
         <>
             <div className="sloganAndService">
@@ -229,18 +301,20 @@ export default function Services() {
                             </div>
                         ))}
                     </div>
-                    <div className="services-section-2">
+                    <div className="services-section-2" ref={sectionRef}>
                         <div className="services-section-2-card">
                             <div className="services-section-2-card-icon">
                                 {icons.map((icon, index) => (
                                     <img key={index} src={icon} />
                                 ))}
                             </div>
-                            <span className="services-section-2-card-text">
-                                {highlightText(fullText1, highlightWords)}
-                                <br />
-                                {highlightText(fullText2, highlightWords)}
-                            </span>
+                            <div className="services-section-2-card-text textSection">
+                                {arr.slice(1).map((text, index) => (
+                                    <b key={index} className={`textLine ${currentStep > index ? "visible" : ""}`}>
+                                        {highlightText(text, highlightWords)}
+                                    </b>
+                                ))}
+                            </div>
                         </div>
                         <div className="services-section-2-desc">
                             <img src={img} />
