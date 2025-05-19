@@ -6,6 +6,11 @@ body {
     height: 100vh;
 }
 
+body.scroll-locked {
+    overflow: hidden;
+    position: relative;
+}
+
 .root {
     height: 100vh;
 }

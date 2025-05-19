@@ -98,37 +98,30 @@ const HowThisWorks = () => {
     useEffect(() => {
         if (doneLook) return;
 
-        const handleScroll = () => {
-            const diagramEl = diagramRef.current;
-            if (!diagramEl) return;
+        const diagramEl = diagramRef.current;
+        if (!diagramEl) return;
 
+        const handleWindowScroll = () => {
             const rect = diagramEl.getBoundingClientRect();
             const windowHeight = window.innerHeight;
 
-            if (rect.top >= 0 && rect.bottom <= windowHeight) {
-                document.body.style.overflow = "hidden";
-                document.body.style.position = 'fixed';
-                document.body.style.top = `-${window.scrollY}px`;
-                document.body.style.left = '0';
-                document.body.style.right = '0';
+            if (rect.top <= 0 && rect.bottom >= windowHeight) {
+                document.body.classList.add("scroll-locked");
             } else {
-                document.body.style.position = '';
-                document.body.style.top = '';
-                document.body.style.left = '';
-                document.body.style.right = '';
-                document.body.style.overflow = '';
+                document.body.classList.remove("scroll-locked");
             }
         };
 
-        window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleScroll);
+        window.addEventListener("scroll", handleWindowScroll);
+        window.addEventListener("resize", handleWindowScroll);
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleScroll);
-            document.body.style.overflow = "";
+            window.removeEventListener("scroll", handleWindowScroll);
+            window.removeEventListener("resize", handleWindowScroll);
+            document.body.classList.remove("scroll-locked");
         };
     }, [doneLook]);
+
 
     useEffect(() => {
         const diagramEl = diagramRef.current;
@@ -215,9 +208,9 @@ const HowThisWorks = () => {
 
 
     return (
-        <div className="row wrapperWorks d-flex justify-content-center align-items-center">
+        <div className="row wrapperWorks d-flex justify-content-center align-items-center" ref={window.innerWidth <= 767 ? diagramRef : null}>
             {window.innerWidth <= 767 ? <h2 className="mb-5 text-center howThisTittle">HOW THIS WORKS</h2> : ""}
-            <div className="childWrapperWorks" ref={window.innerWidth <= 767 ? diagramRef : null}>
+            <div className="childWrapperWorks">
                 {window.innerWidth > 767 ?
                     <div className="col-12 col-md-6 wrapperDiagram">
                         <div className="diagramContent">

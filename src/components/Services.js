@@ -223,19 +223,11 @@ export default function Services() {
         const handleWindowScroll = () => {
             const rect = diagramEl.getBoundingClientRect();
             const windowHeight = window.innerHeight;
-            if (rect.top <= 0 && rect.bottom >= windowHeight) {
-                document.body.style.overflow = "hidden";
-                document.body.style.position = 'fixed';
-                document.body.style.top = `-${window.scrollY}px`;
-                document.body.style.left = '0';
-                document.body.style.right = '0';
 
+            if (rect.top <= 0 && rect.bottom >= windowHeight) {
+                document.body.classList.add("scroll-locked");
             } else {
-                document.body.style.position = '';
-                document.body.style.top = '';
-                document.body.style.left = '';
-                document.body.style.right = '';
-                document.body.style.overflow = '';
+                document.body.classList.remove("scroll-locked");
             }
         };
 
@@ -245,11 +237,10 @@ export default function Services() {
         return () => {
             window.removeEventListener("scroll", handleWindowScroll);
             window.removeEventListener("resize", handleWindowScroll);
-            document.body.style.overflow = "";
+            document.body.classList.remove("scroll-locked");
         };
     }, [doneLook]);
-
-
+    
     useEffect(() => {
         if (doneLook) return;
 
