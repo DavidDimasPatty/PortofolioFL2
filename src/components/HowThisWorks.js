@@ -19,6 +19,7 @@ import step6c from "../assets/image/howWorks/step6/step6c.png"
 import rocket from "../assets/image/roket.png"
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 gsap.registerPlugin(MotionPathPlugin);
 const HowThisWorks = () => {
     const [hoverContainer1, setHoverContainer1] = useState(false);
@@ -33,6 +34,7 @@ const HowThisWorks = () => {
     const [currentStep, setCurrentStep] = useState(1);
     const stepRefs = useRef([]);
     const rocketRef = useRef(null);
+    const isFirstRender = useRef(true);
     const container1 = () => {
         setHoverContainer1(true);
     }
@@ -96,6 +98,7 @@ const HowThisWorks = () => {
     }
 
     useEffect(() => {
+        if (window.innerWidth > 767) return;
         if (doneLook) return;
 
         const diagramEl = diagramRef.current;
@@ -104,11 +107,15 @@ const HowThisWorks = () => {
         const handleWindowScroll = () => {
             const rect = diagramEl.getBoundingClientRect();
             const windowHeight = window.innerHeight;
-
-            if (rect.top <= 0 && rect.bottom >= windowHeight) {
-                document.body.classList.add("scroll-locked");
+            console.log(rect.top)
+            console.log(rect.bottom)
+            console.log(windowHeight)
+            if (rect.top >= 0 && rect.bottom <= windowHeight) {
+                disableBodyScroll(document.body);
+                console.log("masuk")
             } else {
-                document.body.classList.remove("scroll-locked");
+                enableBodyScroll(document.body);
+                clearAllBodyScrollLocks();
             }
         };
 
@@ -118,12 +125,13 @@ const HowThisWorks = () => {
         return () => {
             window.removeEventListener("scroll", handleWindowScroll);
             window.removeEventListener("resize", handleWindowScroll);
-            document.body.classList.remove("scroll-locked");
+            enableBodyScroll(document.body);
         };
     }, [doneLook]);
 
 
     useEffect(() => {
+        if (window.innerWidth > 767) return;
         const diagramEl = diagramRef.current;
         if (!diagramEl) return;
 
@@ -168,7 +176,6 @@ const HowThisWorks = () => {
         setHoverContentBox((currentStep - 1).toString());
     };
 
-    const isFirstRender = useRef(true);
     useEffect(() => {
         if (isFirstRender.current) {
             isFirstRender.current = false;
@@ -208,9 +215,9 @@ const HowThisWorks = () => {
 
 
     return (
-        <div className="row wrapperWorks d-flex justify-content-center align-items-center" ref={window.innerWidth <= 767 ? diagramRef : null}>
+        <div className="row wrapperWorks d-flex justify-content-center align-items-center">
             {window.innerWidth <= 767 ? <h2 className="mb-5 text-center howThisTittle">HOW THIS WORKS</h2> : ""}
-            <div className="childWrapperWorks">
+            <div className="childWrapperWorks" ref={diagramRef}>
                 {window.innerWidth > 767 ?
                     <div className="col-12 col-md-6 wrapperDiagram">
                         <div className="diagramContent">

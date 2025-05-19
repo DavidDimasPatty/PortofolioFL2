@@ -1,17 +1,14 @@
 import { useEffect, useState, useRef } from "react";
-
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import "../assets/style/services.css";
 import img1 from "../assets/image/services-ikon-1.png"
 import img2 from "../assets/image/services-ikon-2.png"
 import img3 from "../assets/image/services-ikon-3.png"
 import img4 from "../assets/image/services-ikon-4.png"
-
 import icon1 from "../assets/image/service-solution-1.png"
 import icon2 from "../assets/image/service-solution-2.png"
 import icon3 from "../assets/image/service-solution-3.png"
-
 import img from "../assets/image/services-sol.png"
-
 import Slogan from "./Slogan";
 import PricingModal from "./Pricing";
 
@@ -224,10 +221,11 @@ export default function Services() {
             const rect = diagramEl.getBoundingClientRect();
             const windowHeight = window.innerHeight;
 
-            if (rect.top <= 0 && rect.bottom >= windowHeight) {
-                document.body.classList.add("scroll-locked");
+            if (rect.top < windowHeight && rect.bottom > 100) {
+                disableBodyScroll(document.body);
             } else {
-                document.body.classList.remove("scroll-locked");
+                enableBodyScroll(document.body);
+                clearAllBodyScrollLocks();
             }
         };
 
@@ -237,10 +235,10 @@ export default function Services() {
         return () => {
             window.removeEventListener("scroll", handleWindowScroll);
             window.removeEventListener("resize", handleWindowScroll);
-            document.body.classList.remove("scroll-locked");
+            enableBodyScroll(document.body);
         };
     }, [doneLook]);
-    
+
     useEffect(() => {
         if (doneLook) return;
 
