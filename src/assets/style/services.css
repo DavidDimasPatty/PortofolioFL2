@@ -650,8 +650,32 @@
     }
 }
 
+@media (max-width:430px) {
+    .services-section {
+        min-height: 2850px;
+    }
+}
+
+@media (max-width:400x) {
+    .services-section {
+        min-height: 2750px;
+    }
+}
+
 @media (max-width:375px) {
     .services-section {
-        min-height: 2950px;
+        min-height: 3050px;
+    }
+}
+
+@media (max-width:350px) {
+    .services-section {
+        min-height: 3150px;
+    }
+}
+
+@media (max-width:330px) {
+    .services-section {
+        min-height: 3450px;
     }
 }
