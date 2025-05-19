@@ -107,8 +107,16 @@ const HowThisWorks = () => {
 
             if (rect.top >= 0 && rect.bottom <= windowHeight) {
                 document.body.style.overflow = "hidden";
+                document.body.style.position = 'fixed';
+                document.body.style.top = `-${window.scrollY}px`;
+                document.body.style.left = '0';
+                document.body.style.right = '0';
             } else {
-                document.body.style.overflow = "";
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.left = '';
+                document.body.style.right = '';
+                document.body.style.overflow = '';
             }
         };
 
