@@ -650,9 +650,9 @@
     }
 }
 
-@media (max-width:430px) {
+@media (min-width: 420px) and (max-width:450px) {
     .services-section {
-        min-height: 2850px;
+        min-height: 2650px;
     }
 }
 
