@@ -16,33 +16,39 @@
     position: absolute;
     opacity: 0;
     width: 70%;
+    left: 20px;
 }
 
 .question2 {
     position: absolute;
     opacity: 0;
     width: 70%;
+    left: 20px;
 }
 
 .question3 {
     position: absolute;
     opacity: 0;
     width: 70%;
+    left: 15px;
 }
 
 .question4 {
     position: absolute;
     opacity: 0;
     width: 70%;
+    left: 20px;
 }
 
 .question5 {
     position: absolute;
     opacity: 0;
     width: 70%;
+    left: 20px;
 }
 
 .wrapQuestions {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,4 +210,3 @@
     font-family: "DEPOT" !important;
     letter-spacing: 2px;
 }
-

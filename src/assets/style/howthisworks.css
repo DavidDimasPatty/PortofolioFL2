@@ -240,10 +240,11 @@
   overflow: hidden;
 }
 
+
 .orbit svg {
   width: 1000px;
-  height: 350px;
-  transform: scale(1.8);
+  height: 500px;
+  transform: scale(1.5);
   z-index: -1;
 }
 
@@ -254,6 +255,7 @@
 
 .moreProjectsButtonWrapper {
   position: relative;
+  bottom: 60px;
   z-index: 20;
 }
 
@@ -819,7 +821,7 @@
     left: -300px;
     transform: scale(0.9);
     width: 1000px;
-    height: 350px;
+    height: 450px;
   }
 
   .projectsMore {
@@ -839,4 +841,152 @@
   .textPathWorks {
     font-size: 10px;
   }
+
+  .moreProjectsButtonWrapper {
+    bottom: 0px;
+  }
+
+
+  .workstep1 {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: -10px;
+    width: 90px;
+    top: 0px;
+    animation: fadeInScale 1s forwards;
+  }
+
+
+  .workstep2a {
+    right: 0px;
+    width: 90px;
+    top: -15px;
+  }
+
+  .workstep2b {
+    right: 10px;
+    width: 70px;
+    top: -7px;
+  }
+
+  .workstep2c {
+    right: 25px;
+    width: 40px;
+    top: 8px;
+  }
+
+
+  .workstep3a {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 0px;
+    width: 80px;
+    top: -10px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep3b {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 22px;
+    width: 35px;
+    top: 12px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep3c {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 15px;
+    width: 50px;
+    top: 6px;
+    animation: fadeInMove 1s forwards;
+  }
+
+
+  .workstep4a {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 0px;
+    width: 80px;
+    top: -10px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep4b {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 20px;
+    width: 40px;
+    top: 12px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep4c {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 32px;
+    width: 15px;
+    top: 24px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep5a {
+    right: 15px;
+    width: 70px;
+  }
+
+  .workstep5b {
+    right: 0px;
+    width: 20px;
+    top: -5px;
+  }
+
+
+  .workstep6a {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 0px;
+    width: 90px;
+    top: -10px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep6b {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 15px;
+    width: 60px;
+    top: 5px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep6c {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 38px;
+    width: 15px;
+    top: 30px;
+    animation: fadeInMove 1s forwards;
+  }
+}
+
+@media (max-width: 370px) {
+  .step-container {
+    right: -5px;
+  }
+}
+
+
+@media (max-width: 344px) {
+  .step-container {
+    right: -8px;
+  }
+
+  
+  .step {
+    height: 40px;
+    width: 110px;
+  }
+
 }

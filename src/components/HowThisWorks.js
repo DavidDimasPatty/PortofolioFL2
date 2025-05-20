@@ -535,9 +535,9 @@ const HowThisWorks = () => {
 
                     <div className="orbit">
                         <svg>
-                            <circle cx="280" cy="210" r="157" stroke="white" fill="none" />
-                            <circle cx="500" cy="210" r="157" stroke="white" fill="none" />
-                            <circle cx="750" cy="210" r="157" stroke="white" fill="none" />
+                            <circle cx="275" cy="220" r="160" stroke="white" fill="none" />
+                            <circle cx="500" cy="220" r="160" stroke="white" fill="none" />
+                            <circle cx="750" cy="220" r="160" stroke="white" fill="none" />
                             <g transform="translate(0.000000,513.000000) scale(0.100000,-0.100000)"
                                 fill="transparent" stroke="none" >
                                 <path id="orbitPath" d="M7320 4665 c-387 -53 -745 -252 -1008 -559 l-42 -49 -88 86 c-147

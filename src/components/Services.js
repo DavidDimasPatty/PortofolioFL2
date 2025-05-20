@@ -16,6 +16,27 @@ import Slogan from "./Slogan";
 import PricingModal from "./Pricing";
 
 export default function Services() {
+
+    const detectDevice = () => {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+            return "Android";
+        }
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return "iOS";
+        }
+
+        if (/Win/i.test(userAgent)) {
+            return "Windows";
+        }
+
+        return "Other";
+    };
+
+    const device = detectDevice();
+
     const servicesData = [
         {
             title: "SOFTWARE DEVELOPMENT",
@@ -215,6 +236,7 @@ export default function Services() {
     const [currentStep, setCurrentStep] = useState(0);
 
     useEffect(() => {
+        if (device == "iOS") return;
         if (doneLook) return;
 
         const diagramEl = sectionRef.current;
@@ -243,6 +265,7 @@ export default function Services() {
 
 
     useEffect(() => {
+        if (device == "iOS") return;
         if (doneLook) return;
 
         const diagramEl = sectionRef.current;
@@ -309,11 +332,21 @@ export default function Services() {
                                 ))}
                             </div>
                             <div className="services-section-2-card-text textSection">
-                                {arr.slice(1).map((text, index) => (
-                                    <b key={index} className={`textLine ${currentStep > index ? "visible" : ""}`}>
-                                        {highlightText(text, highlightWords)}
-                                    </b>
-                                ))}
+
+                                {
+                                    device != "iOS" ?
+                                        arr.slice(1).map((text, index) => (
+                                            <b key={index} className={`textLine ${currentStep > index ? "visible" : ""}`}>
+                                                {highlightText(text, highlightWords)}
+                                            </b>
+                                        ))
+                                        : arr.map((text, index) => (
+                                            <b key={index} className={`textLine visible`}>
+                                                {highlightText(text, highlightWords)}
+                                            </b>
+                                        ))
+                                }
+
                             </div>
                         </div>
                         <div className="services-section-2-desc">

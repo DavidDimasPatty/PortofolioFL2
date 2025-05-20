@@ -55,7 +55,7 @@ const Footer = () => {
 
                     </div>
                     <div className={`mb-4 ourMissionHidden ${isHoverMission ? `visible` : ''}`}>
-                        <h6 className="titelOurVisionHidden">Our Mission</h6>
+                        <h6 className="titelOurMissionHidden">Our Mission</h6>
                         <div className="textMissionHidden">
                             <ul>
                                 <li> Menjadikan Keamanan sebagai Pilar Utama dalam Setiap Inovasi.</li>
@@ -106,7 +106,7 @@ const Footer = () => {
 
             <div className="footerEnd d-flex justify-content-center align-items-center">
                 <div className="borderSpaceEnd d-flex justify-content-center align-items-center gap-3">
-                    <Marquee speed={200} pauseOnHover={true} autoFill={true}>
+                    <Marquee speed={100} pauseOnHover={false} autoFill={true}>
                         <h2 className="moveText"> IKODORA </h2>
                     </Marquee>
                 </div>
