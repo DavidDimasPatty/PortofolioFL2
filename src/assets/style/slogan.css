@@ -8,7 +8,7 @@
 .slogan-section {
     color: white;
     font-family: 'Depot', sans-serif;
-    letter-spacing: 5pt;
+    letter-spacing: 10pt;
     padding: 50px 50px;
 
     display: flex;
@@ -23,12 +23,13 @@
 }
 
 .slogan-small {
-    font-size: 60pt;
+    font-size: 80pt;
+    word-spacing: 0px;
 }
 
 .slogan-large {
-    font-size: 125pt;
-    padding-right: 10px;
+    font-size: 145pt;
+    padding-right: 40px;
 }
 
 .slogan-we-are {

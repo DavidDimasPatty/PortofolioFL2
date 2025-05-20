@@ -107,7 +107,9 @@ const FAQ = () => {
                                 <hr />
                             </div>
                             <div className={`row question3 ${question3 ? "active" : ""}`}>
-                                Tentu! Solusi kami dirancang untuk kompatibilitas dengan berbagai teknologi yang sudah Anda gunakan. Tim kami akan melakukan assessment dan integrasi tanpa mengganggu operasional bisnis Anda.
+                                <ul>
+                                    <li>Tentu! Solusi kami dirancang untuk kompatibilitas dengan berbagai teknologi yang sudah Anda gunakan. Tim kami akan melakukan assessment dan integrasi tanpa mengganggu operasional bisnis Anda.</li>
+                                </ul>
                             </div>
                         </div>
 

@@ -36,14 +36,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     border: 1px solid white;
     border-radius: 9999px;
-
     padding: 50px 0;
-
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.3);
 }
 
 .services-section-1-box-img {
@@ -72,16 +68,18 @@
 
 .services-section-1-box-desc h6 {
     font-size: 16pt;
-    font-family: 'Humnst777black', sans-serif;
+    font-family: "HUM";
     margin: 0;
     padding: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 .services-section-1-box-desc p {
     padding: 0;
     margin: 0;
     font-size: 14pt;
-    font-family: 'Asap SemiCondensed', sans-serif;
+      font-family: "ASAP";
     text-align: start;
 }
 
@@ -197,7 +195,6 @@
     background: transparent;
     padding: 20px;
     overflow: hidden;
-    font-family: "ASAP";
 }
 
 
@@ -206,6 +203,8 @@
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
     margin: 20px 0;
+    letter-spacing: 3px;
+    font-family: "ASAP";
 }
 
 .textLine.visible {

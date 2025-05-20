@@ -128,7 +128,7 @@ export default function Services() {
         },
         {
             title: "Internet of Things",
-            desc: "Kami menghadirkan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mengambil keputusan cepat berdasarkan data real-time. Dengan teknologi terpercaya dan pendekatan yang disesuaikan, kami pastikan transformasi digital Anda berjalan aman, efisien, dan berdampak nyata.",
+            desc: "Kami menghadirkan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mengambil keputusan cepat berdasarkan data real-time.",
             img: img4,
             details: [
                 {

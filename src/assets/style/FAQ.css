@@ -30,7 +30,7 @@
     position: absolute;
     opacity: 0;
     width: 70%;
-    left: 15px;
+    left: 20px;
 }
 
 .question4 {
@@ -72,7 +72,7 @@
 .downArrow1 {
     color: blue;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
@@ -82,7 +82,7 @@
 .downArrow2 {
     color: blue;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
@@ -92,7 +92,7 @@
 .downArrow3 {
     color: blue;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
@@ -102,7 +102,7 @@
 .downArrow4 {
     color: blue;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
@@ -112,7 +112,7 @@
 .downArrow5 {
     color: blue;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
