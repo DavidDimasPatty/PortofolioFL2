@@ -8,7 +8,7 @@
 .slogan-section {
     color: white;
     font-family: 'Depot', sans-serif;
-    letter-spacing: 10pt;
+    letter-spacing: 5pt;
     padding: 50px 50px;
 
     display: flex;
@@ -23,13 +23,12 @@
 }
 
 .slogan-small {
-    font-size: 80pt;
-    word-spacing: 0px;
+    font-size: 60pt;
 }
 
 .slogan-large {
-    font-size: 145pt;
-    padding-right: 40px;
+    font-size: 125pt;
+    padding-right: 10px;
 }
 
 .slogan-we-are {
@@ -165,21 +164,46 @@
 }
 
 @media (min-width: 1199px) and (max-width: 1440px) {
+    .slogan-section {
+        letter-spacing: 7pt;
+        padding: 50px 50px;
+    }
+
     .slogan-small {
-        font-size: 52pt;
+        font-size: 70pt;
+        word-spacing: 0px;
     }
 
     .slogan-large {
-        font-size: 118pt;
-    }
-
-    .slogan-section {
-        padding: 50px 30px;
-        letter-spacing: 1pt;
+        font-size: 95pt;
+        padding-right: 40px;
     }
 
     .slogan-we-are {
         font-size: 46pt;
+        line-height: 46pt;
+    }
+}
+
+
+@media  (min-width: 1440px) and  (max-width: 2560px) {
+    .slogan-section {
+        letter-spacing: 7pt;
+        padding: 50px 50px;
+    }
+
+    .slogan-small {
+        font-size: 100pt;
+        word-spacing: 0px;
+    }
+
+    .slogan-large {
+        font-size: 135pt;
+        padding-right: 40px;
+    }
+
+    .slogan-we-are {
+        font-size: 52pt;
         line-height: 46pt;
     }
 }

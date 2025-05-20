@@ -218,9 +218,9 @@ const HowThisWorks = () => {
 
     return (
         <div className="row wrapperWorks d-flex justify-content-center align-items-center">
-            {window.innerWidth <= 767 ? <h2 className="mb-5 text-center howThisTittle">HOW THIS WORKS</h2> : ""}
-            <div className="childWrapperWorks" ref={window.innerWidth <= 767 ? diagramRef : null} id="howWorks">
-                {window.innerWidth > 767 ?
+            {window.innerWidth <= 800 ? <h2 className="mb-5 text-center howThisTittle">HOW THIS WORKS</h2> : ""}
+            <div className="childWrapperWorks" ref={window.innerWidth <= 800 ? diagramRef : null} id="howWorks">
+                {window.innerWidth > 800 ?
                     <div className="col-12 col-md-6 wrapperDiagram">
                         <div className="diagramContent">
                             <h2 className="mb-5 howThisTittle">HOW THIS WORKS</h2>
@@ -253,15 +253,13 @@ const HowThisWorks = () => {
                                         <div class={`lineVertical ${hoverContainer3 ? "light-v3" : ""}`}></div>
                                         <div class={`step ${hoverContainer3 ? "light3" : ""}`}>PENGEMBANGAN & IMPLEMENTASI</div>
                                     </div>
-                                </div>
 
-                                <div class="row-container  rounded-4 p-3">
                                     <div class={`step-container`}
-                                        onMouseEnter={() => { container4(); setContent("4") }}
-                                        onMouseLeave={() => { containerEnd4(); setContent("1") }}>
-                                        <div class={`step-number ${hoverContainer4 ? "light-top4" : ""}`}>4</div>
-                                        <div class={`lineVertical ${hoverContainer4 ? "light-v4" : ""}`}></div>
-                                        <div class={`step ${hoverContainer4 ? "light4" : ""}`}>PENGUJIAN & OPTIMALISASI</div>
+                                        onMouseEnter={() => { container6(); setContent("6") }}
+                                        onMouseLeave={() => { containerEnd6(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer6 ? "light-top6" : ""}`}>6</div>
+                                        <div class={`lineVertical ${hoverContainer6 ? "light-v6" : ""}`}></div>
+                                        <div class={`step ${hoverContainer6 ? "light6" : ""}`}>PEMELIHARAAN & DUKUNGAN</div>
                                     </div>
                                     {/* <div class="line-container">
                                     <div class="line"></div>
@@ -276,12 +274,14 @@ const HowThisWorks = () => {
                                     {/* <div class="line-container">
                                     <div class="line"></div>
                                 </div> */}
+
+
                                     <div class={`step-container`}
-                                        onMouseEnter={() => { container6(); setContent("6") }}
-                                        onMouseLeave={() => { containerEnd6(); setContent("1") }}>
-                                        <div class={`step-number ${hoverContainer6 ? "light-top6" : ""}`}>6</div>
-                                        <div class={`lineVertical ${hoverContainer6 ? "light-v6" : ""}`}></div>
-                                        <div class={`step ${hoverContainer6 ? "light6" : ""}`}>PEMELIHARAAN & DUKUNGAN</div>
+                                        onMouseEnter={() => { container4(); setContent("4") }}
+                                        onMouseLeave={() => { containerEnd4(); setContent("1") }}>
+                                        <div class={`step-number ${hoverContainer4 ? "light-top4" : ""}`}>4</div>
+                                        <div class={`lineVertical ${hoverContainer4 ? "light-v4" : ""}`}></div>
+                                        <div class={`step ${hoverContainer4 ? "light4" : ""}`}>PENGUJIAN & OPTIMALISASI</div>
                                     </div>
                                 </div>
                             </div>
