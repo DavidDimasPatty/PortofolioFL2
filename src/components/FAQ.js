@@ -48,9 +48,17 @@ const FAQ = () => {
         setQuestion5(!question5);
     }
 
+    function sendEmail() {
+        const email = "example@example.com";
+        const subject = `Saya mau plan uji coba`;
+        const body = `Halo, saya mau uji coba.`;
+        const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(mailtoLink, '_blank');
+    }
+
     return (
         <div className="wrapRowFAQ">
-            <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <div className="col-12 col-md-6 d-flex justify-content-center align-items-center" id="faq">
                 <div className="row wrappperQuestions d-flex justify-content-center align-items-center">
                     <div className="col">
                         <h3 className="text-center mb-3 faqTittleTop"> FREQUENT ASKED QUESTIONS</h3>
@@ -146,7 +154,7 @@ const FAQ = () => {
                     <div className="col d-flex justify-content-center align-items-center anyFAQ">Any more questions?</div>
                     <div className="col d-flex justify-content-center align-items-center"> if you still have questions, give us a shout!</div>
                     <div className="col wrapButtonFAQRight d-flex justify-content-center align-items-center">
-                        <button className="contactUsFAQ">Contact Us</button>
+                        <button className="contactUsFAQ" onClick={sendEmail}>Contact Us</button>
                         <button className="getStartedFAQ">Get Sarted</button>
                     </div>
                 </div>

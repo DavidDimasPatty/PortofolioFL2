@@ -4,6 +4,13 @@ import topLogo from "../assets/image/TopLogo.png"
 
 const Top = () => {
 
+    function sendEmail() {
+        const email = "example@example.com";
+        const subject = `Saya mau plan uji coba`;
+        const body = `Halo, saya mau uji coba.`;
+        const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(mailtoLink, '_blank');
+    }
 
     return (
         <div className="wrapperTop d-flex justify-content-center align-items-center">
@@ -14,14 +21,16 @@ const Top = () => {
                 </div>
                 <div className="topRight col-12 col-md-5">
                     <div className="buttonTopContentTitle">
-                        <h2>HOW CAN WE HELP?</h2>
+                        <h2 className="typing">HOW CAN</h2>
+                        <h2 className="typing">WE HELP</h2>
+                        <h2 className="typing">YOU?</h2>
                     </div>
                     <div className="wrapperButtonTop">
                         <div className="mb-3 buttonTopContent">
-                            <button> OUR PLAN </button>
+                            <button onClick={() => { window.location.href = "#ourPlan" }}> OUR PLAN </button>
                         </div>
                         <div className="buttonTopContent">
-                            <button>  CONTACT US </button>
+                            <button onClick={() => sendEmail()}>  CONTACT US </button>
                         </div>
                     </div>
                 </div>

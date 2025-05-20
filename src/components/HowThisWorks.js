@@ -21,6 +21,8 @@ import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 gsap.registerPlugin(MotionPathPlugin);
 const HowThisWorks = () => {
+    const phoneNumber = "6281311974915";
+    const defaultMessage = "Halo, saya tertarik dengan layanan Anda.";
     const [hoverContainer1, setHoverContainer1] = useState(false);
     const [hoverContainer2, setHoverContainer2] = useState(false);
     const [hoverContainer3, setHoverContainer3] = useState(false);
@@ -205,11 +207,19 @@ const HowThisWorks = () => {
         });
     }, []);
 
+    const openWhatsApp = () => {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        const url = isMobile
+            ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}` // Aplikasi WhatsApp
+            : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(defaultMessage)}`; // WhatsApp Web
+
+        window.open(url, "_blank");
+    };
 
     return (
         <div className="row wrapperWorks d-flex justify-content-center align-items-center">
             {window.innerWidth <= 767 ? <h2 className="mb-5 text-center howThisTittle">HOW THIS WORKS</h2> : ""}
-            <div className="childWrapperWorks" ref={window.innerWidth <= 767 ? diagramRef : null}>
+            <div className="childWrapperWorks" ref={window.innerWidth <= 767 ? diagramRef : null} id="howWorks">
                 {window.innerWidth > 767 ?
                     <div className="col-12 col-md-6 wrapperDiagram">
                         <div className="diagramContent">
@@ -530,7 +540,7 @@ const HowThisWorks = () => {
                         <b>More than 50+ clients and 100+ project</b>
                     </div>
                     <div className="moreProjectsButtonWrapper d-flex justify-content-center align-items-center">
-                        <button className="moreProjectsButton">GET FREE CONSULTATION</button>
+                        <button className="moreProjectsButton" onClick={openWhatsApp}>GET FREE CONSULTATION</button>
                     </div>
 
                     <div className="orbit">

@@ -36,9 +36,9 @@ const Footer = () => {
 
                         </div>
                         <div className="col-12 d-flex justify-content-start buttonFooterBot">
-                            <button>Our Plan</button>
-                            <button>FAQ</button>
-                            <button>HOW</button>
+                            <button onClick={()=>{window.location.href="#ourPlan"}}>Our Plan</button>
+                            <button onClick={()=>{window.location.href="#faq"}}>FAQ</button>
+                            <button onClick={()=>{window.location.href="#howWorks"}}>HOW</button>
                         </div>
                         <div className="row wrapImgFooter">
                             <img src={logoPT} className="imgFooter"></img>

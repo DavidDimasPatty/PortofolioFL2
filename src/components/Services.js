@@ -298,18 +298,17 @@ export default function Services() {
 
 
     const arr = [
-        "",
-        "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri.",
-        "Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda.",
-        "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik.",
-        "Di setiap sekt or, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital."
+        "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. ",
+        "Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda. ",
+        "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. ",
+        "Di setiap sekt or, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital. "
     ]
     return (
         <>
             <div className="sloganAndService">
                 <Slogan />
                 <div className="services-section">
-                    <div className="services-section-1">
+                    <div className="services-section-1" id="ourPlan">
                         {servicesData.map((service, index) => (
                             <div className="services-section-1-box"
                                 key={index}
@@ -335,7 +334,7 @@ export default function Services() {
 
                                 {
                                     device != "iOS" ?
-                                        arr.slice(1).map((text, index) => (
+                                        arr.slice(0).map((text, index) => (
                                             <b key={index} className={`textLine ${currentStep > index ? "visible" : ""}`}>
                                                 {highlightText(text, highlightWords)}
                                             </b>
