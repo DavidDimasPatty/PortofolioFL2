@@ -7,8 +7,8 @@
 
 .slogan-section {
     color: white;
-    font-family: 'Depot', sans-serif;
-    letter-spacing: 5pt;
+    font-family: 'Depot';
+    letter-spacing: 0.2em;
     padding: 50px 50px;
 
     display: flex;
@@ -18,192 +18,68 @@
 
 .slogan-line {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: baseline;
 }
 
 .slogan-small {
-    font-size: 60pt;
+    font-size: 5vw;
+    display: flex;
+    padding-right: 10px;
+    flex-shrink: 1;
 }
 
 .slogan-large {
-    font-size: 125pt;
+    font-size: 12vw;
     padding-right: 10px;
+    flex-shrink: 1;
 }
 
 .slogan-we-are {
     align-self: center;
     display: flex;
     flex-direction: column;
-    font-size: 50pt;
-    line-height: 50pt;
+    font-size: 4.7vw;
+    line-height: 1;
     padding-right: 10px;
+    flex-shrink: 1;
 }
 
 @media (max-width: 360px) {
-    .slogan-small {
-        font-size: 16pt;
-    }
-
-    .slogan-large {
-        font-size: 28pt;
-    }
-
     .slogan-section {
-        padding: 30px 10px;
-        letter-spacing: 1pt;
-    }
-
-    .slogan-we-are {
-        flex-direction: column;
-        font-size: 14pt;
-        line-height: 11pt;
+        letter-spacing: 0.1em;
+        padding: 50px 5px;
     }
 }
 
 @media (min-width: 360px) and (max-width: 480px) {
-    .slogan-small {
-        font-size: 16pt;
-    }
-
-    .slogan-large {
-        font-size: 28pt;
-    }
-
     .slogan-section {
-        padding: 30px 10px;
-        letter-spacing: 1pt;
-    }
-
-    .slogan-we-are {
-        flex-direction: column;
-        font-size: 14pt;
-        line-height: 11pt;
+        letter-spacing: 0.1em;
+        padding: 50px 5px;
     }
 }
 
 @media (min-width: 480px) and (max-width: 600px) {
-    .slogan-small {
-        font-size: 18pt;
-    }
-
-    .slogan-large {
-        font-size: 44pt;
-    }
-
     .slogan-section {
-        padding: 30px 15px;
-        letter-spacing: 1pt;
-    }
-
-    .slogan-we-are {
-        flex-direction: column;
-        font-size: 20pt;
-        line-height: 15pt;
+        letter-spacing: 0.1em;
+        padding: 50px 15px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
-    .slogan-small {
-        font-size: 26pt;
-    }
-
-    .slogan-large {
-        font-size: 55pt;
-    }
-
     .slogan-section {
-        padding: 30px 15px;
-        letter-spacing: 1pt;
-    }
-
-    .slogan-we-are {
-        font-size: 23pt;
-        line-height: 20pt;
+        letter-spacing: 0.2em;
+        padding: 50px 18px;
     }
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
-    .slogan-small {
-        font-size: 35pt;
-    }
-
-    .slogan-large {
-        font-size: 71pt;
-    }
-
     .slogan-section {
-        padding: 30px 15px;
-        letter-spacing: 1pt;
-    }
-
-    .slogan-we-are {
-        font-size: 31pt;
-        line-height: 27pt;
+        letter-spacing: 0.2em;
+        padding: 50px 35px;
     }
 }
 
-@media (min-width: 991px) and (max-width: 1199px) {
-    .slogan-small {
-        font-size: 42pt;
-    }
+/* @media (min-width: 991px) and (max-width: 1199px) {}
 
-    .slogan-large {
-        font-size: 95pt;
-    }
-
-    .slogan-section {
-        padding: 50px 30px;
-        letter-spacing: 1pt;
-    }
-
-    .slogan-we-are {
-        font-size: 40pt;
-        line-height: 34pt;
-    }
-}
-
-@media (min-width: 1199px) and (max-width: 1440px) {
-    .slogan-section {
-        letter-spacing: 7pt;
-        padding: 50px 50px;
-    }
-
-    .slogan-small {
-        font-size: 70pt;
-        word-spacing: 0px;
-    }
-
-    .slogan-large {
-        font-size: 95pt;
-        padding-right: 40px;
-    }
-
-    .slogan-we-are {
-        font-size: 46pt;
-        line-height: 46pt;
-    }
-}
-
-
-@media  (min-width: 1440px) and  (max-width: 2560px) {
-    .slogan-section {
-        letter-spacing: 7pt;
-        padding: 50px 50px;
-    }
-
-    .slogan-small {
-        font-size: 100pt;
-        word-spacing: 0px;
-    }
-
-    .slogan-large {
-        font-size: 135pt;
-        padding-right: 40px;
-    }
-
-    .slogan-we-are {
-        font-size: 52pt;
-        line-height: 46pt;
-    }
-}
+@media (min-width: 1199px) and (max-width: 1440px) {} */
