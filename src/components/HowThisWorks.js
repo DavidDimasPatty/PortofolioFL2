@@ -20,7 +20,7 @@ import rocket from "../assets/image/roket.png"
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 gsap.registerPlugin(MotionPathPlugin);
-const HowThisWorks = () => {
+const HowThisWorks = ({ changeLanguage }) => {
     const phoneNumber = "6281311974915";
     const defaultMessage = "Halo, saya tertarik dengan layanan Anda.";
     const [hoverContainer1, setHoverContainer1] = useState(false);
@@ -231,7 +231,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd1(); setContent("1") }}>
                                         <div class={`step-number ${hoverContainer1 ? "light-top1" : ""}`}>1</div>
                                         <div class={`lineVertical ${hoverContainer1 ? "light-v1" : ""}`}></div>
-                                        <div class={`step ${hoverContainer1 ? "light1" : ""}`}>KONSULTASI & ANALISIS</div>
+                                        <div class={`step ${hoverContainer1 ? "light1" : ""}`}>{changeLanguage ? "KONSULTASI & ANALISIS" : "CONSULT & ANALYZE"}</div>
                                     </div>
                                     {/* <div class="line-container">
                                     <div class="line"></div>
@@ -241,7 +241,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd2(); setContent("1") }}>
                                         <div class={`step-number ${hoverContainer2 ? "light-top2" : ""}`}>2</div>
                                         <div class={`lineVertical ${hoverContainer2 ? "light-v2" : ""}`}></div>
-                                        <div class={`step ${hoverContainer2 ? "light2" : ""}`}>PERENCANAAN & STRATEGI</div>
+                                        <div class={`step ${hoverContainer2 ? "light2" : ""}`}>{changeLanguage ? "PERENCANAAN & STRATEGI" : "PLANNING & STRATEGY"}</div>
                                     </div>
                                     {/* <div class="line-container">
                                     <div class="line"></div>
@@ -251,7 +251,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd3(); setContent("1") }}>
                                         <div class={`step-number ${hoverContainer3 ? "light-top3" : ""}`}>3</div>
                                         <div class={`lineVertical ${hoverContainer3 ? "light-v3" : ""}`}></div>
-                                        <div class={`step ${hoverContainer3 ? "light3" : ""}`}>PENGEMBANGAN & IMPLEMENTASI</div>
+                                        <div class={`step ${hoverContainer3 ? "light3" : ""}`}>{changeLanguage ? "PENGEMBANGAN & IMPLEMENTASI" : "DEVELOPMENT & IMPLEMENT"}</div>
                                     </div>
 
                                     <div class={`step-container`}
@@ -259,7 +259,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd6(); setContent("1") }}>
                                         <div class={`step-number ${hoverContainer6 ? "light-top6" : ""}`}>6</div>
                                         <div class={`lineVertical ${hoverContainer6 ? "light-v6" : ""}`}></div>
-                                        <div class={`step ${hoverContainer6 ? "light6" : ""}`}>PEMELIHARAAN & DUKUNGAN</div>
+                                        <div class={`step ${hoverContainer6 ? "light6" : ""}`}>{changeLanguage ? "PEMELIHARAAN & DUKUNGAN" : "MAINTENANCE & SUPPORT"}</div>
                                     </div>
                                     {/* <div class="line-container">
                                     <div class="line"></div>
@@ -269,7 +269,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd5(); setContent("1") }}>
                                         <div class={`step-number ${hoverContainer5 ? "light-top5" : ""}`}>5</div>
                                         <div class={`lineVertical ${hoverContainer5 ? "light-v5" : ""}`}></div>
-                                        <div class={`step ${hoverContainer5 ? "light5" : ""}`}>DEPLOYMENT & TRAINING</div>
+                                        <div class={`step ${hoverContainer5 ? "light5" : ""}`}>{changeLanguage ? "PENYEBARAN & PELATIHAN" : "DEPLOYMENT & TRAINING"}</div>
                                     </div>
                                     {/* <div class="line-container">
                                     <div class="line"></div>
@@ -281,7 +281,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd4(); setContent("1") }}>
                                         <div class={`step-number ${hoverContainer4 ? "light-top4" : ""}`}>4</div>
                                         <div class={`lineVertical ${hoverContainer4 ? "light-v4" : ""}`}></div>
-                                        <div class={`step ${hoverContainer4 ? "light4" : ""}`}>PENGUJIAN & OPTIMALISASI</div>
+                                        <div class={`step ${hoverContainer4 ? "light4" : ""}`}>{changeLanguage ? "PENGUJIAN & OPTIMALISASI" : "TESTING & OPTIMALIZATION"}</div>
                                     </div>
                                 </div>
                             </div>
@@ -298,7 +298,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd1(); setContent("1") }}>
                                         <div class={`step-number light-top1`}>1</div>
                                         <div class={`lineVertical  light-v1 `}></div>
-                                        <div class={`step light1`}>KONSULTASI & ANALISIS</div>
+                                        <div class={`step light1`}>{changeLanguage ? "KONSULTASI & ANALISIS" : "CONSULT & ANALYZE"}</div>
                                     </div>}
                                 {/* <div class="line-container">
                                     <div class="line"></div>
@@ -310,7 +310,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd2(); setContent("1") }}>
                                         <div class={`step-number  light-top2`}>2</div>
                                         <div class={`lineVertical light-v2`}></div>
-                                        <div class={`step light2`}>PERENCANAAN & STRATEGI</div>
+                                        <div class={`step light2`}>{changeLanguage ? "PERENCANAAN & STRATEGI" : "PLANNING & STRATEGY"}</div>
                                     </div>}
                                 {/* <div class="line-container">
                                     <div class="line"></div>
@@ -322,7 +322,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd3(); setContent("1") }}>
                                         <div class={`step-number light-top3`}>3</div>
                                         <div class={`lineVertical light-v3`}></div>
-                                        <div class={`step light3`}>PENGEMBANGAN & IMPLEMENTASI</div>
+                                        <div class={`step light3`}>{changeLanguage ? "PENGEMBANGAN & IMPLEMENTASI" : "DEVELOPMENT & IMPLEMENT"}</div>
                                     </div>}
 
                                 {currentStep == 4 &&
@@ -332,7 +332,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd4(); setContent("1") }}>
                                         <div class={`step-number light-top4`}>4</div>
                                         <div class={`lineVertical light-v4`}></div>
-                                        <div class={`step light4`}>PENGUJIAN & OPTIMALISASI</div>
+                                        <div class={`step light4`}>{changeLanguage ? "PENGUJIAN & OPTIMALISASI" : "TESTING & OPTIMALIZATION"}</div>
                                     </div>
                                 }
                                 {/* <div class="line-container">
@@ -346,7 +346,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd5(); setContent("1") }}>
                                         <div class={`step-number light-top5`}>5</div>
                                         <div class={`lineVertical light-v5`}></div>
-                                        <div class={`step light5`}>DEPLOYMENT & TRAINING</div>
+                                        <div class={`step light5`}>{changeLanguage ? "PENYEBARAN & PELATIHAN" : "DEPLOYMENT & TRAINING"}</div>
                                     </div>}
                                 {/* <div class="line-container">
                                     <div class="line"></div>
@@ -358,7 +358,7 @@ const HowThisWorks = () => {
                                         onMouseLeave={() => { containerEnd6(); setContent("1") }}>
                                         <div class={`step-number light-top6`}>6</div>
                                         <div class={`lineVertical light-v6`}></div>
-                                        <div class={`step light6`}>PEMELIHARAAN & DUKUNGAN</div>
+                                        <div class={`step light6`}>{changeLanguage ? "PEMELIHARAAN & DUKUNGAN" : "MAINTENANCE & SUPPORT"}</div>
                                     </div>
                                 }
                             </div>
@@ -433,44 +433,27 @@ const HowThisWorks = () => {
                                 }
                             </div>
                             {hoverContentBox === "1" ? (<div className="textWorks p-3">
-                                Kami mendengarkan kebutuhan Anda,
-                                memahami tantangan bisnis, dan
-                                menganalisis infrastruktur yang ada
-                                untuk memberikan solusi terbaik.
+                                {changeLanguage ? "Kami mendengarkan kebutuhan Anda, memahami tantangan bisnis, dan menganalisis infrastruktur yang ada untuk memberikan solusi terbaik." : "We listen to your needs, understand your business challenges, and analyze your existing infrastructure to deliver the best solution."}
                             </div>) : hoverContentBox === "2" ? (
                                 <div className="textWorks p-3">
-                                    Tim kami merancang strategi
-                                    implementasi berdasarkan best
-                                    practices dan standar industri,
-                                    memastikan solusi yang efisien
-                                    dan skalabel.
+                                    {changeLanguage ? "Tim kami merancang strategi implementasi berdasarkan praktek dan standar industri, memastikan solusi yang efisien dan skalabel." : "Our team designs implementation strategies based on industry best practices and standards, ensuring efficient and scalable solutions."}
                                 </div>
                             ) : hoverContentBox === "3" ? (
                                 <div className="textWorks p-3">
-                                    Kami mulai membangun, mengonfigurasi,
-                                    dan mengintegrasikan solusi IT sesuai
-                                    dengan kebutuhan bisnis Anda, dengan
-                                    fokus pada keamanan dan performa.
+                                    {changeLanguage ? "Kami mulai membangun, mengonfigurasi, dan mengintegrasikan solusi IT sesuai dengan kebutuhan bisnis Anda, dengan fokus pada keamanan dan performa." : "We begin by building, configuring, and integrating IT solutions tailored to your business needs, with a strong focus on security and performance."}
+
                                 </div>
                             ) : hoverContentBox === "4" ? (
                                 <div className="textWorks p-3">
-                                    Setiap solusi diuji secara menyeluruh
-                                    untuk memastikan kinerja maksimal,
-                                    keamanan yang kuat, serta
-                                    kompatibilitas dengan sistem yang sudah ada.
+                                    {changeLanguage ? "Setiap solusi diuji secara menyeluruh untuk memastikan kinerja maksimal,  keamanan yang kuat, serta kompatibilitas dengan sistem yang sudah ada." : "Each solution is thoroughly tested to ensure optimal performance, robust security, and seamless compatibility with existing systems."}
                                 </div>
                             ) : hoverContentBox === "5" ? (
                                 <div className="textWorks p-3">
-                                    Setelah siap, solusi diterapkan ke lingkungan
-                                    produksi, dan kami memberikan pelatihan kepada
-                                    tim Anda untuk memastikan adopsi yang sukses.
+                                    {changeLanguage ? "Setelah siap, solusi diterapkan ke lingkungan produksi, dan kami memberikan pelatihan kepada tim Anda untuk memastikan adopsi yang sukses." : "Once ready, the solution is deployed to the production environment, and we provide training to your team to ensure a successful adoption."}
                                 </div>) :
                                 (
                                     <div className="textWorks p-3">
-                                        Kami menyediakan dukungan berkelanjutan,
-                                        monitoring, dan pembaruan untuk memastikan
-                                        sistem tetap optimal dan siap menghadapi
-                                        tantangan masa depan.
+                                        {changeLanguage ? "Kami menyediakan dukungan berkelanjutan, monitoring, dan pembaruan untuk memastikan sistem tetap optimal dan siap menghadapi tantangan masa depan." : "We provide continuous support, monitoring, and updates to ensure the system remains optimal and ready to meet future challenges."}
                                     </div>)
                             }
                             <div>
@@ -478,50 +461,50 @@ const HowThisWorks = () => {
                                     {hoverContentBox === "1" ? (
                                         <>
                                             <div>
-                                                Step 1
+                                                {changeLanguage ? "Langkah 1" : "Step 1"}
                                             </div>
-                                            <div>
-                                                Konsultasi dan Analisis
+                                            <div className="explStep">
+                                                {changeLanguage ? "KONSULTASI & ANALISIS" : "CONSULT & ANALYZE"}
                                             </div>
                                         </>) : hoverContentBox === "2" ? (
                                             <>
                                                 <div>
-                                                    Step 2
+                                                    {changeLanguage ? "Langkah 2" : "Step 2"}
                                                 </div>
-                                                <div>
-                                                    Perencanaan dan Strategi
+                                                <div className="explStep">
+                                                    {changeLanguage ? "PERENCANAAN & STRATEGI" : "PLANNING & STRATEGY"}
                                                 </div>
                                             </>
                                         ) : hoverContentBox === "3" ? (<>
                                             <div>
-                                                Step 3
+                                                {changeLanguage ? "Langkah 3" : "Step 3"}
                                             </div>
-                                            <div>
-                                                Pengembangan dan Implementasi
+                                            <div className="explStep">
+                                                {changeLanguage ? "PENGEMBANGAN & IMPLEMENTASI" : "DEVELOPMENT & IMPLEMENT"}
                                             </div>
                                         </>) :
                                         hoverContentBox === "4" ? (<>
                                             <div>
-                                                Step 4
+                                                {changeLanguage ? "Langkah 4" : "Step 4"}
                                             </div>
-                                            <div>
-                                                Pengujian dan Optimalisasi
+                                            <div className="explStep">
+                                                {changeLanguage ? "PENGUJIAN & OPTIMALISASI" : "TESTING & OPTIMALIZATION"}
                                             </div>
                                         </>) :
                                             hoverContentBox === "5" ? (<>
                                                 <div>
-                                                    Step 5
+                                                    {changeLanguage ? "Langkah 5" : "Step 5"}
                                                 </div>
-                                                <div>
-                                                    Deployment dan Training
+                                                <div className="explStep">
+                                                    {changeLanguage ? "PENYEBARAN & PELATIHAN" : "DEPLOYMENT & TRAINING"}
                                                 </div>
                                             </>) : (
                                                 <>
                                                     <div>
-                                                        Step 6
+                                                        {changeLanguage ? "Langkah 6" : "Step 6"}
                                                     </div>
-                                                    <div>
-                                                        Pemeliharaan dan Dukungan
+                                                    <div className="explStep">
+                                                        {changeLanguage ? "PEMELIHARAAN & DUKUNGAN" : "MAINTENANCE & SUPPORT"}
                                                     </div>
                                                 </>
                                             )}
@@ -537,10 +520,10 @@ const HowThisWorks = () => {
             <div className="projectsMore d-flex justify-content-center align-items-center" id="targetSection">
                 <div className="projectsMoreCol">
                     <div className="moreProjects d-flex justify-content-center align-items-center">
-                        <b>More than 50+ clients and 100+ project</b>
+                        <b>{changeLanguage ? "Lebih dari 50+ klien dan 100+ project" : "More than 50+ clients and 100+ project"}</b>
                     </div>
                     <div className="moreProjectsButtonWrapper d-flex justify-content-center align-items-center">
-                        <button className="moreProjectsButton" onClick={openWhatsApp}>GET FREE CONSULTATION</button>
+                        <button className="moreProjectsButton" onClick={openWhatsApp}>{changeLanguage ? "KONSULTASI GRATIS" : "GET FREE CONSULTATION"}</button>
                     </div>
 
                     <div className="orbit">

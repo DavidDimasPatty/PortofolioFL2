@@ -715,6 +715,10 @@
   letter-spacing: 5px;
 }
 
+.explStep {
+  text-transform: capitalize;
+}
+
 @keyframes fadeInMove {
   0% {
 
@@ -749,10 +753,7 @@
 }
 
 
-@media (min-width: 728px) and (max-width: 800px) {
-
-
-}
+@media (min-width: 728px) and (max-width: 800px) {}
 
 
 

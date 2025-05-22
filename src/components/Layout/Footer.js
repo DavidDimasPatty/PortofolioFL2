@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 import waLogo from "../../assets/image/whatsapp.png"
 import fbLogo from "../../assets/image/facebook.png"
 import igLogo from "../../assets/image/instagramm.png"
-const Footer = () => {
+const Footer = ({ changeLanguage }) => {
     const [isHoverVision, setIsHoverVision] = useState(false);
     const [isHoverMission, setisHoverMission] = useState(false);
 
@@ -32,13 +32,13 @@ const Footer = () => {
                 <div className="col-12 col-md-3 d-flex  pb-2">
                     <div className="row w-100">
                         <div className="row secureTittle">
-                            <h3>WANT TO BE SECURE? <hr /></h3>
+                            <h3>{changeLanguage ? "INGIN MENJADI AMAN?" : "WANT TO BE SECURE?"} <hr /></h3>
 
                         </div>
                         <div className="col-12 d-flex justify-content-start buttonFooterBot">
-                            <button onClick={()=>{window.location.href="#ourPlan"}}>Our Plan</button>
-                            <button onClick={()=>{window.location.href="#faq"}}>FAQ</button>
-                            <button onClick={()=>{window.location.href="#howWorks"}}>HOW</button>
+                            <button onClick={() => { window.location.href = "#ourPlan" }}>{changeLanguage ? "Paket Kami" : "Our Plan"}</button>
+                            <button onClick={() => { window.location.href = "#faq" }}>FAQ</button>
+                            <button onClick={() => { window.location.href = "#howWorks" }}>{changeLanguage ? "Bagaimana" : "HOW"}</button>
                         </div>
                         <div className="row wrapImgFooter">
                             <img src={logoPT} className="imgFooter"></img>
@@ -48,22 +48,39 @@ const Footer = () => {
 
                 <div className="col-12 col-md-7 d-flex justify-content-center align-items-center wrapperVisionMission">
                     <div className={`mb-4 ourVisionHidden ${isHoverVision ? `visible` : ''}`}>
-                        <h6 className="titelOurVisionHidden">Our Vision</h6>
+                        <h6 className="titelOurVisionHidden">{changeLanguage ? "Visi Kami" : "Our Vision"}</h6>
                         <div className="textVisionHidden">
-                            “Menjadi pelopor dalam pengembangan solusi teknologi yang aman, inovatif, dan berkelanjutan di tingkat Nasional maupun Global, dengan menjunjung tinggi integritas, kepercayaan, serta tanggung jawab sosial sebagai landasan utama dalam membentuk ekosistem digital yang terpercaya dan berdampak positif bagi bangsa dan negara.”
+                            {changeLanguage
+                                ? "Menjadi pelopor dalam pengembangan solusi teknologi yang aman, inovatif, dan berkelanjutan di tingkat Nasional maupun Global, dengan menjunjung tinggi integritas, kepercayaan, serta tanggung jawab sosial sebagai landasan utama dalam membentuk ekosistem digital yang terpercaya dan berdampak positif bagi bangsa dan negara."
+                                : "To become a pioneer in developing secure, innovative, and sustainable technology solutions at both national and global levels, upholding integrity, trust, and social responsibility as the fundamental principles in building a trusted digital ecosystem that positively impacts the nation and country."
+                            }
                         </div>
 
                     </div>
                     <div className={`mb-4 ourMissionHidden ${isHoverMission ? `visible` : ''}`}>
-                        <h6 className="titelOurMissionHidden">Our Mission</h6>
+                        <h6 className="titelOurMissionHidden">{changeLanguage ? "Misi Kami" : "Our Mission"}</h6>
                         <div className="textMissionHidden">
-                            <ul>
-                                <li> Menjadikan Keamanan sebagai Pilar Utama dalam Setiap Inovasi.</li>
-                                <li> Mendorong Inovasi yang Relevan dan Bertanggung Jawab.</li>
-                                <li> Mengubah Ide Besar Menjadi Solusi Melalui Teknologi dan Kolaborasi.</li>
-                                <li> Menjunjung Tinggi Integritas dan Etika Profesional</li>
-                                <li> Membangun Ekosistem Digital yang Tangguh, Adaptif, dan Terpercaya.</li>
-                            </ul>
+                            {changeLanguage ? (
+                                <>
+                                    <ul>
+                                        <li>Menjadikan Keamanan sebagai Pilar Utama dalam Setiap Inovasi.</li>
+                                        <li>Mendorong Inovasi yang Relevan dan Bertanggung Jawab.</li>
+                                        <li>Mengubah Ide Besar Menjadi Solusi Melalui Teknologi dan Kolaborasi.</li>
+                                        <li>Menjunjung Tinggi Integritas dan Etika Profesional.</li>
+                                        <li>Membangun Ekosistem Digital yang Tangguh, Adaptif, dan Terpercaya.</li>
+                                    </ul>
+                                </>
+                            ) : (
+                                <>
+                                    <ul>
+                                        <li>Making Security the Main Pillar in Every Innovation.</li>
+                                        <li>Driving Relevant and Responsible Innovation.</li>
+                                        <li>Transforming Big Ideas into Solutions Through Technology and Collaboration.</li>
+                                        <li>Upholding Integrity and Professional Ethics.</li>
+                                        <li>Building a Resilient, Adaptive, and Trusted Digital Ecosystem.</li>
+                                    </ul>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -71,19 +88,19 @@ const Footer = () => {
                 <div className="col-12 col-md-2 d-flex">
                     <div className="row aboutUsWrapFooter">
                         <div className="row mb-4">
-                            <h6 className="aboutUsFooter">About Us</h6>
+                            <h6 className="aboutUsFooter">{changeLanguage ? "Tentang Kami" : "About Us"}</h6>
                             <h6 onMouseEnter={hoverVision}
                                 onMouseLeave={resetHover}
                                 onTouchStart={hoverVision}
-                                onTouchEnd={resetHover}>Our Vision</h6>
+                                onTouchEnd={resetHover}>{changeLanguage ? "Visi Kami" : "Our Vision"}</h6>
                             <h6 onMouseEnter={hoverMission}
                                 onMouseLeave={resetHover}
                                 onTouchStart={hoverMission}
-                                onTouchEnd={resetHover}>Our Mission</h6>
+                                onTouchEnd={resetHover}>{changeLanguage ? "Misi Kami" : "Our Mission"}</h6>
                         </div>
 
                         <div className="row mb-4 contactUsWrapFooter">
-                            <h6 className="contactUsFooter">Contact Us</h6>
+                            <h6 className="contactUsFooter">{changeLanguage ? "Kontak Kami" : "About Us"}</h6>
                             <h6>Email@gmail.com</h6>
                             <h6>+62813 11948 214</h6>
                             <br />
@@ -93,7 +110,7 @@ const Footer = () => {
 
                         <div className="row mb-4 socialMediaWrapFooter">
                             <div className="col">
-                                <h6 className="socialMediaFooter">Social Media</h6>
+                                <h6 className="socialMediaFooter">{changeLanguage ? "Media Sosial" : "Social Media"}</h6>
                                 <img src={igLogo} width={"30px"} className="mx-1" />
                                 <img src={fbLogo} width={"30px"} className="mx-1" />
                                 <img src={waLogo} width={"30px"} className="mx-1" />

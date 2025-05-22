@@ -11,10 +11,15 @@ import Slogan from "./Slogan";
 const Home = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
+    const [change, setChange] = useState(false);
 
 
     const handleCheckboxChange = (checked) => {
         setIsChecked(checked);
+    };
+
+    const handleChange = () => {
+        setChange(!change);
     };
 
     const toggleMenu = () => {
@@ -25,12 +30,14 @@ const Home = () => {
         <div className={`wrapper-all ${isMenuOpen ? 'menuOpen' : ''}`}>
             <Header onCheckboxChange={handleCheckboxChange}
                 onMenuOpen={toggleMenu}
-                isMenuOpen={isMenuOpen} />
-            <Top />
+                isMenuOpen={isMenuOpen}
+                handleChange={handleChange}
+            />
+            <Top changeLanguage={change}/>
             <Services />
-            <HowThisWorks />
-            <FAQ/>
-            <Footer />
+            <HowThisWorks changeLanguage={change} />
+            <FAQ changeLanguage={change} />
+            <Footer changeLanguage={change} />
         </div>
     )
 };

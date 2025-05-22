@@ -2,16 +2,16 @@ import React, { useRef, useEffect, useState } from "react";
 import "../../assets/style/header.css"
 import logoPT from "../../assets/image/primaryLogo.png"
 
-const Header = ({ onCheckboxChange, onMenuOpen, isMenuOpen }) => {
+const Header = ({ onCheckboxChange, onMenuOpen, isMenuOpen,handleChange }) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleMenu = (event) => {
         onMenuOpen(!isMenuOpen);
     };
 
-    const handleChange = (event) => {
-        onCheckboxChange(event.target.checked);
-    };
+    // const handleChange = (event) => {
+    //     onCheckboxChange(event.target.checked);
+    // };
 
     const handleScroll = () => {
         const scrollThresholdInVh = 50;
