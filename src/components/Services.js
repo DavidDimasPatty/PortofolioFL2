@@ -301,7 +301,7 @@ export default function Services() {
         "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. ",
         "Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda. ",
         "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. ",
-        "Di setiap sekt or, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital. "
+        "Di setiap sektor, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital. "
     ]
     return (
         <>
