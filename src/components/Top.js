@@ -21,9 +21,9 @@ const Top = ({ changeLanguage }) => {
                 </div>
                 <div className="topRight col-12 col-md-5">
                     <div className="buttonTopContentTitle">
-                        <h2 className="typing">{changeLanguage ? "ADAKAH" : "HOW CAN"}</h2>
-                        <h2 className="typing">{changeLanguage ? "YANG BISA" : "WE HELP"}</h2>
-                        <h2 className="typing">{changeLanguage ? "DIBANTU?" : "YOU?"}</h2>
+                        <h2 className="typing">{changeLanguage ? "ADA YANG" : "HOW CAN"}</h2>
+                        <h2 className="typing">{changeLanguage ? "BISA KAMI" : "WE HELP"}</h2>
+                        <h2 className="typing">{changeLanguage ? "BANTU?" : "YOU?"}</h2>
                     </div>
                     <div className="wrapperButtonTop">
                         <div className="mb-3 buttonTopContent">
