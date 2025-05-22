@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import "../assets/style/pricing.css";
 
@@ -6,6 +6,28 @@ const PricingModal = ({ isOpen, onClose, service }) => {
 
     const [shouldRender, setShouldRender] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
+
+    const titleRefs = useRef([]);
+    const pointsRefs = useRef([]);
+
+    const updateHeights = () => {
+        setTimeout(() => {
+            const titleHeights = titleRefs.current.map(el => el?.offsetHeight || 0);
+            const pointsHeights = pointsRefs.current.map(el => el?.offsetHeight || 0);
+
+            const maxTitleHeight = Math.max(...titleHeights);
+            const maxPointsHeight = Math.max(...pointsHeights);
+
+            // Apply minHeight via inline style
+            titleRefs.current.forEach(el => {
+                if (el) el.style.minHeight = `${maxTitleHeight}px`;
+            });
+
+            pointsRefs.current.forEach(el => {
+                if (el) el.style.minHeight = `${maxPointsHeight}px`;
+            });
+        }, 100); // jeda agar layout stabil
+    };
 
     useEffect(() => {
         if (isOpen && service) {
@@ -19,6 +41,14 @@ const PricingModal = ({ isOpen, onClose, service }) => {
             if (scrollbarWidth > 0) {
                 document.body.style.paddingRight = `${scrollbarWidth}px`;
             }
+
+            // Jalankan update height setelah layout muncul
+            setTimeout(() => {
+                updateHeights();
+            }, 300);
+
+            // Resize handler
+            window.addEventListener("resize", updateHeights);
 
         } else {
             setIsVisible(false);
@@ -34,6 +64,7 @@ const PricingModal = ({ isOpen, onClose, service }) => {
 
         // Cleanup saat komponen unmount
         return () => {
+            window.removeEventListener("resize", updateHeights);
             document.body.classList.remove("modal-open");
             document.body.style.paddingRight = "";
         };
@@ -43,8 +74,15 @@ const PricingModal = ({ isOpen, onClose, service }) => {
 
     return (
         <div className="pricing-section">
-            <div className={`pricing-modal-overlay ${isVisible ? "show" : ""}`}>
-                <div className="pricing-modal-content">
+            <div
+                className={`pricing-modal-overlay ${isVisible ? "show" : ""}`}
+                onClick={onClose}
+            >
+                <div
+                    className="pricing-modal-content"
+                    onClick={(e) => e.stopPropagation()} // <-- mencegah modal tertutup saat klik di dalam
+                >
+
                     <div className="pricing-modal-scroll">
                         <button className="pricing-modal-close" onClick={onClose}>
                             <span className="pricing-modal-close-arrow-left"></span>
@@ -56,8 +94,16 @@ const PricingModal = ({ isOpen, onClose, service }) => {
                             {service.details?.map((item, idx) => (
                                 <div key={idx} className="pricing-modal-card">
                                     <p className="pricing-modal-card-number">{String(idx + 1).padStart(2, "0")}</p>
-                                    <h3 className="pricing-modal-card-title">{item.cardTitle}</h3>
-                                    <ul className="pricing-modal-card-points">
+                                    <h3
+                                        className="pricing-modal-card-title"
+                                        ref={(el) => (titleRefs.current[idx] = el)}
+                                    >
+                                        {item.cardTitle}
+                                    </h3>
+                                    <ul
+                                        className="pricing-modal-card-points"
+                                        ref={(el) => (pointsRefs.current[idx] = el)}
+                                    >
                                         {item.pointsTitle.map((point, i) => (
                                             <li key={i}>{point}</li>
                                         ))}

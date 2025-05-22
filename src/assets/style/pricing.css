@@ -140,6 +140,7 @@ body.modal-open {
     font-family: 'ASAP', sans-serif;
     letter-spacing: 1px;
     margin: 0;
+    color: rgba(0, 85, 255, 1);
 }
 
 .pricing-modal-card-title {
@@ -147,6 +148,9 @@ body.modal-open {
     font-weight: bold;
     letter-spacing: 1px;
     margin: 0 0 10px 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .pricing-modal-card-points {
@@ -155,6 +159,9 @@ body.modal-open {
     margin-bottom: 10px;
     color: white;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
 .pricing-modal-card-points li::marker {
