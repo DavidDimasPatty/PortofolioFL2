@@ -15,7 +15,7 @@ import img from "../assets/image/services-sol.png"
 import Slogan from "./Slogan";
 import PricingModal from "./Pricing";
 
-export default function Services() {
+export default function Services({ changeLanguage }) {
 
     const detectDevice = () => {
         const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -37,130 +37,323 @@ export default function Services() {
 
     const device = detectDevice();
 
-    const servicesData = [
-        {
-            title: "SOFTWARE DEVELOPMENT",
-            desc: "Aplikasi web dan mobile yang inovatif, aman, skalabel, responsif, user-friendly, dan efisien.",
-            img: img1,
-            details: [
-                {
-                    cardTitle: "MOBILE APPS",
-                    pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
-                    price: "Rp 30.000.000"
-                },
-                {
-                    cardTitle: "WEBSITE",
-                    pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
-                    price: "Rp 1.400.000"
-                },
-                {
-                    cardTitle: "ERP",
-                    pointsTitle: ["Full Cycle Development", "Testing", "Maintenance", "Installation"],
-                    price: "Rp 99.000.000"
-                }
-            ]
-        },
-        {
-            title: "CYBER SECURITY",
-            desc: "Perlindungan dari ancaman siber dengan layanan Vulnerability Assessment & Penetration Testing (Pentest) serta keamanan jaringan.",
-            img: img2,
-            details: [
-                {
-                    cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Website",
-                    pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
-                    price: "Rp 5.000.000"
-                },
-                {
-                    cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) API",
-                    pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
-                    price: "Rp 12.000.000"
-                },
-                {
-                    cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Mobile Application",
-                    pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
-                    price: "Rp 35.000.000"
-                }
-            ]
-        },
-        {
-            title: "IT MANAGED & CONSULTING",
-            desc: "Layanan perencanaan, implementasi, dan pemeliharaan yang andal. Dari strategi IT hingga pemantauan 24/7 dengan lancar dan efisien.",
-            img: img3,
-            details: [
-                {
-                    cardTitle: "IT Consulting & Manage Service",
-                    pointsTitle: ["Perancangan & Perencanaan Sistem", "Audit IT", "Efisiensi operasional"],
-                    price: "Rp 250.000.000"
-                },
-                {
-                    cardTitle: "IT Support",
-                    pointsTitle: ["Support teknis", "Pemantauan sistem", "Testing"],
-                    price: "Rp 75.000.000"
-                },
-                {
-                    cardTitle: "Procurement of Technology Solution",
-                    pointsTitle: ["Pengadaan asset TI", "Pengadaan Software", "Implementasi & Set Up Sistem", "Pengadaan Cloud Service"],
-                    price: "Rp 15.000.000"
-                }
-            ]
-        },
-        {
-            title: "DATA ANALYTICS & AI SOLUTIONS",
-            desc: "Layanan mengubah data menjadi wawasan berharga dengan solusi Data Analytics & Artificial Intelligence, menganalisa tren dan mengotomatisasi proses menggunakan teknologi AI.",
-            img: img4,
-            details: [
-                {
-                    cardTitle: "Business Intelligence",
-                    pointsTitle: ["Dashboard", "Visualisasi data", "Insight bisnis real-time"],
-                    price: "Rp 15.000.000"
-                },
-                {
-                    cardTitle: "Predictive Analytics",
-                    pointsTitle: ["Analisa tren historis", "Forecasting", "Dashboard", "Analisis customer Behaviour"],
-                    price: "Rp 45.000.000"
-                },
-                {
-                    cardTitle: "Artificial Intelegent Development",
-                    pointsTitle: ["Computer Vision", "Natural Language Processing", "Reinforcement Learning"],
-                    price: "Rp 75.000.000"
-                }
-            ]
-        },
-        {
-            title: "Internet of Things",
-            desc: "Kami menghadirkan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mengambil keputusan cepat berdasarkan data real-time.",
-            img: img4,
-            details: [
-                {
-                    cardTitle: "Smart Home",
-                    pointsTitle: ["Smart Access Control", "CCTV", "Smart Lighting"],
-                    price: "Rp 7.500.000"
-                },
-                {
-                    cardTitle: "Industri",
-                    pointsTitle: ["Industrial Automation", "Assets Tracking"],
-                    price: "Rp 125.000.000"
-                },
-                {
-                    cardTitle: "Transportasi",
-                    pointsTitle: ["Smart Parking", "Vehicle Diagnostic"],
-                    price: "Rp 45.000.000"
-                }
-            ]
-        },
-        {
-            title: "Fraud Detection System",
-            desc: "Kami menghadirkan solusi fraud detection berbasis teknologi mutakhir yang mampu mengidentifikasi dan mencegah potensi penipuan secara real-time.",
-            img: img4,
-            details: [
-                {
-                    cardTitle: "Fraud System",
-                    pointsTitle: ["Fraud Risk Assessment & Advisory", "Fraud Detection System Implementation", "Data Analytics untuk Fraud Detection"],
-                    price: "Rp 125.000.000"
-                }
-            ]
-        }
-    ];
+    let servicesData;
+
+    if (changeLanguage) {
+        servicesData = [
+            {
+                title: "SOFTWARE DEVELOPMENT",
+                desc: "Aplikasi web dan mobile yang inovatif, aman, skalabel, responsif, user-friendly, dan efisien.",
+                img: img1,
+                details: [
+                    {
+                        cardTitle: "MOBILE APPS",
+                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                        price: "Rp 30.000.000",
+                        discount: "y",
+                        priceDiscount: "Rp 100.000.000"
+                    },
+                    {
+                        cardTitle: "WEBSITE",
+                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                        price: "Rp 1.400.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "ERP",
+                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance", "Installation"],
+                        price: "Rp 99.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "CYBER SECURITY",
+                desc: "Perlindungan dari ancaman siber dengan layanan Vulnerability Assessment & Penetration Testing (Pentest) serta keamanan jaringan.",
+                img: img2,
+                details: [
+                    {
+                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Website",
+                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        price: "Rp 5.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) API",
+                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        price: "Rp 12.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Mobile Application",
+                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        price: "Rp 35.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "IT MANAGED & CONSULTING",
+                desc: "Layanan perencanaan, implementasi, dan pemeliharaan yang andal. Dari strategi IT hingga pemantauan 24/7 dengan lancar dan efisien.",
+                img: img3,
+                details: [
+                    {
+                        cardTitle: "IT Consulting & Manage Service",
+                        pointsTitle: ["Perancangan & Perencanaan Sistem", "Audit IT", "Efisiensi operasional"],
+                        price: "Rp 250.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "IT Support",
+                        pointsTitle: ["Support teknis", "Pemantauan sistem", "Testing"],
+                        price: "Rp 75.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Procurement of Technology Solution",
+                        pointsTitle: ["Pengadaan asset TI", "Pengadaan Software", "Implementasi & Set Up Sistem", "Pengadaan Cloud Service"],
+                        price: "Rp 15.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "DATA ANALYTICS & AI SOLUTIONS",
+                desc: "Layanan mengubah data menjadi wawasan berharga dengan solusi Data Analytics & Artificial Intelligence, menganalisa tren dan mengotomatisasi proses menggunakan teknologi AI.",
+                img: img4,
+                details: [
+                    {
+                        cardTitle: "Business Intelligence",
+                        pointsTitle: ["Dashboard", "Visualisasi data", "Insight bisnis real-time"],
+                        price: "Rp 15.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Predictive Analytics",
+                        pointsTitle: ["Analisa tren historis", "Forecasting", "Dashboard", "Analisis customer Behaviour"],
+                        price: "Rp 45.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Artificial Intelegent Development",
+                        pointsTitle: ["Computer Vision", "Natural Language Processing", "Reinforcement Learning"],
+                        price: "Rp 75.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "Internet of Things",
+                desc: "Kami menghadirkan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mengambil keputusan cepat berdasarkan data real-time.",
+                img: img4,
+                details: [
+                    {
+                        cardTitle: "Smart Home",
+                        pointsTitle: ["Smart Access Control", "CCTV", "Smart Lighting"],
+                        price: "Rp 7.500.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Industri",
+                        pointsTitle: ["Industrial Automation", "Assets Tracking"],
+                        price: "Rp 125.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Transportasi",
+                        pointsTitle: ["Smart Parking", "Vehicle Diagnostic"],
+                        price: "Rp 45.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "Fraud Detection System",
+                desc: "Kami menghadirkan solusi fraud detection berbasis teknologi mutakhir yang mampu mengidentifikasi dan mencegah potensi penipuan secara real-time.",
+                img: img4,
+                details: [
+                    {
+                        cardTitle: "Fraud System",
+                        pointsTitle: ["Fraud Risk Assessment & Advisory", "Fraud Detection System Implementation", "Data Analytics untuk Fraud Detection"],
+                        price: "Rp 125.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            }
+        ];
+    } else {
+        servicesData = [
+            {
+                title: "SOFTWARE DEVELOPMENT",
+                desc: "Aplikasi web dan mobile yang inovatif, aman, skalabel, responsif, user-friendly, dan efisien.",
+                img: img1,
+                details: [
+                    {
+                        cardTitle: "MOBILE APPS",
+                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                        price: "Rp 30.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "WEBSITE",
+                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                        price: "Rp 1.400.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "ERP",
+                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance", "Installation"],
+                        price: "Rp 99.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "CYBER SECURITY",
+                desc: "Perlindungan dari ancaman siber dengan layanan Vulnerability Assessment & Penetration Testing (Pentest) serta keamanan jaringan.",
+                img: img2,
+                details: [
+                    {
+                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Website",
+                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        price: "Rp 5.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) API",
+                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        price: "Rp 12.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Mobile Application",
+                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        price: "Rp 35.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "IT MANAGED & CONSULTING",
+                desc: "Layanan perencanaan, implementasi, dan pemeliharaan yang andal. Dari strategi IT hingga pemantauan 24/7 dengan lancar dan efisien.",
+                img: img3,
+                details: [
+                    {
+                        cardTitle: "IT Consulting & Manage Service",
+                        pointsTitle: ["Perancangan & Perencanaan Sistem", "Audit IT", "Efisiensi operasional"],
+                        price: "Rp 250.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "IT Support",
+                        pointsTitle: ["Support teknis", "Pemantauan sistem", "Testing"],
+                        price: "Rp 75.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Procurement of Technology Solution",
+                        pointsTitle: ["Pengadaan asset TI", "Pengadaan Software", "Implementasi & Set Up Sistem", "Pengadaan Cloud Service"],
+                        price: "Rp 15.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "DATA ANALYTICS & AI SOLUTIONS",
+                desc: "Layanan mengubah data menjadi wawasan berharga dengan solusi Data Analytics & Artificial Intelligence, menganalisa tren dan mengotomatisasi proses menggunakan teknologi AI.",
+                img: img4,
+                details: [
+                    {
+                        cardTitle: "Business Intelligence",
+                        pointsTitle: ["Dashboard", "Visualisasi data", "Insight bisnis real-time"],
+                        price: "Rp 15.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Predictive Analytics",
+                        pointsTitle: ["Analisa tren historis", "Forecasting", "Dashboard", "Analisis customer Behaviour"],
+                        price: "Rp 45.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Artificial Intelegent Development",
+                        pointsTitle: ["Computer Vision", "Natural Language Processing", "Reinforcement Learning"],
+                        price: "Rp 75.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "Internet of Things",
+                desc: "Kami menghadirkan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mengambil keputusan cepat berdasarkan data real-time.",
+                img: img4,
+                details: [
+                    {
+                        cardTitle: "Smart Home",
+                        pointsTitle: ["Smart Access Control", "CCTV", "Smart Lighting"],
+                        price: "Rp 7.500.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Industri",
+                        pointsTitle: ["Industrial Automation", "Assets Tracking"],
+                        price: "Rp 125.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    },
+                    {
+                        cardTitle: "Transportasi",
+                        pointsTitle: ["Smart Parking", "Vehicle Diagnostic"],
+                        price: "Rp 45.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            },
+            {
+                title: "Fraud Detection System",
+                desc: "Kami menghadirkan solusi fraud detection berbasis teknologi mutakhir yang mampu mengidentifikasi dan mencegah potensi penipuan secara real-time.",
+                img: img4,
+                details: [
+                    {
+                        cardTitle: "Fraud System",
+                        pointsTitle: ["Fraud Risk Assessment & Advisory", "Fraud Detection System Implementation", "Data Analytics untuk Fraud Detection"],
+                        price: "Rp 125.000.000",
+                        discount: "n",
+                        priceDiscount: "Rp 100.000"
+                    }
+                ]
+            }
+        ];
+    }
 
     const icons = [
         icon1, icon2, icon3
@@ -201,7 +394,13 @@ export default function Services() {
     // const fullText1 = "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda.";
     // const fullText2 = "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. Di setiap sekt or, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital.";
 
-    const highlightWords = ["solusi", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
+    let highlightWords;
+
+    if (changeLanguage) {
+        highlightWords = ["solusi", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
+    } else {
+        highlightWords = ["solusi", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
+    }
 
     const highlightText = (text, highlights) => {
         const parts = text.split(/(\s+)/);
@@ -296,13 +495,23 @@ export default function Services() {
         setCurrentStep(currentStep + 1);
     };
 
+    let arr;
+    if (changeLanguage) {
+        arr = [
+            "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. ",
+            "Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda. ",
+            "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. ",
+            "Di setiap sektor, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital. "
+        ]
+    } else {
+        arr = [
+            "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. ",
+            "Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda. ",
+            "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. ",
+            "Di setiap sektor, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital. "
+        ]
+    }
 
-    const arr = [
-        "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. ",
-        "Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda. ",
-        "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. ",
-        "Di setiap sektor, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital. "
-    ]
     return (
         <>
             <div className="sloganAndService">
@@ -362,6 +571,7 @@ export default function Services() {
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 service={selectedService}
+                changeLanguage={changeLanguage}
             />
         </>
     );

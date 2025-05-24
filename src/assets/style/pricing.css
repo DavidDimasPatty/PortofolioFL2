@@ -178,6 +178,7 @@ body.modal-open {
 .pricing-modal-card-desc1 {
     font-size: 14px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .pricing-modal-card-price {
@@ -185,6 +186,40 @@ body.modal-open {
     font-weight: bold;
     margin: 0;
 }
+
+.price-strike {
+    /* text-decoration: line-through;
+    color: gray;
+    margin-right: 8px;
+    font-size: 14px; */
+
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    color: gray;
+    line-height: 1;
+    margin-right: 8px;
+    font-size: 14px;
+    color: gray;
+}
+
+.price-strike::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    transform: rotate(-10deg);
+    transform-origin: center;
+}
+
+.price-discount {
+    /* color: red; */
+    /* font-weight: bold; */
+}
+
 
 .pricing-modal-card-desc2 {
     font-size: 12px;

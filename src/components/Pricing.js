@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 
 import "../assets/style/pricing.css";
 
-const PricingModal = ({ isOpen, onClose, service }) => {
+const PricingModal = ({ isOpen, onClose, service, changeLanguage }) => {
 
     const [shouldRender, setShouldRender] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
@@ -88,7 +88,7 @@ const PricingModal = ({ isOpen, onClose, service }) => {
                             <span className="pricing-modal-close-arrow-left"></span>
                             <span className="pricing-modal-close-category-text">{service.title}</span>
                         </button>
-                        <h2 className="pricing-modal-title">choose your plan</h2>
+                        <h2 className="pricing-modal-title">{changeLanguage ? "Pilih paket Anda" : "choose your plan"}</h2>
 
                         <div className="pricing-modal-cards">
                             {service.details?.map((item, idx) => (
@@ -109,24 +109,33 @@ const PricingModal = ({ isOpen, onClose, service }) => {
                                         ))}
                                     </ul>
                                     <div className="pricing-modal-card-line"></div>
-                                    <div className="pricing-modal-card-desc1">START FROM</div>
-                                    <p className="pricing-modal-card-price">{item.price}</p>
-                                    <div className="pricing-modal-card-desc2">Start to chat with our team for more detail or to consult your ideas!</div>
+                                    <div className="pricing-modal-card-desc1">{changeLanguage ? "Mulai dari" : "START FROM"}</div>
+                                    <p className="pricing-modal-card-price">
+                                        {item.discount === "y" ? (
+                                            <>
+                                                <span className="price-strike">{item.price}</span>
+                                                <span className="price-discount">{item.priceDiscount}</span>
+                                            </>
+                                        ) : (
+                                            item.price
+                                        )}
+                                    </p>
+                                    <div className="pricing-modal-card-desc2">{changeLanguage ? "Silakan berdiskusi dengan tim kami untuk informasi lebih lanjut dan konsultasi ide Anda." : "Start to chat with our team for more detail or to consult your ideas!"}</div>
                                     <a
-                                        href={`https://wa.me/6282135813697?text=${encodeURIComponent(
+                                        href={`https://wa.me/62859106795228?text=${encodeURIComponent(
                                             `Halo, saya tertarik dengan paket "${item.cardTitle}" dari kategori ${service.title}. Bisa dibantu untuk informasi lebih lanjut?`
                                         )}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="pricing-modal-card-btn"
                                     >
-                                        <div className="pricing-modal-card-btn-text">Choose Plan</div>
+                                        <div className="pricing-modal-card-btn-text">{changeLanguage ? "Pilih Paket" : "Choose Plan"}</div>
                                     </a>
 
                                 </div>
                             ))}
                         </div>
-                        <div className="pricing-modal-footer">EVERYTHING YOU NEED IS IN ONE PLACE!</div>
+                        <div className="pricing-modal-footer">{changeLanguage ? "SEMUA YANG ANDA BUTUHKAN ADA DI DISINI!" : "EVERYTHING YOU NEED IS IN ONE PLACE!"}</div>
                     </div>
                 </div>
             </div>
