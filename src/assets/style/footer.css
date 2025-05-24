@@ -7,7 +7,11 @@
     font-family: "ASAP";
 }
 
-.contentFooter {}
+.contentFooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .wrapImgFooter {
     width: 150px;
@@ -347,7 +351,29 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (min-width: 720px) and (max-width:1200px) {
+    .contentFooter {
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    .box1Footer {
+        width: 40%;
+    }
+
+    .box2Footer {
+        width: 40%;
+    }
+
+    .box3Footer {
+        width: 20%;
+    }
+
+
+    .buttonFooterBot {
+        font-size: 10px;
+    }
+
     .wrapperCall {
         width: 100%;
         text-align: center;
@@ -386,9 +412,17 @@
         justify-content: center;
     }
 
+    .contactUsWrapFooter {
+        width: 100%;
+        word-break: break-all;
+    }
 }
 
-@media (max-width:820px) {
+@media (max-width:620px) {
+    .buttonFooterBot {
+        font-size: 14px;
+    }
+
     .ourVisionHidden {
         padding: 60px 20px 0px 0px;
         left: 50%;
@@ -449,7 +483,16 @@
     }
 }
 
+@media (max-width:375px) {
+    .buttonFooterBot {
+        font-size: 13px;
+    }
+}
+
 @media (max-width:345px) {
+    .buttonFooterBot {
+        font-size: 10px;
+    }
 
     .contactUsWrapFooter {
         width: 140px;

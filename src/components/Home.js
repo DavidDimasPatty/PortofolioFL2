@@ -34,7 +34,7 @@ const Home = () => {
                 handleChange={handleChange}
             />
             <Top changeLanguage={change}/>
-            <Services />
+            <Services changeLanguage={change}/>
             <HowThisWorks changeLanguage={change} />
             <FAQ changeLanguage={change} />
             <Footer changeLanguage={change} />

@@ -350,29 +350,6 @@
 
 }
 
-
-@media (max-width:928px) {
-  .orbit1 {
-    left: 10%;
-  }
-
-  .orbit2 {
-    left: 35%;
-  }
-
-  .orbit3 {
-    left: 60%;
-  }
-
-  .orbit1,
-  .orbit2,
-  .orbit3 {
-    width: 10vw;
-    height: 10vw;
-  }
-
-}
-
 .step::before {
   content: "";
   position: absolute;
@@ -741,23 +718,7 @@
 }
 
 
-@media (min-width: 800px) and (max-width: 1100px) {
-
-  .wrapperDiagram {
-    flex: 5 !important;
-  }
-
-  .wrapperBoxWorks {
-    flex: 1 !important;
-  }
-}
-
-
-@media (min-width: 728px) and (max-width: 800px) {}
-
-
-
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .childWrapperWorks {
     position: relative;
     display: flex;
@@ -1041,6 +1002,205 @@
   .step {
     height: 40px;
     width: 110px;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width:1024px) {
+  .wrapperWorks {
+    background-size: cover;
+  }
+
+  .orbit svg {
+    left: -15%;
+    transform: scale(1.2);
+  }
+
+  .wrapperDiagram {
+    flex: 3 !important;
+  }
+
+  .wrapperBoxWorks {
+    flex: 3 !important;
+  }
+
+  .boxWorks {
+    width: 350px;
+    height: 350px;
+    bottom: 10px;
+    right: 20px;
+  }
+
+  .boxTopWorks {
+    height: 170px;
+    width: 170px;
+    left: 145px;
+    top: -60px;
+  }
+
+  .plus-shape {
+    left: -100px;
+    bottom: -20px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .plus-shape::before {
+    width: 35px;
+  }
+
+  .plus-shape::after {
+    height: 35px;
+  }
+
+  .imageWorks {
+    height: 160px;
+  }
+
+  .textWorks {
+    font-size: 15px;
+    height: 160px;
+  }
+
+  .textPathWorks {
+    font-size: 12px;
+  }
+
+
+
+  .workstep1 {
+    position: absolute;
+    right: -10px;
+    width: 120px;
+    top: 0px;
+    animation: fadeInScale 1s forwards;
+  }
+
+
+  .workstep2a {
+    right: 0px;
+    width: 110px;
+    top: -15px;
+  }
+
+  .workstep2b {
+    right: 10px;
+    width: 90px;
+    top: -7px;
+  }
+
+  .workstep2c {
+    right: 25px;
+    width: 60px;
+    top: 8px;
+  }
+
+
+  .workstep3a {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    top: -10px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep3b {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 28px;
+    width: 45px;
+    top: 16px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep3c {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 15px;
+    width: 70px;
+    top: 6px;
+    animation: fadeInMove 1s forwards;
+  }
+
+
+  .workstep4a {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    top: -10px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep4b {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 20px;
+    width: 60px;
+    top: 12px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep4c {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 36px;
+    width: 25px;
+    top: 30px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep5a {
+    right: 15px;
+    width: 90px;
+  }
+
+  .workstep5b {
+    right: 0px;
+    width: 40px;
+    top: -5px;
+  }
+
+
+  .workstep6a {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 0px;
+    width: 110px;
+    top: -10px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep6b {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 15px;
+    width: 80px;
+    top: 5px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .workstep6c {
+    /* filter: invert(1) brightness(2); */
+    position: absolute;
+    right: 45px;
+    width: 20px;
+    top: 38px;
+    animation: fadeInMove 1s forwards;
+  }
+
+  .step-container {
+    right: -8px;
+    bottom: 90px;
+  }
+
+
+  .step {
+    height: 40px;
+    width: 150px;
+    font-size: 14px;
+    height: 70px;
   }
 
 }

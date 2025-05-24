@@ -17,6 +17,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border: 1px solid transparent;
 }
 
 .services-section {
@@ -651,5 +652,17 @@
 
     .services-section-2-card-text-largeText {
         font-size: 23pt;
+    }
+}
+
+@media (min-width : 700px) and (max-width:1200px) {
+
+    .circleHalfWave1 {
+        width: 220vw;
+    }
+
+
+    .circleHalfWave2 {
+        width: 220vw;
     }
 }
