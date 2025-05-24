@@ -48,21 +48,21 @@ export default function Services({ changeLanguage }) {
                 details: [
                     {
                         cardTitle: "MOBILE APPS",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi"],
                         price: "Rp 30.000.000",
-                        discount: "y",
+                        discount: "n",
                         priceDiscount: "Rp 100.000.000"
                     },
                     {
                         cardTitle: "WEBSITE",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi"],
                         price: "Rp 1.400.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "ERP",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance", "Installation"],
+                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi", "Installation"],
                         price: "Rp 99.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -200,26 +200,26 @@ export default function Services({ changeLanguage }) {
         servicesData = [
             {
                 title: "SOFTWARE DEVELOPMENT",
-                desc: "Aplikasi web dan mobile yang inovatif, aman, skalabel, responsif, user-friendly, dan efisien.",
+                desc: "We deliver innovative, secure, scalable, and responsive web and mobile applications designed to provide optimal user experience and efficient performance.",
                 img: img1,
                 details: [
                     {
                         cardTitle: "MOBILE APPS",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi"],
                         price: "Rp 30.000.000",
                         discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        priceDiscount: "Rp 100.000.000"
                     },
                     {
                         cardTitle: "WEBSITE",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance"],
+                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi"],
                         price: "Rp 1.400.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "ERP",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Maintenance", "Installation"],
+                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi", "Installation"],
                         price: "Rp 99.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -228,7 +228,7 @@ export default function Services({ changeLanguage }) {
             },
             {
                 title: "CYBER SECURITY",
-                desc: "Perlindungan dari ancaman siber dengan layanan Vulnerability Assessment & Penetration Testing (Pentest) serta keamanan jaringan.",
+                desc: "Protection against cyber threats through Vulnerability Assessment & Penetration Testing (Pentest) services and network security solutions.",
                 img: img2,
                 details: [
                     {
@@ -256,7 +256,7 @@ export default function Services({ changeLanguage }) {
             },
             {
                 title: "IT MANAGED & CONSULTING",
-                desc: "Layanan perencanaan, implementasi, dan pemeliharaan yang andal. Dari strategi IT hingga pemantauan 24/7 dengan lancar dan efisien.",
+                desc: "Reliable planning, implementation, and maintenance services from IT strategy development to seamless 24/7 monitoring with efficiency.",
                 img: img3,
                 details: [
                     {
@@ -284,7 +284,7 @@ export default function Services({ changeLanguage }) {
             },
             {
                 title: "DATA ANALYTICS & AI SOLUTIONS",
-                desc: "Layanan mengubah data menjadi wawasan berharga dengan solusi Data Analytics & Artificial Intelligence, menganalisa tren dan mengotomatisasi proses menggunakan teknologi AI.",
+                desc: "Services that transform data into valuable insights with Data Analytics and Artificial Intelligence solutions, analyzing trends and automating processes using AI technology.",
                 img: img4,
                 details: [
                     {
@@ -312,7 +312,7 @@ export default function Services({ changeLanguage }) {
             },
             {
                 title: "Internet of Things",
-                desc: "Kami menghadirkan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mengambil keputusan cepat berdasarkan data real-time.",
+                desc: "We deliver innovative IoT solutions that help your business improve efficiency, optimize processes, and make swift decisions based on real-time data.",
                 img: img4,
                 details: [
                     {
@@ -340,7 +340,7 @@ export default function Services({ changeLanguage }) {
             },
             {
                 title: "Fraud Detection System",
-                desc: "Kami menghadirkan solusi fraud detection berbasis teknologi mutakhir yang mampu mengidentifikasi dan mencegah potensi penipuan secara real-time.",
+                desc: "We provide state-of-the-art fraud detection solutions capable of identifying and preventing potential fraud in real-time.",
                 img: img4,
                 details: [
                     {
@@ -399,7 +399,7 @@ export default function Services({ changeLanguage }) {
     if (changeLanguage) {
         highlightWords = ["solusi", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
     } else {
-        highlightWords = ["solusi", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
+        highlightWords = ["solutions", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
     }
 
     const highlightText = (text, highlights) => {
@@ -505,10 +505,10 @@ export default function Services({ changeLanguage }) {
         ]
     } else {
         arr = [
-            "Kami menyediakan solusi IT yang dirancang untuk memenuhi kebutuhan unik di berbagai industri. ",
-            "Baik di sektor perbankan, kesehatan, e-commerce, manufaktur, pemerintahan, dan lainnya, layanan kami memastikan keamanan, efisiensi, dan skalabilitas dalam operasional bisnis Anda. ",
-            "Dengan pendekatan berbasis best practices dan standar industri, solusi kami dapat dengan mudah diadaptasi untuk menghadapi tantangan spesifik. ",
-            "Di setiap sektor, membantu meningkatkan produktivitas, kepatuhan regulasi, dan perlindungan terhadap ancaman digital. "
+            "We provide IT solutions tailored to meet the unique needs of various industries. ",
+            "Whether in banking, healthcare, e-commerce, manufacturing, government, or others, our services ensure security, efficiency, and scalability in your business operations. ",
+            "With a best-practice and industry-standard approach, our solutions are easily adaptable to address specific challenges. ",
+            "In every sector, we help enhance productivity, regulatory compliance, and protection against digital threats. "
         ]
     }
 
