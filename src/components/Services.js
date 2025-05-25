@@ -1,5 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import "../assets/style/services.css";
 import img1 from "../assets/image/services-ikon-1.png"
 import img2 from "../assets/image/services-ikon-2.png"
@@ -42,27 +45,27 @@ export default function Services({ changeLanguage }) {
     if (changeLanguage) {
         servicesData = [
             {
-                title: "SOFTWARE DEVELOPMENT",
-                desc: "Aplikasi web dan mobile yang inovatif, aman, skalabel, responsif, user-friendly, dan efisien.",
+                title: "PENGEMBANGAN PERANGKAT LUNAK",
+                desc: "Pengembangan aplikasi web dan mobile yang inovatif, aman, skalabel, responsif, mudah digunakan, dan efisien.",
                 img: img1,
                 details: [
                     {
-                        cardTitle: "MOBILE APPS",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi"],
+                        cardTitle: "APLIKASI MOBILE",
+                        pointsTitle: ["Pengembangan Sistem Secara Menyeluruh", "Pengujian", "Revisi"],
                         price: "Rp 30.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000.000"
                     },
                     {
-                        cardTitle: "WEBSITE",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi"],
+                        cardTitle: "SITUS WEB",
+                        pointsTitle: ["Pengembangan Sistem Secara Menyeluruh", "Pengujian", "Revisi"],
                         price: "Rp 1.400.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "ERP",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi", "Installation"],
+                        pointsTitle: ["Pengembangan Sistem Secara Menyeluruh", "Pengujian", "Revisi", "Instalasi"],
                         price: "Rp 99.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -70,27 +73,27 @@ export default function Services({ changeLanguage }) {
                 ]
             },
             {
-                title: "CYBER SECURITY",
-                desc: "Perlindungan dari ancaman siber dengan layanan Vulnerability Assessment & Penetration Testing (Pentest) serta keamanan jaringan.",
+                title: "KEAMANAN SIBER",
+                desc: "Solusi perlindungan terhadap ancaman siber melalui layanan Penilaian Kerentanan dan Pengujian Penetrasi (Pentest), serta keamanan jaringan yang komprehensif.",
                 img: img2,
                 details: [
                     {
-                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Website",
-                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Situs Web",
+                        pointsTitle: ["Simulasi Serangan", "Evaluasi Sistem", "Laporan Detail Risiko", "Retest"],
                         price: "Rp 5.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) API",
-                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        pointsTitle: ["Simulasi Serangan", "Evaluasi Sistem", "Laporan Detail Risiko", "Retest"],
                         price: "Rp 12.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
-                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Mobile Application",
-                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Aplikasi Mobile",
+                        pointsTitle: ["Simulasi Serangan", "Evaluasi Sistem", "Laporan Detail Risiko", "Retest"],
                         price: "Rp 35.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -98,27 +101,27 @@ export default function Services({ changeLanguage }) {
                 ]
             },
             {
-                title: "IT MANAGED & CONSULTING",
-                desc: "Layanan perencanaan, implementasi, dan pemeliharaan yang andal. Dari strategi IT hingga pemantauan 24/7 dengan lancar dan efisien.",
+                title: "MANAJEMEN & KONSULTASI IT",
+                desc: "Layanan perencanaan, implementasi, dan pemeliharaan TI yang handal, mulai dari pengembangan strategi hingga pemantauan sistem 24/7 yang efektif dan efisien.",
                 img: img3,
                 details: [
                     {
-                        cardTitle: "IT Consulting & Manage Service",
-                        pointsTitle: ["Perancangan & Perencanaan Sistem", "Audit IT", "Efisiensi operasional"],
+                        cardTitle: "Konsultasi & Manajemen IT",
+                        pointsTitle: ["Perancangan & Perencanaan Sistem", "Audit IT", "Efisiensi Operasional"],
                         price: "Rp 250.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
-                        cardTitle: "IT Support",
-                        pointsTitle: ["Support teknis", "Pemantauan sistem", "Testing"],
+                        cardTitle: "Dukungan IT",
+                        pointsTitle: ["Dukungan Teknis", "Pemantauan Sistem", "Pengujian"],
                         price: "Rp 75.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
-                        cardTitle: "Procurement of Technology Solution",
-                        pointsTitle: ["Pengadaan asset TI", "Pengadaan Software", "Implementasi & Set Up Sistem", "Pengadaan Cloud Service"],
+                        cardTitle: "Pengadaan Solusi Teknologi",
+                        pointsTitle: ["Pengadaan Aset TI", "Pengadaan Perangkat Lunak", "Implementasi & Setup Sistem", "Pengadaan Layanan Cloud"],
                         price: "Rp 15.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -126,26 +129,26 @@ export default function Services({ changeLanguage }) {
                 ]
             },
             {
-                title: "DATA ANALYTICS & AI SOLUTIONS",
-                desc: "Layanan mengubah data menjadi wawasan berharga dengan solusi Data Analytics & Artificial Intelligence, menganalisa tren dan mengotomatisasi proses menggunakan teknologi AI.",
+                title: "ANALITIK DATA & SOLUSI AI",
+                desc: "Layanan yang mengubah data menjadi wawasan berharga melalui solusi Analitik Data dan Kecerdasan Buatan, menganalisis tren, dan mengotomatisasi proses bisnis dengan teknologi AI.",
                 img: img4,
                 details: [
                     {
                         cardTitle: "Business Intelligence",
-                        pointsTitle: ["Dashboard", "Visualisasi data", "Insight bisnis real-time"],
+                        pointsTitle: ["Dashboard", "Visualisasi Data", "Wawasan Bisnis Secara Real-Time"],
                         price: "Rp 15.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
-                        cardTitle: "Predictive Analytics",
-                        pointsTitle: ["Analisa tren historis", "Forecasting", "Dashboard", "Analisis customer Behaviour"],
+                        cardTitle: "Analitik Prediktif",
+                        pointsTitle: ["Analisis Tren Historis", "Peramalan", "Dashboard", "Analisis Perilaku Pelanggan"],
                         price: "Rp 45.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
-                        cardTitle: "Artificial Intelegent Development",
+                        cardTitle: "Pengembangan Kecerdasan Buatan",
                         pointsTitle: ["Computer Vision", "Natural Language Processing", "Reinforcement Learning"],
                         price: "Rp 75.000.000",
                         discount: "n",
@@ -154,27 +157,27 @@ export default function Services({ changeLanguage }) {
                 ]
             },
             {
-                title: "Internet of Things",
-                desc: "Kami menghadirkan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mengambil keputusan cepat berdasarkan data real-time.",
+                title: "INTERNET OF THINGS",
+                desc: "Menyediakan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mendukung pengambilan keputusan cepat berbasis data real-time.",
                 img: img4,
                 details: [
                     {
                         cardTitle: "Smart Home",
-                        pointsTitle: ["Smart Access Control", "CCTV", "Smart Lighting"],
+                        pointsTitle: ["Kontrol Akses Pintar", "CCTV", "Pencahayaan Pintar"],
                         price: "Rp 7.500.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "Industri",
-                        pointsTitle: ["Industrial Automation", "Assets Tracking"],
+                        pointsTitle: ["Otomasi Industri", "Pelacakan Aset"],
                         price: "Rp 125.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "Transportasi",
-                        pointsTitle: ["Smart Parking", "Vehicle Diagnostic"],
+                        pointsTitle: ["Parkir Pintar", "Diagnostik Kendaraan"],
                         price: "Rp 45.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -182,13 +185,13 @@ export default function Services({ changeLanguage }) {
                 ]
             },
             {
-                title: "Fraud Detection System",
-                desc: "Kami menghadirkan solusi fraud detection berbasis teknologi mutakhir yang mampu mengidentifikasi dan mencegah potensi penipuan secara real-time.",
+                title: "SISTEM DETEKSI PENIPUAN",
+                desc: "Solusi deteksi penipuan terkini yang mampu mengidentifikasi dan mencegah potensi penipuan secara real-time.",
                 img: img4,
                 details: [
                     {
-                        cardTitle: "Fraud System",
-                        pointsTitle: ["Fraud Risk Assessment & Advisory", "Fraud Detection System Implementation", "Data Analytics untuk Fraud Detection"],
+                        cardTitle: "Sistem Deteksi Penipuan",
+                        pointsTitle: ["Penilaian Risiko & Konsultasi Penipuan", "Implementasi Sistem Deteksi Penipuan", "Analitik Data untuk Deteksi Penipuan"],
                         price: "Rp 125.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -200,26 +203,26 @@ export default function Services({ changeLanguage }) {
         servicesData = [
             {
                 title: "SOFTWARE DEVELOPMENT",
-                desc: "We deliver innovative, secure, scalable, and responsive web and mobile applications designed to provide optimal user experience and efficient performance.",
+                desc: "Innovative, secure, scalable, responsive, user-friendly, and efficient web and mobile applications.",
                 img: img1,
                 details: [
                     {
                         cardTitle: "MOBILE APPS",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi"],
+                        pointsTitle: ["Full Cycle Development", "Testing", "Revision"],
                         price: "Rp 30.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000.000"
                     },
                     {
                         cardTitle: "WEBSITE",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi"],
+                        pointsTitle: ["Full Cycle Development", "Testing", "Revision"],
                         price: "Rp 1.400.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "ERP",
-                        pointsTitle: ["Full Cycle Development", "Testing", "Revisi", "Installation"],
+                        pointsTitle: ["Full Cycle Development", "Testing", "Revision", "Installation"],
                         price: "Rp 99.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -233,21 +236,21 @@ export default function Services({ changeLanguage }) {
                 details: [
                     {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Website",
-                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        pointsTitle: ["Attack Simulation", "System Evaluation", "Detailed Risk Report", "Detailed Risk Report"],
                         price: "Rp 5.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) API",
-                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        pointsTitle: ["Attack Simulation", "System Evaluation", "Detailed Risk Report", "Detailed Risk Report"],
                         price: "Rp 12.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Mobile Application",
-                        pointsTitle: ["Simulasi serangan", "Evaluasi sistem", "Laporan detail risiko", "Retest"],
+                        pointsTitle: ["Attack Simulation", "System Evaluation", "Detailed Risk Report", "Detailed Risk Report"],
                         price: "Rp 35.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -261,21 +264,21 @@ export default function Services({ changeLanguage }) {
                 details: [
                     {
                         cardTitle: "IT Consulting & Manage Service",
-                        pointsTitle: ["Perancangan & Perencanaan Sistem", "Audit IT", "Efisiensi operasional"],
+                        pointsTitle: ["System Design & Planning", "IT Audit", "Operational Efficiency"],
                         price: "Rp 250.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "IT Support",
-                        pointsTitle: ["Support teknis", "Pemantauan sistem", "Testing"],
+                        pointsTitle: ["Technical Support", "System Monitoring", "Testing"],
                         price: "Rp 75.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "Procurement of Technology Solution",
-                        pointsTitle: ["Pengadaan asset TI", "Pengadaan Software", "Implementasi & Set Up Sistem", "Pengadaan Cloud Service"],
+                        pointsTitle: ["IT Asset Procurement", "Software Procurement", "System Implementation & Setup", "Cloud Service Procurement"],
                         price: "Rp 15.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -289,14 +292,14 @@ export default function Services({ changeLanguage }) {
                 details: [
                     {
                         cardTitle: "Business Intelligence",
-                        pointsTitle: ["Dashboard", "Visualisasi data", "Insight bisnis real-time"],
+                        pointsTitle: ["Dashboard", "Data Visualization", "Real-Time Business Insights"],
                         price: "Rp 15.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
                     },
                     {
                         cardTitle: "Predictive Analytics",
-                        pointsTitle: ["Analisa tren historis", "Forecasting", "Dashboard", "Analisis customer Behaviour"],
+                        pointsTitle: ["Historical Trend Analysis", "Forecasting", "Dashboard", "Customer Behavior Analysis"],
                         price: "Rp 45.000.000",
                         discount: "n",
                         priceDiscount: "Rp 100.000"
@@ -399,7 +402,7 @@ export default function Services({ changeLanguage }) {
     if (changeLanguage) {
         highlightWords = ["solusi", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
     } else {
-        highlightWords = ["solutions", "memenuhi", "kebutuhan", "keamanan", "efisiensi", "skalabilitas", "best", "practices", "standar", "industri", "mudah", "diadaptasi", "meningkatkan", "produktivitas", "kepatuhan", "regulasi", "perlindungan"];
+        highlightWords = ["it", "solutions", "unique", "needs", "industries", "security", "efficiency", "scalability", "best", "practices", "industry", "standards", "offerings", "adaptable", "productivity", "compliance", "protection"];
     }
 
     const highlightText = (text, highlights) => {
@@ -505,63 +508,75 @@ export default function Services({ changeLanguage }) {
         ]
     } else {
         arr = [
-            "We provide IT solutions tailored to meet the unique needs of various industries. ",
-            "Whether in banking, healthcare, e-commerce, manufacturing, government, or others, our services ensure security, efficiency, and scalability in your business operations. ",
-            "With a best-practice and industry-standard approach, our solutions are easily adaptable to address specific challenges. ",
-            "In every sector, we help enhance productivity, regulatory compliance, and protection against digital threats. "
+            "We provide IT solutions designed to meet unique needs across various industries. ",
+            "Whether in banking, healthcare, e-commerce, manufacturing, government sectors, or others, our services ensure security, efficiency, and scalability in your business operations. ",
+            "Using best practices and industry standards, our offerings are easily adaptable to address specific challenges. ",
+            "In every sector, we help improve productivity, regulatory compliance, and protection against digital threats. "
         ]
     }
+
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
 
     return (
         <>
             <div className="sloganAndService">
                 <Slogan />
-                <div className="services-section">
-                    <div className="services-section-1" id="ourPlan">
-                        {servicesData.map((service, index) => (
-                            <div className="services-section-1-box"
-                                key={index}
-                                onClick={() => handleBoxServiceClick(service)}>
-                                <div className="services-section-1-box-img">
-                                    <img src={service.img} alt={`${service.title} Icon`} />
+                <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, ease: "easeOut" }}>
+                    <div className="services-section">
+                        <div className="services-section-1" id="ourPlan">
+                            {servicesData.map((service, index) => (
+                                <div className="services-section-1-box"
+                                    key={index}
+                                    onClick={() => handleBoxServiceClick(service)}>
+                                    <div className="services-section-1-box-img">
+                                        <img src={service.img} alt={`${service.title} Icon`} />
+                                    </div>
+                                    <div className="services-section-1-box-desc">
+                                        <h6>{service.title}</h6>
+                                        <p>{service.desc}</p>
+                                    </div>
                                 </div>
-                                <div className="services-section-1-box-desc">
-                                    <h6>{service.title}</h6>
-                                    <p>{service.desc}</p>
+                            ))}
+                        </div>
+
+                        <div className="services-section-2" ref={sectionRef}>
+                            <div className="services-section-2-card">
+                                <div className="services-section-2-card-icon">
+                                    {icons.map((icon, index) => (
+                                        <img key={index} src={icon} />
+                                    ))}
+                                </div>
+                                <div className="services-section-2-card-text textSection">
+
+                                    {
+                                        device != "iOS" ?
+                                            arr.slice(0).map((text, index) => (
+                                                <b key={index} className={`textLine ${currentStep > index ? "visible" : ""}`}>
+                                                    {highlightText(text, highlightWords)}
+                                                </b>
+                                            ))
+                                            : arr.map((text, index) => (
+                                                <b key={index} className={`textLine visible`}>
+                                                    {highlightText(text, highlightWords)}
+                                                </b>
+                                            ))
+                                    }
+
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                    <div className="services-section-2" ref={sectionRef}>
-                        <div className="services-section-2-card">
-                            <div className="services-section-2-card-icon">
-                                {icons.map((icon, index) => (
-                                    <img key={index} src={icon} />
-                                ))}
-                            </div>
-                            <div className="services-section-2-card-text textSection">
-
-                                {
-                                    device != "iOS" ?
-                                        arr.slice(0).map((text, index) => (
-                                            <b key={index} className={`textLine ${currentStep > index ? "visible" : ""}`}>
-                                                {highlightText(text, highlightWords)}
-                                            </b>
-                                        ))
-                                        : arr.map((text, index) => (
-                                            <b key={index} className={`textLine visible`}>
-                                                {highlightText(text, highlightWords)}
-                                            </b>
-                                        ))
-                                }
-
+                            <div className="services-section-2-desc">
+                                <img src={img} />
                             </div>
                         </div>
-                        <div className="services-section-2-desc">
-                            <img src={img} />
-                        </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className="waveService">
                 <div className="circleHalfWave1"></div>
