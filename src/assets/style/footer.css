@@ -371,7 +371,7 @@
 
 
     .buttonFooterBot {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .wrapperCall {
@@ -498,4 +498,24 @@
         width: 140px;
         word-break: break-all;
     }
+}
+
+
+@media (min-width: 1200px) and (max-width:1530px) {
+    .buttonFooterBot {
+        font-size: 12px;
+    }
+
+    .box1Footer {
+        width: 35%;
+    }
+
+    .box2Footer {
+        width: 45%;
+    }
+
+    .box3Footer {
+        width: 20%;
+    }
+
 }

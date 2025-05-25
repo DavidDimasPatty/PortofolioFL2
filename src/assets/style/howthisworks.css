@@ -1012,8 +1012,11 @@
   }
 
   .orbit svg {
+    position: absolute;
+    z-index: -1;
     left: -15%;
-    transform: scale(1.2);
+    transform: scale(1);
+    width: 5000px;
   }
 
   .wrapperDiagram {
@@ -1203,4 +1206,23 @@
     height: 70px;
   }
 
+}
+
+@media (min-width: 900px) and (max-width:1000px) {
+ .orbit svg {
+    left: -5%;
+  }
+}
+@media  (min-width:1024px) {
+
+  .orbit svg {
+    left: -0%;
+  }
+}
+
+
+@media (min-width: 540px) and (max-width:600px) {
+  .orbit svg {
+    left: -40%;
+  }
 }
