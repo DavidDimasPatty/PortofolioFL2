@@ -1,13 +1,17 @@
 import { React, useState } from "react";
 import "../assets/style/FAQ.css"
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const FAQ = ({ changeLanguage }) => {
     const [question1, setQuestion1] = useState(false);
     const [question2, setQuestion2] = useState(false);
     const [question3, setQuestion3] = useState(false);
     const [question4, setQuestion4] = useState(false);
     const [question5, setQuestion5] = useState(false);
-
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
     const clickQuestion1 = () => {
         setQuestion1(!question1);
         setQuestion2(false);
@@ -59,7 +63,11 @@ const FAQ = ({ changeLanguage }) => {
     return (
         <div className="wrapRowFAQ">
             <div className="col-12 col-md-6 d-flex justify-content-center align-items-center" id="faq">
-                <div className="row wrappperQuestions d-flex justify-content-center align-items-center">
+                <motion.div className="row wrappperQuestions d-flex justify-content-center align-items-center"
+                    ref={ref}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, ease: "easeOut" }}>
                     <div className="col">
                         <h3 className="text-center mb-3 faqTittleTop"> FREQUENT ASKED QUESTIONS</h3>
                         <div className="wrapQuestions">
@@ -232,10 +240,14 @@ const FAQ = ({ changeLanguage }) => {
                         </div>
 
                     </div>
-                </div>
+                </motion.div>
             </div>
 
-            <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <motion.div className="col-12 col-md-6 d-flex justify-content-center align-items-center"
+                ref={ref}
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, ease: "easeOut" }}>
                 <div className="col">
                     <div className="col d-flex justify-content-center align-items-center anyFAQ">
                         {changeLanguage
@@ -251,7 +263,7 @@ const FAQ = ({ changeLanguage }) => {
                         <button className="getStartedFAQ">{changeLanguage ? "Memulai" : "Get Started"}</button>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

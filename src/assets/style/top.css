@@ -170,7 +170,7 @@
 
 }
 
-@media (min-width:700px) and (max-width: 1024px) {
+@media (min-width:1024px) and (max-width: 1024px) {
     .titleName {
         width: 50%;
         height: 100vw;
