@@ -224,6 +224,16 @@ const HowThisWorks = ({ changeLanguage }) => {
         window.open(url, "_blank");
     };
 
+    const isDesktop = window.innerWidth > 1024;
+
+    const motionProps = isDesktop
+        ? {
+            initial: { opacity: 0, y: 50 },
+            animate: inView ? { opacity: 1, y: 0 } : {},
+            transition: { duration: 0.6, ease: "easeOut" }
+        }
+        : {};
+
     return (
         <div className="row wrapperWorks d-flex justify-content-center align-items-center">
             {window.innerWidth <= 1024 ? <h2 className="mb-5 text-center howThisTittle">HOW THIS WORKS</h2> : ""}
@@ -299,10 +309,7 @@ const HowThisWorks = ({ changeLanguage }) => {
                             </div>
                         </div>
                     </motion.div> :
-                    <motion.div className="wrapperDiagram" ref={ref}
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={inView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, ease: "easeOut" }}>
+                    <motion.div className="wrapperDiagram" ref={ref}>
                         <div className="diagramContent" >
                             {/* tampilan mobile diatur aja nanti si width */}
                             <div class="col">
@@ -380,11 +387,10 @@ const HowThisWorks = ({ changeLanguage }) => {
                         </div>
                     </motion.div>}
 
-                <motion.div className={`wrapperBoxWorks ${window.innerWidth > 1024 ? "col-12 col-md-6" : ""}`}
+                <motion.div
+                    className={`wrapperBoxWorks ${isDesktop ? "col-12 col-md-6" : ""}`}
                     ref={ref}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, ease: "easeOut" }}>
+                    {...motionProps} >
                     <div className="col boxWorksContent">
                         <div className="wrapContentComponent">
                             <div className="boxTopWorks">
