@@ -454,7 +454,7 @@ const HowThisWorks = ({ changeLanguage }) => {
 
                             {hoverContentBox === "1" ?
                                 (<div className="textWorks p-3">
-                                    <motion.b   key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
+                                    <motion.b key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 1.5 }}>
                                         {changeLanguage ? "Kami mendengarkan kebutuhan Anda, memahami tantangan bisnis, dan menganalisis infrastruktur yang ada untuk memberikan solusi terbaik." : "We listen to your needs, understand your business challenges, and analyze your existing infrastructure to deliver the best solution."}
@@ -462,7 +462,7 @@ const HowThisWorks = ({ changeLanguage }) => {
                                 </div>
                                 ) : hoverContentBox === "2" ? (
                                     <div className="textWorks p-3">
-                                        <motion.b   key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
+                                        <motion.b key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 1.5 }}>
                                             {changeLanguage ? "Tim kami merancang strategi implementasi berdasarkan praktek dan standar industri, memastikan solusi yang efisien dan skalabel." : "Our team designs implementation strategies based on industry best practices and standards, ensuring efficient and scalable solutions."}
@@ -470,7 +470,7 @@ const HowThisWorks = ({ changeLanguage }) => {
                                     </div>
                                 ) : hoverContentBox === "3" ? (
                                     <div className="textWorks p-3">
-                                        <motion.b   key={hoverContentBox}  initial={{ opacity: 0, x: -100 }}
+                                        <motion.b key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 1.5 }}>
                                             {changeLanguage ? "Kami mulai membangun, mengonfigurasi, dan mengintegrasikan solusi IT sesuai dengan kebutuhan bisnis Anda, dengan fokus pada keamanan dan performa." : "We begin by building, configuring, and integrating IT solutions tailored to your business needs, with a strong focus on security and performance."}
@@ -478,7 +478,7 @@ const HowThisWorks = ({ changeLanguage }) => {
                                     </div>
                                 ) : hoverContentBox === "4" ? (
                                     <div className="textWorks p-3">
-                                        <motion.b   key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
+                                        <motion.b key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 1.5 }}>
                                             {changeLanguage ? "Setiap solusi diuji secara menyeluruh untuk memastikan kinerja maksimal,  keamanan yang kuat, serta kompatibilitas dengan sistem yang sudah ada." : "Each solution is thoroughly tested to ensure optimal performance, robust security, and seamless compatibility with existing systems."}
@@ -486,7 +486,7 @@ const HowThisWorks = ({ changeLanguage }) => {
                                     </div>
                                 ) : hoverContentBox === "5" ? (
                                     <div className="textWorks p-3">
-                                        <motion.b   key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
+                                        <motion.b key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 1.5 }}>
                                             {changeLanguage ? "Setelah siap, solusi diterapkan ke lingkungan produksi, dan kami memberikan pelatihan kepada tim Anda untuk memastikan adopsi yang sukses." : "Once ready, the solution is deployed to the production environment, and we provide training to your team to ensure a successful adoption."}
@@ -494,7 +494,7 @@ const HowThisWorks = ({ changeLanguage }) => {
                                     </div>) :
                                     (
                                         <div className="textWorks p-3">
-                                            <motion.b   key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
+                                            <motion.b key={hoverContentBox} initial={{ opacity: 0, x: -100 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{ duration: 1.5 }}>
                                                 {changeLanguage ? "Kami menyediakan dukungan berkelanjutan, monitoring, dan pembaruan untuk memastikan sistem tetap optimal dan siap menghadapi tantangan masa depan." : "We provide continuous support, monitoring, and updates to ensure the system remains optimal and ready to meet future challenges."}
@@ -573,7 +573,12 @@ const HowThisWorks = ({ changeLanguage }) => {
                         <b>{changeLanguage ? "Lebih dari 50+ klien dan 100+ project" : "More than 50+ clients and 100+ project"}</b>
                     </div>
                     <div className="moreProjectsButtonWrapper d-flex justify-content-center align-items-center">
-                        <button className="moreProjectsButton" onClick={openWhatsApp}>{changeLanguage ? "KONSULTASI GRATIS" : "GET FREE CONSULTATION"}</button>
+                        <motion.button className="moreProjectsButton" onClick={openWhatsApp}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >{changeLanguage ? "KONSULTASI GRATIS" : "GET FREE CONSULTATION"}
+                        </motion.button>
                     </div>
 
                     <div className="orbit">

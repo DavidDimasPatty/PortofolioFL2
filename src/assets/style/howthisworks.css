@@ -1007,6 +1007,16 @@
 }
 
 @media (min-width: 700px) and (max-width:1024px) {
+
+  .boxWorks {
+    box-shadow:
+      inset 0 12px 0px -10px rgba(0, 85, 255, 1),
+      inset 0 -12px 0px -10px rgba(0, 85, 255, 1),
+      0 10px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
   .wrapperWorks {
     background-size: cover;
   }
@@ -1209,11 +1219,22 @@
 }
 
 @media (min-width: 900px) and (max-width:1000px) {
- .orbit svg {
+  .orbit svg {
     left: -5%;
   }
+
+  .boxWorks {
+    box-shadow:
+      inset 0 12px 0px -10px rgba(0, 85, 255, 1),
+      inset 0 -12px 0px -10px rgba(0, 85, 255, 1),
+      0 10px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
 }
-@media  (min-width:1024px) {
+
+@media (min-width:1024px) {
 
   .orbit svg {
     left: -0%;

@@ -5,6 +5,7 @@ import Marquee from "react-fast-marquee";
 import waLogo from "../../assets/image/whatsapp.png"
 import fbLogo from "../../assets/image/facebook.png"
 import igLogo from "../../assets/image/instagramm.png"
+import { motion } from "framer-motion";
 const Footer = ({ changeLanguage }) => {
     const [isHoverVision, setIsHoverVision] = useState(false);
     const [isHoverMission, setisHoverMission] = useState(false);
@@ -36,9 +37,19 @@ const Footer = ({ changeLanguage }) => {
 
                         </div>
                         <div className="col-12 d-flex justify-content-start buttonFooterBot">
-                            <button onClick={() => { window.location.href = "#ourPlan" }}>{changeLanguage ? "Paket Kami" : "Our Plan"}</button>
-                            <button onClick={() => { window.location.href = "#faq" }}>FAQ</button>
-                            <button onClick={() => { window.location.href = "#howWorks" }}>{changeLanguage ? "Bagaimana" : "HOW"}</button>
+                            <motion.button onClick={() => { window.location.href = "#ourPlan" }}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                            >{changeLanguage ? "Paket Kami" : "Our Plan"}</motion.button>
+                            <motion.button onClick={() => { window.location.href = "#faq" }}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                                transition={{ type: "spring", stiffness: 300 }}>FAQ</motion.button>
+                            <motion.button onClick={() => { window.location.href = "#howWorks" }}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                                transition={{ type: "spring", stiffness: 300 }}>{changeLanguage ? "Bagaimana" : "HOW"}</motion.button>
                         </div>
                         <div className="row wrapImgFooter">
                             <img src={logoPT} className="imgFooter"></img>

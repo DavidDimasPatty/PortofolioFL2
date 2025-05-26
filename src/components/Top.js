@@ -40,10 +40,33 @@ const Top = ({ changeLanguage }) => {
                     </div>
                     <div className="wrapperButtonTop">
                         <div className="mb-3 buttonTopContent">
-                            <button onClick={() => { window.location.href = "#ourPlan" }}> {changeLanguage ? "PAKET KAMI" : "OUR PLAN"}</button>
+                            <motion.button onClick={() => { window.location.href = "#ourPlan" }}
+                                whileHover={{
+                                    scale: 1.1,
+                                    rotate: 3,
+                                    boxShadow: "0px 5px 20px rgba(0,0,0,0.2)"
+                                }}
+                                whileTap={{
+                                    scale: 1.1,
+                                    rotate: 3,
+                                    boxShadow: "0px 5px 20px rgba(0,0,0,0.2)"
+                                }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                            > {changeLanguage ? "PAKET KAMI" : "OUR PLAN"}</motion.button>
                         </div>
                         <div className="buttonTopContent">
-                            <button onClick={() => sendEmail()}>  {changeLanguage ? "KONTAK KAMI" : "CONTACT US"}</button>
+                            <motion.button onClick={() => sendEmail()}
+                                whileHover={{
+                                    scale: 1.1,
+                                    rotate: -3,
+                                    boxShadow: "0px 5px 20px rgba(0,0,0,0.2)"
+                                }}
+                                whileTap={{
+                                    scale: 1.1,
+                                    rotate: 3,
+                                    boxShadow: "0px 5px 20px rgba(0,0,0,0.2)"
+                                }}
+                                transition={{ type: "spring", stiffness: 300 }}>  {changeLanguage ? "KONTAK KAMI" : "CONTACT US"}</motion.button>
                         </div>
                     </div>
                 </motion.div>

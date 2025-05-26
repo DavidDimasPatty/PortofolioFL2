@@ -259,8 +259,16 @@ const FAQ = ({ changeLanguage }) => {
                             ? "Hubungi kami untuk lebih lanjut."
                             : "If you still have questions, give us a shout!"}
                     </div>    <div className="col wrapButtonFAQRight d-flex justify-content-center align-items-center">
-                        <button className="contactUsFAQ" onClick={sendEmail}>{changeLanguage ? "Kontak Kami" : "Contact Us"}</button>
-                        <button className="getStartedFAQ">{changeLanguage ? "Memulai" : "Get Started"}</button>
+                        <motion.button className="contactUsFAQ" onClick={sendEmail}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ type: "spring", stiffness: 300 }}>{changeLanguage ? "Kontak Kami" : "Contact Us"}
+                        </motion.button>
+                        <motion.button className="getStartedFAQ"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >{changeLanguage ? "Memulai" : "Get Started"}</motion.button>
                     </div>
                 </div>
             </motion.div>
