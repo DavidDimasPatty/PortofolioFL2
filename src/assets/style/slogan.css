@@ -48,35 +48,35 @@
 @media (max-width: 360px) {
     .slogan-section {
         letter-spacing: 0.1em;
-        padding: 50px 5px;
+        padding: 20px 5px;
     }
 }
 
 @media (min-width: 360px) and (max-width: 480px) {
     .slogan-section {
         letter-spacing: 0.1em;
-        padding: 50px 5px;
+        padding: 25px 5px;
     }
 }
 
 @media (min-width: 480px) and (max-width: 600px) {
     .slogan-section {
         letter-spacing: 0.1em;
-        padding: 50px 15px;
+        padding: 30px 15px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
     .slogan-section {
         letter-spacing: 0.2em;
-        padding: 50px 18px;
+        padding: 40px 18px;
     }
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
     .slogan-section {
         letter-spacing: 0.2em;
-        padding: 50px 35px;
+        padding: 45px 35px;
     }
 }
 
