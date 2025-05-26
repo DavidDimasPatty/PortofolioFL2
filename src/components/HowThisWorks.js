@@ -226,7 +226,7 @@ const HowThisWorks = ({ changeLanguage }) => {
 
     const isDesktop = window.innerWidth > 1024;
 
-    const motionProps = isDesktop
+    const motionProps = window.innerWidth > 1024
         ? {
             initial: { opacity: 0, y: 50 },
             animate: inView ? { opacity: 1, y: 0 } : {},
@@ -388,7 +388,7 @@ const HowThisWorks = ({ changeLanguage }) => {
                     </motion.div>}
 
                 <motion.div
-                    className={`wrapperBoxWorks ${isDesktop ? "col-12 col-md-6" : ""}`}
+                    className={`wrapperBoxWorks ${window.innerWidth > 1024 ? "col-12 col-md-6" : ""}`}
                     ref={ref}
                     {...motionProps} >
                     <div className="col boxWorksContent">
