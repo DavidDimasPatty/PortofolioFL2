@@ -420,7 +420,7 @@
 
 @media (max-width:620px) {
     .buttonFooterBot {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .ourVisionHidden {
@@ -485,7 +485,7 @@
 
 @media (max-width:375px) {
     .buttonFooterBot {
-        font-size: 13px;
+        font-size: 10px;
     }
 }
 

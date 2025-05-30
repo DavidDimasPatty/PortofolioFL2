@@ -161,12 +161,20 @@
         min-height: 800px;
     }
 
+    .buttonTopContent button {
+        font-size: 12px;
+    }
 }
 
 @media (max-width:400px) {
     .wrapperTop {
         min-height: 600px;
     }
+
+    .buttonTopContent button {
+        font-size: 12px;
+    }
+
 
 }
 
