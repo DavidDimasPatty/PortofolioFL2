@@ -56,7 +56,7 @@ export default function Services({ changeLanguage }) {
                         pointsTitle: ["Pengembangan Sistem Secara Menyeluruh", "Pengujian", "Revisi"],
                         price: "Rp 30.000.000",
                         discount: "n",
-                        priceDiscount: "Rp 100.000.000"
+                        priceDiscount: "Rp 20.000.000"
                     },
                     {
                         cardTitle: "SITUS WEB",

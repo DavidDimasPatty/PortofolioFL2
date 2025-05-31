@@ -9,14 +9,17 @@ const PricingModal = ({ isOpen, onClose, service, changeLanguage }) => {
 
     const titleRefs = useRef([]);
     const pointsRefs = useRef([]);
+    const pricesRefs = useRef([]);
 
     const updateHeights = () => {
         setTimeout(() => {
             const titleHeights = titleRefs.current.map(el => el?.offsetHeight || 0);
             const pointsHeights = pointsRefs.current.map(el => el?.offsetHeight || 0);
+            const pricesHeights = pricesRefs.current.map(el => el?.offsetHeight || 0);
 
             const maxTitleHeight = Math.max(...titleHeights);
             const maxPointsHeight = Math.max(...pointsHeights);
+            const maxPricesHeight = Math.max(...pricesHeights);
 
             // Apply minHeight via inline style
             titleRefs.current.forEach(el => {
@@ -25,6 +28,10 @@ const PricingModal = ({ isOpen, onClose, service, changeLanguage }) => {
 
             pointsRefs.current.forEach(el => {
                 if (el) el.style.minHeight = `${maxPointsHeight}px`;
+            });
+
+            pricesRefs.current.forEach(el => {
+                if (el) el.style.minHeight = `${maxPricesHeight}px`;
             });
         }, 100); // jeda agar layout stabil
     };
@@ -110,7 +117,8 @@ const PricingModal = ({ isOpen, onClose, service, changeLanguage }) => {
                                     </ul>
                                     <div className="pricing-modal-card-line"></div>
                                     <div className="pricing-modal-card-desc1">{changeLanguage ? "Mulai dari" : "START FROM"}</div>
-                                    <p className="pricing-modal-card-price">
+                                    <p className="pricing-modal-card-price"
+                                        ref={(el) => (pricesRefs.current[idx] = el)}>
                                         {item.discount === "y" ? (
                                             <>
                                                 <span className="price-strike">{item.price}</span>
