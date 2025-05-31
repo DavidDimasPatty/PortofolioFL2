@@ -25,11 +25,11 @@ body.modal-open {
 }
 
 .pricing-modal-content {
-    /* background-image: url('../../assets/image/howBG.jpeg');
+    background-image: url('../../assets/image/bg-pricing.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; */
-    background-color: gray;
+    background-position: center;
+    /* background-color: gray; */
     width: 100%;
     max-width: 80vw;
     padding: 0;
@@ -82,10 +82,10 @@ body.modal-open {
     border: none;
     color: white;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 10px;
     text-transform: uppercase;
     cursor: pointer;
-    font-family: 'ASAP', sans-serif;
+    font-family: 'ASAP';
     letter-spacing: 3px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -98,16 +98,16 @@ body.modal-open {
 .pricing-modal-close-arrow-left {
     width: 0;
     height: 0;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-right: 8px solid white;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 6px solid white;
 }
 
 .pricing-modal-title {
     text-align: center;
     text-transform: uppercase;
-    font-family: "DEPOT", sans-serif;
-    font-size: 30px;
+    font-family: "DEPOT";
+    font-size: 35px;
     margin: 20px 0 30px 0;
     letter-spacing: 3px;
 }
@@ -118,6 +118,7 @@ body.modal-open {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .pricing-modal-card {
@@ -130,34 +131,41 @@ body.modal-open {
         inset 0 4px 0 -3px rgba(0, 85, 255, 1),
         inset 0 -4px 0 -3px rgba(0, 85, 255, 1);
     color: white;
-    max-width: 300px;
-    background: rgba(255, 255, 255, 0.5);
+    max-width: 250px;
+    /* background: rgba(255, 255, 255, 0.5); */
+    background: transparent;
 }
 
 .pricing-modal-card-number {
     text-align: end;
-    font-size: 24px;
-    font-family: 'ASAP', sans-serif;
-    letter-spacing: 1px;
+    font-size: 22px;
+    font-family: 'ASAP';
+    font-weight: 300;
+    letter-spacing: 3px;
     margin: 0;
-    color: rgba(0, 85, 255, 1);
+    /* color: rgba(0, 85, 255, 1); */
+    color: white;
 }
 
 .pricing-modal-card-title {
+    font-family: 'HUM';
     font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-weight: 900;
+    letter-spacing: 2px;
     margin: 0 0 10px 0;
     display: flex;
     justify-content: start;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .pricing-modal-card-points {
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 13px;
     margin-bottom: 10px;
     color: white;
+    font-family: 'ASAP';
+    font-weight: 300;
     font-size: 14px;
     display: flex;
     flex-direction: column;
@@ -176,15 +184,18 @@ body.modal-open {
 }
 
 .pricing-modal-card-desc1 {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
     text-transform: uppercase;
+    font-family: 'HUM';
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 
 .pricing-modal-card-price {
     font-size: 18px;
-    font-weight: bold;
     margin: 0;
+    font-family: 'HUM';
+    font-weight: 900;
 }
 
 .price-strike {
@@ -215,16 +226,13 @@ body.modal-open {
     transform-origin: center;
 }
 
-.price-discount {
-    /* color: red; */
-    /* font-weight: bold; */
-}
-
 
 .pricing-modal-card-desc2 {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1;
     margin-top: 2px;
+    font-family: 'ASAP';
+    font-weight: 300;
 }
 
 /* Button */
@@ -234,8 +242,10 @@ body.modal-open {
     border-radius: 9999px;
     background: rgba(0, 85, 255, 1);
     color: white;
-    font-size: 20px;
-    font-weight: bold;
+    font-family: 'HUM';
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,14 +257,15 @@ body.modal-open {
 .pricing-modal-card-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    color: black;
+    color: white;
 }
 
 .pricing-modal-footer {
     margin-top: 30px;
     text-align: center;
-    font-family: 'DEPOT', sans-serif;
-    font-size: 20px;
+    font-family: 'DEPOT';
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 
 @media (max-width: 600px) {
@@ -270,5 +281,9 @@ body.modal-open {
 
     .pricing-modal-title {
         margin: 20px 0 20px 0;
+    }
+
+    .pricing-modal-card {
+        max-width: 300px;
     }
 }

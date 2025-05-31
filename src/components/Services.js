@@ -8,6 +8,8 @@ import img1 from "../assets/image/services-ikon-1.png"
 import img2 from "../assets/image/services-ikon-2.png"
 import img3 from "../assets/image/services-ikon-3.png"
 import img4 from "../assets/image/services-ikon-4.png"
+import img5 from "../assets/image/services-ikon-5.png"
+import img6 from "../assets/image/services-ikon-6.png"
 
 import icon1 from "../assets/image/service-solution-1.png"
 import icon2 from "../assets/image/service-solution-2.png"
@@ -159,7 +161,7 @@ export default function Services({ changeLanguage }) {
             {
                 title: "INTERNET OF THINGS",
                 desc: "Menyediakan solusi IoT inovatif yang membantu bisnis Anda meningkatkan efisiensi, mengoptimalkan proses, dan mendukung pengambilan keputusan cepat berbasis data real-time.",
-                img: img4,
+                img: img5,
                 details: [
                     {
                         cardTitle: "Smart Home",
@@ -187,7 +189,7 @@ export default function Services({ changeLanguage }) {
             {
                 title: "SISTEM DETEKSI PENIPUAN",
                 desc: "Solusi deteksi penipuan terkini yang mampu mengidentifikasi dan mencegah potensi penipuan secara real-time.",
-                img: img4,
+                img: img6,
                 details: [
                     {
                         cardTitle: "Sistem Deteksi Penipuan",
@@ -316,7 +318,7 @@ export default function Services({ changeLanguage }) {
             {
                 title: "Internet of Things",
                 desc: "We deliver innovative IoT solutions that help your business improve efficiency, optimize processes, and make swift decisions based on real-time data.",
-                img: img4,
+                img: img5,
                 details: [
                     {
                         cardTitle: "Smart Home",
@@ -344,7 +346,7 @@ export default function Services({ changeLanguage }) {
             {
                 title: "Fraud Detection System",
                 desc: "We provide state-of-the-art fraud detection solutions capable of identifying and preventing potential fraud in real-time.",
-                img: img4,
+                img: img6,
                 details: [
                     {
                         cardTitle: "Fraud System",
