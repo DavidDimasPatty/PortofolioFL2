@@ -30,7 +30,7 @@ const Footer = ({ changeLanguage }) => {
     return (
         <div className="footer" id="footer">
             <div className="contentFooter">
-                <div className="col-12 col-md-3 d-flex  pb-2 box1Footer">
+                <div className="col-12 col-md-5 d-flex  pb-2 box1Footer">
                     <div className="row w-100">
                         <div className="row secureTittle">
                             <h3>{changeLanguage ? "INGIN MENJADI AMAN?" : "WANT TO BE SECURE?"} <hr /></h3>
@@ -57,7 +57,7 @@ const Footer = ({ changeLanguage }) => {
                     </div>
                 </div>
 
-                <div className="col-12 col-md-7 d-flex justify-content-center align-items-center wrapperVisionMission box2Footer">
+                <div className="col-12 col-md-5 d-flex justify-content-center align-items-center wrapperVisionMission box2Footer">
                     <div className={`mb-4 ourVisionHidden ${isHoverVision ? `visible` : ''}`}>
                         <h6 className="titelOurVisionHidden">{changeLanguage ? "Visi Kami" : "Our Vision"}</h6>
                         <div className="textVisionHidden">

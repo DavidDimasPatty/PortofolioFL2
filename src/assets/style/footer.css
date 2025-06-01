@@ -28,7 +28,7 @@
 
 .secureTittle h3 {
     color: white;
-    font-size: 33px;
+    font-size: 56px;
 }
 
 .secureTittle hr {
@@ -507,15 +507,19 @@
     }
 
     .box1Footer {
-        width: 35%;
+        width: 55%;
     }
 
     .box2Footer {
-        width: 45%;
+        width: 25%;
     }
 
     .box3Footer {
         width: 20%;
+    }
+
+    .secureTittle hr {
+        width:85%;
     }
 
 }
