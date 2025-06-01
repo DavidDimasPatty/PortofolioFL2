@@ -36,13 +36,15 @@
     height: 3px;
 }
 
-
+.buttonFooterBot {
+    gap: 40px;
+}
 
 .buttonFooterBot button {
     border: none;
     background-color: rgb(21, 21, 221);
     border-radius: 10px;
-    width: 140px;
+    width: 180px;
     color: white;
     margin-left: 10px;
     text-transform: uppercase;
@@ -357,6 +359,11 @@
         flex-direction: row !important;
     }
 
+    
+    .secureTittle h3 {
+        font-size: 33px;
+    }
+
     .box1Footer {
         width: 40%;
     }
@@ -372,6 +379,11 @@
 
     .buttonFooterBot {
         font-size: 9px;
+        gap: 0px;
+    }
+
+    .buttonFooterBot button {
+        width: 140px;
     }
 
     .wrapperCall {
@@ -419,8 +431,14 @@
 }
 
 @media (max-width:620px) {
+
     .buttonFooterBot {
         font-size: 10px;
+        gap: 0px;
+    }
+
+    .buttonFooterBot button {
+        width: 140px;
     }
 
     .ourVisionHidden {
@@ -486,12 +504,22 @@
 @media (max-width:375px) {
     .buttonFooterBot {
         font-size: 10px;
+        gap: 0px;
+    }
+
+    .buttonFooterBot button {
+        width: 140px;
     }
 }
 
 @media (max-width:345px) {
     .buttonFooterBot {
         font-size: 10px;
+        gap: 0px;
+    }
+
+    .buttonFooterBot button {
+        width: 140px;
     }
 
     .contactUsWrapFooter {
@@ -501,9 +529,14 @@
 }
 
 
-@media (min-width: 1200px) and (max-width:1530px) {
+@media (min-width: 1200px) and (max-width:1581px) {
     .buttonFooterBot {
         font-size: 12px;
+        gap: 40px;
+    }
+
+    .buttonFooterBot button {
+        width: 180px;
     }
 
     .box1Footer {
@@ -518,8 +551,21 @@
         width: 20%;
     }
 
-    .secureTittle hr {
-        width:85%;
+    .secureTittle h3 {
+        color: white;
+        font-size: 56px;
     }
 
+    .secureTittle hr {
+        width: 42vw;
+    }
+
+}
+
+@media (min-width: 1581px) and (max-width:1688px) {
+
+    .secureTittle h3 {
+        color: white;
+        font-size: 53px;
+    }
 }
