@@ -224,6 +224,7 @@
 
 .wrapText h3 {
     font-size: 60px;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-family: "asap";
@@ -248,5 +249,11 @@
 
     100% {
         background-position: 200% center;
+    }
+}
+
+@media (max-width:500px) {
+    .wrapText h3 {
+        font-size: 30px;
     }
 }
