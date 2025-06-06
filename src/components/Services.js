@@ -15,7 +15,8 @@ import icon1 from "../assets/image/service-solution-1.png"
 import icon2 from "../assets/image/service-solution-2.png"
 import icon3 from "../assets/image/service-solution-3.png"
 
-import img from "../assets/image/services-sol.png"
+import imgIndo from "../assets/image/services-sol.png"
+import imgInggris from "../assets/image/service-sol-1.png"
 
 import Slogan from "./Slogan";
 import PricingModal from "./Pricing";
@@ -574,7 +575,7 @@ export default function Services({ changeLanguage }) {
                                 </div>
                             </div>
                             <div className="services-section-2-desc">
-                                <img src={img} />
+                                <img src={changeLanguage ? imgIndo : imgInggris} />
                             </div>
                         </div>
                     </div>
