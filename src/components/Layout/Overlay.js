@@ -7,17 +7,17 @@ const Overlay = () => {
         sessionStorage.getItem("rocketAnimated") === "true"
     );
     useEffect(() => {
-        // setDoneAnimate(false);
-        // if (!doneAnimate) {
+        setDoneAnimate(false);
+        if (!doneAnimate) {
             document.body.classList.add("no-scroll");
             let tl = gsap.timeline({
                 repeat: 0,
                 repeatDelay: 0,
-                // onComplete: () => {
-                //     document.body.classList.remove("no-scroll");
-                //     sessionStorage.setItem("rocketAnimated", "true");
-                //     setDoneAnimate(true);
-                // }
+                onComplete: () => {
+                    document.body.classList.remove("no-scroll");
+                    sessionStorage.setItem("rocketAnimated", "true");
+                    setDoneAnimate(true);
+                }
             });
             const labels = document.getElementsByClassName("labels");
             const rocket = document.querySelectorAll(
@@ -105,16 +105,16 @@ const Overlay = () => {
                 }, "launch-=1.8")
                 .to("#frame", {
                     duration: 3,
-                    y: `-=${window.innerHeight}px`,
+                    y: `-=${window.innerHeight+100}px`,
                     ease: "power4",
                     onStart: () => {
                         document.body.classList.remove("no-scroll");
                     }
                 }, "launch-=1.5");
-        // } else {
-        //     setDoneAnimate(true);
-        //     document.body.classList.remove("no-scroll");
-        // }
+        } else {
+            setDoneAnimate(true);
+            document.body.classList.remove("no-scroll");
+        }
     }, []);
 
     return (
