@@ -33,3 +33,7 @@ body.scroll-locked {
     font-weight: normal;
     font-style: normal;
 }
+
+body.no-scroll {
+  overflow: hidden;
+}

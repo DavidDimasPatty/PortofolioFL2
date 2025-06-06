@@ -7,6 +7,7 @@ import HowThisWorks from "./HowThisWorks";
 import FAQ from "./FAQ";
 import Services from "./Services";
 import Slogan from "./Slogan";
+import Overlay from "./Layout/Overlay";
 
 const Home = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +34,7 @@ const Home = () => {
                 isMenuOpen={isMenuOpen}
                 handleChange={handleChange}
             />
+            <Overlay/>
             <Top changeLanguage={change}/>
             <Services changeLanguage={change}/>
             <HowThisWorks changeLanguage={change} />

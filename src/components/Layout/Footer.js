@@ -33,7 +33,7 @@ const Footer = ({ changeLanguage }) => {
                 <div className="col-12 col-md-5 d-flex  pb-2 box1Footer">
                     <div className="row w-100">
                         <div className="row secureTittle">
-                            <h3>{changeLanguage ? "INGIN MENJADI AMAN?" : "WANT TO BE SECURE?"} <hr /></h3>
+                            <h3>{changeLanguage ? "INGIN KEAMANAN?" : "WANT TO BE SECURE?"} <hr /></h3>
 
                         </div>
                         <div className="col-12 d-flex justify-content-start buttonFooterBot">
