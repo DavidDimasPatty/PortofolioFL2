@@ -30,8 +30,8 @@ const Overlay = () => {
             let cdStart = 2,
                 cdLeave = cdStart / 2,
                 esDuration = 0.1,
-                esRepeat = 25,
-                smDuration = 3;
+                esRepeat = 40,
+                smDuration = 8;
 
             tl
                 // .addLabel("countdown")
@@ -66,7 +66,7 @@ const Overlay = () => {
                     scale: 0,
                     opacity: 2,
                     stagger: smDuration / smokeL.length,
-                    x: "+=45px",
+                    x: "+=35px",
                     y: "+=30px",
                 }, "engine-start-=.5")
                 .from(smokeR, {
@@ -74,7 +74,7 @@ const Overlay = () => {
                     scale: 0,
                     opacity: 2,
                     stagger: smDuration / smokeR.length,
-                    x: "-=45px",
+                    x: "-=85px",
                     y: "+=30px",
                 }, "engine-start-=.5")
                 .from(fire, {
