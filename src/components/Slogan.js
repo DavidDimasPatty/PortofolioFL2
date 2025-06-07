@@ -23,10 +23,11 @@ export default function Slogan() {
                     </span>
                     <span className="slogan-large">STRONG</span>
                     <span className="slogan-small">BY</span>
-                    <span className="slogan-small">CHOICE,</span>
+                    <span className="slogan-small">CHOICE</span>
                 </span>
                 
                 <span className="slogan-line">
+                    <span className="slogan-small">AND</span>
                     <span className="slogan-large">SECURE</span>
                     <span className="slogan-small">BY</span>
                     <span className="slogan-small">DESIGN</span>
