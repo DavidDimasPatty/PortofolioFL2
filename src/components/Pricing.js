@@ -7,12 +7,39 @@ const PricingModal = ({ isOpen, onClose, service, changeLanguage }) => {
     const [shouldRender, setShouldRender] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
 
+    const [cardAnimation, setCardAnimation] = useState(false);
+
     const titleRefs = useRef([]);
     const pointsRefs = useRef([]);
     const pricesRefs = useRef([]);
 
+    // const updateHeights = () => {
+    //     setTimeout(() => {
+    //         const titleHeights = titleRefs.current.map(el => el?.offsetHeight || 0);
+    //         const pointsHeights = pointsRefs.current.map(el => el?.offsetHeight || 0);
+    //         const pricesHeights = pricesRefs.current.map(el => el?.offsetHeight || 0);
+
+    //         const maxTitleHeight = Math.max(...titleHeights);
+    //         const maxPointsHeight = Math.max(...pointsHeights);
+    //         const maxPricesHeight = Math.max(...pricesHeights);
+
+    //         // Apply minHeight via inline style
+    //         titleRefs.current.forEach(el => {
+    //             if (el) el.style.minHeight = `${maxTitleHeight}px`;
+    //         });
+
+    //         pointsRefs.current.forEach(el => {
+    //             if (el) el.style.minHeight = `${maxPointsHeight}px`;
+    //         });
+
+    //         pricesRefs.current.forEach(el => {
+    //             if (el) el.style.minHeight = `${maxPricesHeight}px`;
+    //         });
+    //     }, 100); // jeda agar layout stabil
+    // };
+
     const updateHeights = () => {
-        setTimeout(() => {
+        requestAnimationFrame(() => {
             const titleHeights = titleRefs.current.map(el => el?.offsetHeight || 0);
             const pointsHeights = pointsRefs.current.map(el => el?.offsetHeight || 0);
             const pricesHeights = pricesRefs.current.map(el => el?.offsetHeight || 0);
@@ -21,7 +48,6 @@ const PricingModal = ({ isOpen, onClose, service, changeLanguage }) => {
             const maxPointsHeight = Math.max(...pointsHeights);
             const maxPricesHeight = Math.max(...pricesHeights);
 
-            // Apply minHeight via inline style
             titleRefs.current.forEach(el => {
                 if (el) el.style.minHeight = `${maxTitleHeight}px`;
             });
@@ -33,7 +59,7 @@ const PricingModal = ({ isOpen, onClose, service, changeLanguage }) => {
             pricesRefs.current.forEach(el => {
                 if (el) el.style.minHeight = `${maxPricesHeight}px`;
             });
-        }, 100); // jeda agar layout stabil
+        });
     };
 
     useEffect(() => {
@@ -77,6 +103,15 @@ const PricingModal = ({ isOpen, onClose, service, changeLanguage }) => {
         };
     }, [isOpen, service]);
 
+    useEffect(() => {
+        if (isVisible) {
+            setTimeout(() => setCardAnimation(true), 50); // delay agar animasi terasa
+        } else {
+            setCardAnimation(false);
+        }
+    }, [isVisible]);
+
+
     if (!shouldRender) return null;
 
     return (
@@ -99,7 +134,7 @@ const PricingModal = ({ isOpen, onClose, service, changeLanguage }) => {
 
                         <div className="pricing-modal-cards">
                             {service.details?.map((item, idx) => (
-                                <div key={idx} className="pricing-modal-card">
+                                <div key={idx} className={`pricing-modal-card ${cardAnimation ? "show" : ""}`}>
                                     <p className="pricing-modal-card-number">{String(idx + 1).padStart(2, "0")}</p>
                                     <h3
                                         className="pricing-modal-card-title"
