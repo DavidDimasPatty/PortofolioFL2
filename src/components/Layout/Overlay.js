@@ -30,26 +30,26 @@ const Overlay = () => {
             let cdStart = 2,
                 cdLeave = cdStart / 2,
                 esDuration = 0.1,
-                esRepeat = 15,
-                smDuration = 1.5;
+                esRepeat = 25,
+                smDuration = 3;
 
             tl
-                .addLabel("countdown")
-                .from(labels, {
-                    duration: cdStart,
-                    scale: 0,
-                    x: "50px",
-                    y: "50px",
-                    stagger: cdStart / labels.length,
-                }, "countdown")
-                .to(labels, {
-                    duration: cdLeave,
-                    scale: 0,
-                    x: "20px",
-                    y: "20px",
-                    opacity: 0,
-                    stagger: cdStart / labels.length,
-                }, "countdown+=" + cdStart / labels.length)
+                // .addLabel("countdown")
+                // .from(labels, {
+                //     duration: cdStart,
+                //     scale: 0,
+                //     x: "50px",
+                //     y: "50px",
+                //     stagger: cdStart / labels.length,
+                // }, "countdown")
+                // .to(labels, {
+                //     duration: cdLeave,
+                //     scale: 0,
+                //     x: "20px",
+                //     y: "20px",
+                //     opacity: 0,
+                //     stagger: cdStart / labels.length,
+                // }, "countdown+=" + cdStart / labels.length)
 
                 .addLabel("engine-start")
                 .from(rocket, {
@@ -62,7 +62,7 @@ const Overlay = () => {
                     y: "+=5px",
                 }, "engine-start-=1")
                 .from(smokeL, {
-                    duration: smDuration,
+                    duration: 2,
                     scale: 0,
                     opacity: 2,
                     stagger: smDuration / smokeL.length,
@@ -70,7 +70,7 @@ const Overlay = () => {
                     y: "+=30px",
                 }, "engine-start-=.5")
                 .from(smokeR, {
-                    duration: smDuration,
+                    duration: 2,
                     scale: 0,
                     opacity: 2,
                     stagger: smDuration / smokeR.length,
@@ -105,7 +105,7 @@ const Overlay = () => {
                 }, "launch-=1.8")
                 .to("#frame", {
                     duration: 3,
-                    y: `-=${window.innerHeight+100}px`,
+                    y: `-=${window.innerHeight + 100}px`,
                     ease: "power4",
                     onStart: () => {
                         document.body.classList.remove("no-scroll");
@@ -136,9 +136,9 @@ const Overlay = () => {
                         <div className="rocket__wing rocket__wing--left"></div>
                         <div className="rocket__wing rocket__wing--right">   </div>
                         <div className="rocket__label">
-                            <p className="labels">3</p>
-                            <p className="labels">2</p>
-                            <p className="labels">1</p>
+                            <p className="labels"></p>
+                            <p className="labels"></p>
+                            <p className="labels"></p>
                         </div>
 
                         {["left", "right"].map((side) =>
