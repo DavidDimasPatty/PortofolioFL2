@@ -75,12 +75,14 @@
     color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-left: 50px;
 }
 
 .contactUsWrapFooter {
     color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
+    word-break: break-all;
 }
 
 .socialMediaWrapFooter {
@@ -353,13 +355,14 @@
 }
 
 
+
 @media (min-width: 720px) and (max-width:1200px) {
     .contentFooter {
         display: flex;
         flex-direction: row !important;
     }
 
-    
+
     .secureTittle h3 {
         font-size: 33px;
     }
@@ -428,6 +431,11 @@
         width: 100%;
         word-break: break-all;
     }
+
+    .aboutUsWrapFooter {
+        margin-left: 0px;
+    }
+
 }
 
 @media (max-width:620px) {
@@ -478,11 +486,13 @@
     .wrapperVisionMission {
         position: relative;
         width: 100%;
+        margin-left: 10px;
     }
 
     .contactUsWrapFooter {
         color: white;
         width: 200px;
+
     }
 
     .secureTittle h3 {
@@ -499,6 +509,16 @@
         position: relative;
         right: 19px;
     }
+
+    .aboutUsWrapFooter {
+        margin-left: -14px;
+    }
+
+
+    .contactUsWrapFooter {
+        width: 210px;
+
+    }
 }
 
 @media (max-width:375px) {
@@ -509,6 +529,10 @@
 
     .buttonFooterBot button {
         width: 140px;
+    }
+
+    .aboutUsWrapFooter {
+        margin-left: -10px;
     }
 }
 
@@ -525,6 +549,10 @@
     .contactUsWrapFooter {
         width: 140px;
         word-break: break-all;
+    }
+
+    .aboutUsWrapFooter {
+        margin-left: -12px;
     }
 }
 
@@ -560,6 +588,9 @@
         width: 42vw;
     }
 
+    .aboutUsWrapFooter {
+        margin-left: 0px;
+    }
 }
 
 @media (min-width: 1581px) and (max-width:1688px) {
@@ -567,5 +598,9 @@
     .secureTittle h3 {
         color: white;
         font-size: 53px;
+    }
+
+    .aboutUsWrapFooter {
+        margin-left: 0px;
     }
 }

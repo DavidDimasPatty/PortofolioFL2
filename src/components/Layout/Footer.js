@@ -66,7 +66,7 @@ const Footer = ({ changeLanguage }) => {
                     </div>
                 </div>
 
-                <div className="col-12 col-md-5 d-flex justify-content-center align-items-center wrapperVisionMission box2Footer">
+                <div className="col-12 col-md-4 d-flex justify-content-center align-items-center wrapperVisionMission box2Footer">
                     <div className={`mb-4 ourVisionHidden ${isHoverVision ? `visible` : ''}`}>
                         <h6 className="titelOurVisionHidden">{changeLanguage ? "Visi Kami" : "Our Vision"}</h6>
                         <div className="textVisionHidden">
@@ -105,7 +105,7 @@ const Footer = ({ changeLanguage }) => {
                     </div>
                 </div>
 
-                <div className="col-12 col-md-2 d-flex box3Footer">
+                <div className="col-12 col-md-3 d-flex box3Footer">
                     <div className="row aboutUsWrapFooter">
                         <div className="row mb-4">
                             <h6 className="aboutUsFooter">{changeLanguage ? "Tentang Kami" : "About Us"}</h6>
