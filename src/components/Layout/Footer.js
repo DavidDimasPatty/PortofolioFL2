@@ -9,7 +9,8 @@ import { motion } from "framer-motion";
 const Footer = ({ changeLanguage }) => {
     const [isHoverVision, setIsHoverVision] = useState(false);
     const [isHoverMission, setisHoverMission] = useState(false);
-
+    const phoneNumber = "62859106795228";
+    const defaultMessage = "Halo, saya ingin kosultasi.";
     const hoverVision = () => {
         setIsHoverVision(true);
         setisHoverMission(false);
@@ -26,6 +27,14 @@ const Footer = ({ changeLanguage }) => {
         setisHoverMission(false);
     }
 
+    const openWhatsApp = () => {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        const url = isMobile
+            ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}` // Aplikasi WhatsApp
+            : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(defaultMessage)}`; // WhatsApp Web
+
+        window.open(url, "_blank");
+    };
 
     return (
         <div className="footer" id="footer">
@@ -113,7 +122,6 @@ const Footer = ({ changeLanguage }) => {
                         <div className="row mb-4 contactUsWrapFooter">
                             <h6 className="contactUsFooter">{changeLanguage ? "Kontak Kami" : "About Us"}</h6>
                             <h6>ikodora.official@gmail.com</h6>
-                            <h6>+62 859-1067-95228</h6>
                             <br />
                             <h6>Address</h6>
                             <h6>Jakarta - Indonesia</h6>
@@ -122,9 +130,9 @@ const Footer = ({ changeLanguage }) => {
                         <div className="row mb-4 socialMediaWrapFooter">
                             <div className="col">
                                 <h6 className="socialMediaFooter">{changeLanguage ? "Media Sosial" : "Social Media"}</h6>
-                                <img src={igLogo} width={"30px"} className="mx-1" />
-                                <img src={fbLogo} width={"30px"} className="mx-1" />
-                                <img src={waLogo} width={"30px"} className="mx-1" />
+                                <a href="https://www.instagram.com/ikodora.official/" target="_blank"><img src={igLogo} width={"30px"} className="mx-1" /></a>
+                                {/* <img src={fbLogo} width={"30px"} className="mx-1" /> */}
+                                <img src={waLogo} width={"30px"} className="mx-1" onClick={() =>openWhatsApp()} />
                             </div>
                         </div>
 
