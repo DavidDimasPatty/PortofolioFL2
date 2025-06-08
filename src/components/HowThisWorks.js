@@ -24,8 +24,8 @@ import { useInView } from "react-intersection-observer";
 
 gsap.registerPlugin(MotionPathPlugin);
 const HowThisWorks = ({ changeLanguage }) => {
-    const phoneNumber = "6281311974915";
-    const defaultMessage = "Halo, saya tertarik dengan layanan Anda.";
+    const phoneNumber = "62859106795228";
+    const defaultMessage = "Halo, saya ingin kosultasi.";
     const [hoverContainer1, setHoverContainer1] = useState(false);
     const [hoverContainer2, setHoverContainer2] = useState(false);
     const [hoverContainer3, setHoverContainer3] = useState(false);

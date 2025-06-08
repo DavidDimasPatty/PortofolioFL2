@@ -112,8 +112,8 @@ const Footer = ({ changeLanguage }) => {
 
                         <div className="row mb-4 contactUsWrapFooter">
                             <h6 className="contactUsFooter">{changeLanguage ? "Kontak Kami" : "About Us"}</h6>
-                            <h6>Email@gmail.com</h6>
-                            <h6>+62813 11948 214</h6>
+                            <h6>ikodora.official@gmail.com</h6>
+                            <h6>+62 859-1067-95228</h6>
                             <br />
                             <h6>Address</h6>
                             <h6>Jakarta - Indonesia</h6>

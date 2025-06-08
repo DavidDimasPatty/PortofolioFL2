@@ -15,9 +15,9 @@ const Top = ({ changeLanguage }) => {
     );
 
     function sendEmail() {
-        const email = "example@example.com";
-        const subject = `Saya mau plan uji coba`;
-        const body = `Halo, saya mau uji coba.`;
+        const email = "ikodora.official@gmail.com";
+        const subject = `Saya mau konsultasi`;
+        const body = `Halo, saya mau konsultasi.`;
         const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.open(mailtoLink, '_blank');
     }
