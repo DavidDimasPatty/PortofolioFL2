@@ -56,22 +56,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "APLIKASI MOBILE",
                         pointsTitle: ["Pengembangan Sistem Secara Menyeluruh", "Pengujian", "Revisi"],
                         price: "Rp 30.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 20.000.000"
+                        discount: "y",
+                        priceDiscount: "Rp 27.000.000"
                     },
                     {
                         cardTitle: "SITUS WEB",
                         pointsTitle: ["Pengembangan Sistem Secara Menyeluruh", "Pengujian", "Revisi"],
                         price: "Rp 1.400.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 1.260.000"
                     },
                     {
                         cardTitle: "ERP",
                         pointsTitle: ["Pengembangan Sistem Secara Menyeluruh", "Pengujian", "Revisi", "Instalasi"],
                         price: "Rp 99.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 89.100.000"
                     }
                 ]
             },
@@ -84,22 +84,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Situs Web",
                         pointsTitle: ["Simulasi Serangan", "Evaluasi Sistem", "Laporan Detail Risiko", "Retest"],
                         price: "Rp 5.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 3.500.000"
                     },
                     {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) API",
                         pointsTitle: ["Simulasi Serangan", "Evaluasi Sistem", "Laporan Detail Risiko", "Retest"],
                         price: "Rp 12.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 6.000.000"
                     },
                     {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Aplikasi Mobile",
                         pointsTitle: ["Simulasi Serangan", "Evaluasi Sistem", "Laporan Detail Risiko", "Retest"],
                         price: "Rp 35.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 25.000.000"
                     }
                 ]
             },
@@ -112,22 +112,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "Konsultasi & Manajemen IT",
                         pointsTitle: ["Perancangan & Perencanaan Sistem", "Audit IT", "Efisiensi Operasional"],
                         price: "Rp 250.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 225.000.000"
                     },
                     {
                         cardTitle: "Dukungan IT",
                         pointsTitle: ["Dukungan Teknis", "Pemantauan Sistem", "Pengujian"],
                         price: "Rp 75.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 67.500.000"
                     },
                     {
                         cardTitle: "Pengadaan Solusi Teknologi",
                         pointsTitle: ["Pengadaan Aset TI", "Pengadaan Perangkat Lunak", "Implementasi & Setup Sistem", "Pengadaan Layanan Cloud"],
                         price: "Rp 15.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 13.500.000"
                     }
                 ]
             },
@@ -140,22 +140,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "Business Intelligence",
                         pointsTitle: ["Dashboard", "Visualisasi Data", "Wawasan Bisnis Secara Real-Time"],
                         price: "Rp 15.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 13.500.000"
                     },
                     {
                         cardTitle: "Analitik Prediktif",
                         pointsTitle: ["Analisis Tren Historis", "Peramalan", "Dashboard", "Analisis Perilaku Pelanggan"],
                         price: "Rp 45.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 40.500.000"
                     },
                     {
                         cardTitle: "Pengembangan Kecerdasan Buatan",
                         pointsTitle: ["Computer Vision", "Natural Language Processing", "Reinforcement Learning"],
                         price: "Rp 75.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 67.500.000"
                     }
                 ]
             },
@@ -168,22 +168,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "Smart Home",
                         pointsTitle: ["Kontrol Akses Pintar", "CCTV", "Pencahayaan Pintar"],
                         price: "Rp 7.500.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 6.750.000"
                     },
                     {
                         cardTitle: "Industri",
                         pointsTitle: ["Otomasi Industri", "Pelacakan Aset"],
                         price: "Rp 125.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 112.500.000"
                     },
                     {
                         cardTitle: "Transportasi",
                         pointsTitle: ["Parkir Pintar", "Diagnostik Kendaraan"],
                         price: "Rp 45.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 40.500.000"
                     }
                 ]
             },
@@ -196,8 +196,8 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "Sistem Deteksi Penipuan",
                         pointsTitle: ["Penilaian Risiko & Konsultasi Penipuan", "Implementasi Sistem Deteksi Penipuan", "Analitik Data untuk Deteksi Penipuan"],
                         price: "Rp 125.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 112.500.000"
                     }
                 ]
             }
@@ -213,22 +213,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "MOBILE APPS",
                         pointsTitle: ["Full Cycle Development", "Testing", "Revision"],
                         price: "Rp 30.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000.000"
+                        discount: "y",
+                        priceDiscount: "Rp 27.000.000"
                     },
                     {
                         cardTitle: "WEBSITE",
                         pointsTitle: ["Full Cycle Development", "Testing", "Revision"],
                         price: "Rp 1.400.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 1.260.000"
                     },
                     {
                         cardTitle: "ERP",
                         pointsTitle: ["Full Cycle Development", "Testing", "Revision", "Installation"],
                         price: "Rp 99.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 89.100.000"
                     }
                 ]
             },
@@ -241,22 +241,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Website",
                         pointsTitle: ["Attack Simulation", "System Evaluation", "Detailed Risk Report", "Detailed Risk Report"],
                         price: "Rp 5.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 3.500.000"
                     },
                     {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) API",
                         pointsTitle: ["Attack Simulation", "System Evaluation", "Detailed Risk Report", "Detailed Risk Report"],
                         price: "Rp 12.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 6.000.000"
                     },
                     {
                         cardTitle: "VAPT (Vulnerability Assessment & Penetration Testing) Mobile Application",
                         pointsTitle: ["Attack Simulation", "System Evaluation", "Detailed Risk Report", "Detailed Risk Report"],
                         price: "Rp 35.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 25.000.000"
                     }
                 ]
             },
@@ -269,22 +269,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "IT Consulting & Manage Service",
                         pointsTitle: ["System Design & Planning", "IT Audit", "Operational Efficiency"],
                         price: "Rp 250.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 225.000.000"
                     },
                     {
                         cardTitle: "IT Support",
                         pointsTitle: ["Technical Support", "System Monitoring", "Testing"],
                         price: "Rp 75.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 67.500.000"
                     },
                     {
                         cardTitle: "Procurement of Technology Solution",
                         pointsTitle: ["IT Asset Procurement", "Software Procurement", "System Implementation & Setup", "Cloud Service Procurement"],
                         price: "Rp 15.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 13.500.000"
                     }
                 ]
             },
@@ -297,22 +297,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "Business Intelligence",
                         pointsTitle: ["Dashboard", "Data Visualization", "Real-Time Business Insights"],
                         price: "Rp 15.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 13.500.000"
                     },
                     {
                         cardTitle: "Predictive Analytics",
                         pointsTitle: ["Historical Trend Analysis", "Forecasting", "Dashboard", "Customer Behavior Analysis"],
                         price: "Rp 45.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 40.500.000"
                     },
                     {
                         cardTitle: "Artificial Intelegent Development",
                         pointsTitle: ["Computer Vision", "Natural Language Processing", "Reinforcement Learning"],
                         price: "Rp 75.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 67.500.000"
                     }
                 ]
             },
@@ -325,22 +325,22 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "Smart Home",
                         pointsTitle: ["Smart Access Control", "CCTV", "Smart Lighting"],
                         price: "Rp 7.500.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 6.750.000"
                     },
                     {
                         cardTitle: "Industri",
                         pointsTitle: ["Industrial Automation", "Assets Tracking"],
                         price: "Rp 125.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 112.500.000"
                     },
                     {
                         cardTitle: "Transportasi",
                         pointsTitle: ["Smart Parking", "Vehicle Diagnostic"],
                         price: "Rp 45.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 40.500.000"
                     }
                 ]
             },
@@ -353,8 +353,8 @@ export default function Services({ changeLanguage }) {
                         cardTitle: "Fraud System",
                         pointsTitle: ["Fraud Risk Assessment & Advisory", "Fraud Detection System Implementation", "Data Analytics untuk Fraud Detection"],
                         price: "Rp 125.000.000",
-                        discount: "n",
-                        priceDiscount: "Rp 100.000"
+                        discount: "y",
+                        priceDiscount: "Rp 112.500.000"
                     }
                 ]
             }
