@@ -65,7 +65,7 @@ const FAQ = ({ changeLanguage }) => {
             <div className="col-12 col-md-6 d-flex justify-content-center align-items-center" id="faq">
                 <motion.div className="row wrappperQuestions d-flex justify-content-center align-items-center"
                     ref={ref}
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 1, y: 0 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, ease: "easeOut" }}>
                     <div className="col">
